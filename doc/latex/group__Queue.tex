@@ -1,0 +1,66 @@
+\hypertarget{group__Queue}{}\doxysection{Queue functions}
+\label{group__Queue}\index{Queue functions@{Queue functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structqueue}{queue}} $\ast$ \mbox{\hyperlink{group__Queue_ga00029e335cda45ae903e2ced584e391a}{create\+\_\+queue}} ()
+\item 
+void \mbox{\hyperlink{group__Queue_ga514a2174af34164aa2a7f021b41fc8d7}{free\+\_\+queue}} (struct \mbox{\hyperlink{structqueue}{queue}} $\ast$q)
+\item 
+void \mbox{\hyperlink{group__Queue_gad1e7d02ccf93534bfc877371523c8426}{add\+\_\+queue}} (struct \mbox{\hyperlink{structqueue}{queue}} $\ast$q, void $\ast$data)
+\item 
+void $\ast$ \mbox{\hyperlink{group__Queue_ga8810a26d9eb3b9ed40bd89ee7f8e3ef6}{pop\+\_\+queue}} (struct \mbox{\hyperlink{structqueue}{queue}} $\ast$q)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__Queue_gad1e7d02ccf93534bfc877371523c8426}\label{group__Queue_gad1e7d02ccf93534bfc877371523c8426}} 
+\index{Queue functions@{Queue functions}!add\_queue@{add\_queue}}
+\index{add\_queue@{add\_queue}!Queue functions@{Queue functions}}
+\doxysubsubsection{\texorpdfstring{add\_queue()}{add\_queue()}}
+{\footnotesize\ttfamily void add\+\_\+queue (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structqueue}{queue}} $\ast$}]{q,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+Add a node to queue. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em q} & pointer to queue \\
+\hline
+ & {\em \{in\mbox{]}} & data pointer to node data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Queue_ga00029e335cda45ae903e2ced584e391a}\label{group__Queue_ga00029e335cda45ae903e2ced584e391a}} 
+\index{Queue functions@{Queue functions}!create\_queue@{create\_queue}}
+\index{create\_queue@{create\_queue}!Queue functions@{Queue functions}}
+\doxysubsubsection{\texorpdfstring{create\_queue()}{create\_queue()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structqueue}{queue}}$\ast$ create\+\_\+queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Create a queue instance. \begin{DoxyReturn}{Returns}
+pointer to newly created queue
+\end{DoxyReturn}
+Queue \mbox{\Hypertarget{group__Queue_ga514a2174af34164aa2a7f021b41fc8d7}\label{group__Queue_ga514a2174af34164aa2a7f021b41fc8d7}} 
+\index{Queue functions@{Queue functions}!free\_queue@{free\_queue}}
+\index{free\_queue@{free\_queue}!Queue functions@{Queue functions}}
+\doxysubsubsection{\texorpdfstring{free\_queue()}{free\_queue()}}
+{\footnotesize\ttfamily void free\+\_\+queue (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structqueue}{queue}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+Free queue instance and all its nodes 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em q} & pointer to queue instance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Queue_ga8810a26d9eb3b9ed40bd89ee7f8e3ef6}\label{group__Queue_ga8810a26d9eb3b9ed40bd89ee7f8e3ef6}} 
+\index{Queue functions@{Queue functions}!pop\_queue@{pop\_queue}}
+\index{pop\_queue@{pop\_queue}!Queue functions@{Queue functions}}
+\doxysubsubsection{\texorpdfstring{pop\_queue()}{pop\_queue()}}
+{\footnotesize\ttfamily void$\ast$ pop\+\_\+queue (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structqueue}{queue}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+Pop a node from the queue (F\+I\+FO). 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em q} & pointer to queue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data pointer stored by the node 
+\end{DoxyReturn}

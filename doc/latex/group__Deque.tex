@@ -1,0 +1,97 @@
+\hypertarget{group__Deque}{}\doxysection{Deque functions}
+\label{group__Deque}\index{Deque functions@{Deque functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdeque}{deque}} $\ast$ \mbox{\hyperlink{group__Deque_ga87b945cc56c7e45584a76966aaeb7a59}{create\+\_\+deque}} ()
+\item 
+void \mbox{\hyperlink{group__Deque_gad4f581903db9b6380cec7e6f6a51e5e0}{free\+\_\+deque}} (struct \mbox{\hyperlink{structdeque}{deque}} $\ast$dq)
+\item 
+void \mbox{\hyperlink{group__Deque_ga729a37122ee7f31753b5a8fbc070d9b4}{add\+\_\+first\+\_\+deque}} (struct \mbox{\hyperlink{structdeque}{deque}} $\ast$dq, void $\ast$data)
+\item 
+void \mbox{\hyperlink{group__Deque_ga3c2350a42c9863f7ab1c483c50ebca65}{add\+\_\+last\+\_\+deque}} (struct \mbox{\hyperlink{structdeque}{deque}} $\ast$dq, void $\ast$data)
+\item 
+void $\ast$ \mbox{\hyperlink{group__Deque_ga61d14832aad1bce9d36d76d418713442}{pop\+\_\+first\+\_\+deque}} (struct \mbox{\hyperlink{structdeque}{deque}} $\ast$dq)
+\item 
+void $\ast$ \mbox{\hyperlink{group__Deque_gaf301c9120ce55ae6b09486ed3707b315}{pop\+\_\+last\+\_\+deque}} (struct \mbox{\hyperlink{structdeque}{deque}} $\ast$dq)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__Deque_ga729a37122ee7f31753b5a8fbc070d9b4}\label{group__Deque_ga729a37122ee7f31753b5a8fbc070d9b4}} 
+\index{Deque functions@{Deque functions}!add\_first\_deque@{add\_first\_deque}}
+\index{add\_first\_deque@{add\_first\_deque}!Deque functions@{Deque functions}}
+\doxysubsubsection{\texorpdfstring{add\_first\_deque()}{add\_first\_deque()}}
+{\footnotesize\ttfamily void add\+\_\+first\+\_\+deque (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdeque}{deque}} $\ast$}]{dq,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+Add a node to beginning of deque. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em dq} & pointer to deque instance \\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & pointer to node data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Deque_ga3c2350a42c9863f7ab1c483c50ebca65}\label{group__Deque_ga3c2350a42c9863f7ab1c483c50ebca65}} 
+\index{Deque functions@{Deque functions}!add\_last\_deque@{add\_last\_deque}}
+\index{add\_last\_deque@{add\_last\_deque}!Deque functions@{Deque functions}}
+\doxysubsubsection{\texorpdfstring{add\_last\_deque()}{add\_last\_deque()}}
+{\footnotesize\ttfamily void add\+\_\+last\+\_\+deque (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdeque}{deque}} $\ast$}]{dq,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+Add a node to end of deque. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em dq} & pointer to deque instance \\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & pointer to node data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Deque_ga87b945cc56c7e45584a76966aaeb7a59}\label{group__Deque_ga87b945cc56c7e45584a76966aaeb7a59}} 
+\index{Deque functions@{Deque functions}!create\_deque@{create\_deque}}
+\index{create\_deque@{create\_deque}!Deque functions@{Deque functions}}
+\doxysubsubsection{\texorpdfstring{create\_deque()}{create\_deque()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structdeque}{deque}}$\ast$ create\+\_\+deque (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Create a deque instance. \begin{DoxyReturn}{Returns}
+pointer to newly created deque
+\end{DoxyReturn}
+Deque \mbox{\Hypertarget{group__Deque_gad4f581903db9b6380cec7e6f6a51e5e0}\label{group__Deque_gad4f581903db9b6380cec7e6f6a51e5e0}} 
+\index{Deque functions@{Deque functions}!free\_deque@{free\_deque}}
+\index{free\_deque@{free\_deque}!Deque functions@{Deque functions}}
+\doxysubsubsection{\texorpdfstring{free\_deque()}{free\_deque()}}
+{\footnotesize\ttfamily void free\+\_\+deque (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdeque}{deque}} $\ast$}]{dq }\end{DoxyParamCaption})}
+
+Free queue instance and all its nodes 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em q} & pointer to queue instance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Deque_ga61d14832aad1bce9d36d76d418713442}\label{group__Deque_ga61d14832aad1bce9d36d76d418713442}} 
+\index{Deque functions@{Deque functions}!pop\_first\_deque@{pop\_first\_deque}}
+\index{pop\_first\_deque@{pop\_first\_deque}!Deque functions@{Deque functions}}
+\doxysubsubsection{\texorpdfstring{pop\_first\_deque()}{pop\_first\_deque()}}
+{\footnotesize\ttfamily void$\ast$ pop\+\_\+first\+\_\+deque (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdeque}{deque}} $\ast$}]{dq }\end{DoxyParamCaption})}
+
+Pop a node from the beginning of the deque. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em s} & pointer to deque instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data pointer stored by the node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Deque_gaf301c9120ce55ae6b09486ed3707b315}\label{group__Deque_gaf301c9120ce55ae6b09486ed3707b315}} 
+\index{Deque functions@{Deque functions}!pop\_last\_deque@{pop\_last\_deque}}
+\index{pop\_last\_deque@{pop\_last\_deque}!Deque functions@{Deque functions}}
+\doxysubsubsection{\texorpdfstring{pop\_last\_deque()}{pop\_last\_deque()}}
+{\footnotesize\ttfamily void$\ast$ pop\+\_\+last\+\_\+deque (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdeque}{deque}} $\ast$}]{dq }\end{DoxyParamCaption})}
+
+Pop a node from the end of the deque. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em s} & pointer to deque instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data pointer stored by the node 
+\end{DoxyReturn}

@@ -1,0 +1,339 @@
+\hypertarget{datastructs_8c}{}\doxysection{datastructs.\+c File Reference}
+\label{datastructs_8c}\index{datastructs.c@{datastructs.c}}
+{\ttfamily \#include \char`\"{}datastructs.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsl__node}{sl\+\_\+node}} $\ast$ \mbox{\hyperlink{datastructs_8c_a5c19fd5ac916ec112b34afdb945c1d1a}{create\+\_\+slnode}} (void $\ast$data)
+\item 
+struct \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} $\ast$ \mbox{\hyperlink{datastructs_8c_adfde97b701dfc4580163167d043b89fb}{create\+\_\+dlnode}} (void $\ast$data)
+\item 
+struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} $\ast$ \mbox{\hyperlink{datastructs_8c_ac876e12b1704071e274a5d22b8a53932}{create\+\_\+dlpnode}} (void $\ast$data)
+\item 
+void \mbox{\hyperlink{datastructs_8c_a4477b26121b223516c77fae83bc8e9e6}{free\+\_\+slnode}} (struct \mbox{\hyperlink{structsl__node}{sl\+\_\+node}} $\ast$n)
+\item 
+void \mbox{\hyperlink{datastructs_8c_ad1756e5087dd535a5884717daca771bb}{free\+\_\+dlnode}} (struct \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} $\ast$n)
+\item 
+void \mbox{\hyperlink{datastructs_8c_a84c216cd565520135cd8f28b1661fcdc}{free\+\_\+dlpnode}} (struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} $\ast$n)
+\item 
+void \mbox{\hyperlink{datastructs_8c_a82e9b11c768db750c9235188b08eb5cb}{free\+\_\+slnode\+\_\+seq}} (struct \mbox{\hyperlink{structsl__node}{sl\+\_\+node}} $\ast$n)
+\item 
+void \mbox{\hyperlink{datastructs_8c_a2143e7aab3338e9be572be010a2d0820}{free\+\_\+dlnode\+\_\+seq}} (struct \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} $\ast$n)
+\item 
+struct \mbox{\hyperlink{structstack}{stack}} $\ast$ \mbox{\hyperlink{datastructs_8c_af991b6afe6bd16f944388fc91269a5be}{create\+\_\+stack}} ()
+\item 
+void \mbox{\hyperlink{datastructs_8c_a9b1911ef2001424b0e5b909f96a1d97d}{add\+\_\+stack}} (struct \mbox{\hyperlink{structstack}{stack}} $\ast$s, void $\ast$data)
+\item 
+void $\ast$ \mbox{\hyperlink{datastructs_8c_a5ed947d9781c236cb08d014c105f83ce}{pop\+\_\+stack}} (struct \mbox{\hyperlink{structstack}{stack}} $\ast$s)
+\item 
+void \mbox{\hyperlink{datastructs_8c_ab5ead2093b4871d147ce22ede36de84f}{free\+\_\+stack}} (struct \mbox{\hyperlink{structstack}{stack}} $\ast$s)
+\item 
+struct \mbox{\hyperlink{structqueue}{queue}} $\ast$ \mbox{\hyperlink{datastructs_8c_a00029e335cda45ae903e2ced584e391a}{create\+\_\+queue}} ()
+\item 
+void \mbox{\hyperlink{datastructs_8c_ad1e7d02ccf93534bfc877371523c8426}{add\+\_\+queue}} (struct \mbox{\hyperlink{structqueue}{queue}} $\ast$q, void $\ast$data)
+\item 
+void $\ast$ \mbox{\hyperlink{datastructs_8c_a8810a26d9eb3b9ed40bd89ee7f8e3ef6}{pop\+\_\+queue}} (struct \mbox{\hyperlink{structqueue}{queue}} $\ast$q)
+\item 
+void \mbox{\hyperlink{datastructs_8c_a514a2174af34164aa2a7f021b41fc8d7}{free\+\_\+queue}} (struct \mbox{\hyperlink{structqueue}{queue}} $\ast$q)
+\item 
+struct \mbox{\hyperlink{structdeque}{deque}} $\ast$ \mbox{\hyperlink{datastructs_8c_a87b945cc56c7e45584a76966aaeb7a59}{create\+\_\+deque}} ()
+\item 
+void \mbox{\hyperlink{datastructs_8c_a729a37122ee7f31753b5a8fbc070d9b4}{add\+\_\+first\+\_\+deque}} (struct \mbox{\hyperlink{structdeque}{deque}} $\ast$dq, void $\ast$data)
+\item 
+void \mbox{\hyperlink{datastructs_8c_a3c2350a42c9863f7ab1c483c50ebca65}{add\+\_\+last\+\_\+deque}} (struct \mbox{\hyperlink{structdeque}{deque}} $\ast$dq, void $\ast$data)
+\item 
+void $\ast$ \mbox{\hyperlink{datastructs_8c_a61d14832aad1bce9d36d76d418713442}{pop\+\_\+first\+\_\+deque}} (struct \mbox{\hyperlink{structdeque}{deque}} $\ast$dq)
+\item 
+void $\ast$ \mbox{\hyperlink{datastructs_8c_af301c9120ce55ae6b09486ed3707b315}{pop\+\_\+last\+\_\+deque}} (struct \mbox{\hyperlink{structdeque}{deque}} $\ast$dq)
+\item 
+void $\ast$ \mbox{\hyperlink{datastructs_8c_a471b6b8d14d7f08d6c352264d87378b3}{contains\+\_\+deque}} (struct \mbox{\hyperlink{structdeque}{deque}} $\ast$dq)
+\item 
+void \mbox{\hyperlink{datastructs_8c_ad4f581903db9b6380cec7e6f6a51e5e0}{free\+\_\+deque}} (struct \mbox{\hyperlink{structdeque}{deque}} $\ast$dq)
+\item 
+struct \mbox{\hyperlink{structbinarytree}{binarytree}} $\ast$ \mbox{\hyperlink{datastructs_8c_ae2547288735bcd7c7314f046a5e02079}{create\+\_\+binarytree}} ()
+\item 
+void $\ast$ \mbox{\hyperlink{datastructs_8c_aa5c75a53fcab126bf26ab4a7103d6ae9}{lowest\+\_\+binarytree}} (struct \mbox{\hyperlink{structbinarytree}{binarytree}} $\ast$\mbox{\hyperlink{structtree}{tree}})
+\item 
+void $\ast$ \mbox{\hyperlink{datastructs_8c_ae42228071a39fd844bf226f96583631d}{highest\+\_\+binarytree}} (struct \mbox{\hyperlink{structbinarytree}{binarytree}} $\ast$\mbox{\hyperlink{structtree}{tree}})
+\item 
+int8\+\_\+t \mbox{\hyperlink{datastructs_8c_a83ea655a673ffbd805350a9aa0876049}{add\+\_\+binarytree}} (struct \mbox{\hyperlink{structbinarytree}{binarytree}} $\ast$\mbox{\hyperlink{structtree}{tree}}, void $\ast$data)
+\item 
+struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} $\ast$ \mbox{\hyperlink{datastructs_8c_aff6a1b45819ebcebb6ff0d37c2591ff0}{find\+\_\+binarytree}} (struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} $\ast$n, void $\ast$data)
+\item 
+int8\+\_\+t \mbox{\hyperlink{datastructs_8c_a788995939407494569ed18b5d36a271b}{del\+\_\+binarytree}} (struct \mbox{\hyperlink{structbinarytree}{binarytree}} $\ast$\mbox{\hyperlink{structtree}{tree}}, void $\ast$data)
+\item 
+void \mbox{\hyperlink{datastructs_8c_ae84a446090b35414fae9cb8ff7747560}{free\+\_\+sub\+\_\+binarytree}} (struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} $\ast$start)
+\item 
+void \mbox{\hyperlink{datastructs_8c_a5cc384b4331ed649805222bb901dd0fc}{free\+\_\+binarytree}} (struct \mbox{\hyperlink{structbinarytree}{binarytree}} $\ast$\mbox{\hyperlink{structtree}{tree}})
+\item 
+struct \mbox{\hyperlink{structset}{set}} $\ast$ \mbox{\hyperlink{datastructs_8c_a4c72ae35502a70c93313e7faabb75f70}{create\+\_\+set}} ()
+\item 
+int8\+\_\+t \mbox{\hyperlink{datastructs_8c_a41a96c2a17b3551d3234bd5f97e81a75}{add\+\_\+set}} (struct \mbox{\hyperlink{structset}{set}} $\ast$s, void $\ast$data)
+\item 
+int8\+\_\+t \mbox{\hyperlink{datastructs_8c_ae75b966a47e53cf882e0e344306ee0f8}{contains\+\_\+set}} (struct \mbox{\hyperlink{structset}{set}} $\ast$s, void $\ast$data)
+\item 
+int8\+\_\+t \mbox{\hyperlink{datastructs_8c_aaa9a2215b54b78a15f197f3350f7fb36}{del\+\_\+set}} (struct \mbox{\hyperlink{structset}{set}} $\ast$s, void $\ast$data)
+\item 
+void \mbox{\hyperlink{datastructs_8c_a9379b253df297624bab5f1c0e177cea7}{free\+\_\+set}} (struct \mbox{\hyperlink{structset}{set}} $\ast$s)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{datastructs_8c_a83ea655a673ffbd805350a9aa0876049}\label{datastructs_8c_a83ea655a673ffbd805350a9aa0876049}} 
+\index{datastructs.c@{datastructs.c}!add\_binarytree@{add\_binarytree}}
+\index{add\_binarytree@{add\_binarytree}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{add\_binarytree()}{add\_binarytree()}}
+{\footnotesize\ttfamily int8\+\_\+t add\+\_\+binarytree (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structbinarytree}{binarytree}} $\ast$}]{tree,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{datastructs_8c_a729a37122ee7f31753b5a8fbc070d9b4}\label{datastructs_8c_a729a37122ee7f31753b5a8fbc070d9b4}} 
+\index{datastructs.c@{datastructs.c}!add\_first\_deque@{add\_first\_deque}}
+\index{add\_first\_deque@{add\_first\_deque}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{add\_first\_deque()}{add\_first\_deque()}}
+{\footnotesize\ttfamily void add\+\_\+first\+\_\+deque (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdeque}{deque}} $\ast$}]{dq,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{datastructs_8c_a3c2350a42c9863f7ab1c483c50ebca65}\label{datastructs_8c_a3c2350a42c9863f7ab1c483c50ebca65}} 
+\index{datastructs.c@{datastructs.c}!add\_last\_deque@{add\_last\_deque}}
+\index{add\_last\_deque@{add\_last\_deque}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{add\_last\_deque()}{add\_last\_deque()}}
+{\footnotesize\ttfamily void add\+\_\+last\+\_\+deque (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdeque}{deque}} $\ast$}]{dq,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{datastructs_8c_ad1e7d02ccf93534bfc877371523c8426}\label{datastructs_8c_ad1e7d02ccf93534bfc877371523c8426}} 
+\index{datastructs.c@{datastructs.c}!add\_queue@{add\_queue}}
+\index{add\_queue@{add\_queue}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{add\_queue()}{add\_queue()}}
+{\footnotesize\ttfamily void add\+\_\+queue (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structqueue}{queue}} $\ast$}]{q,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{datastructs_8c_a41a96c2a17b3551d3234bd5f97e81a75}\label{datastructs_8c_a41a96c2a17b3551d3234bd5f97e81a75}} 
+\index{datastructs.c@{datastructs.c}!add\_set@{add\_set}}
+\index{add\_set@{add\_set}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{add\_set()}{add\_set()}}
+{\footnotesize\ttfamily int8\+\_\+t add\+\_\+set (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structset}{set}} $\ast$}]{s,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{datastructs_8c_a9b1911ef2001424b0e5b909f96a1d97d}\label{datastructs_8c_a9b1911ef2001424b0e5b909f96a1d97d}} 
+\index{datastructs.c@{datastructs.c}!add\_stack@{add\_stack}}
+\index{add\_stack@{add\_stack}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{add\_stack()}{add\_stack()}}
+{\footnotesize\ttfamily void add\+\_\+stack (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structstack}{stack}} $\ast$}]{s,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{datastructs_8c_a471b6b8d14d7f08d6c352264d87378b3}\label{datastructs_8c_a471b6b8d14d7f08d6c352264d87378b3}} 
+\index{datastructs.c@{datastructs.c}!contains\_deque@{contains\_deque}}
+\index{contains\_deque@{contains\_deque}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{contains\_deque()}{contains\_deque()}}
+{\footnotesize\ttfamily void$\ast$ contains\+\_\+deque (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdeque}{deque}} $\ast$}]{dq }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{datastructs_8c_ae75b966a47e53cf882e0e344306ee0f8}\label{datastructs_8c_ae75b966a47e53cf882e0e344306ee0f8}} 
+\index{datastructs.c@{datastructs.c}!contains\_set@{contains\_set}}
+\index{contains\_set@{contains\_set}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{contains\_set()}{contains\_set()}}
+{\footnotesize\ttfamily int8\+\_\+t contains\+\_\+set (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structset}{set}} $\ast$}]{s,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{datastructs_8c_ae2547288735bcd7c7314f046a5e02079}\label{datastructs_8c_ae2547288735bcd7c7314f046a5e02079}} 
+\index{datastructs.c@{datastructs.c}!create\_binarytree@{create\_binarytree}}
+\index{create\_binarytree@{create\_binarytree}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{create\_binarytree()}{create\_binarytree()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structbinarytree}{binarytree}}$\ast$ create\+\_\+binarytree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Binary tree \mbox{\Hypertarget{datastructs_8c_a87b945cc56c7e45584a76966aaeb7a59}\label{datastructs_8c_a87b945cc56c7e45584a76966aaeb7a59}} 
+\index{datastructs.c@{datastructs.c}!create\_deque@{create\_deque}}
+\index{create\_deque@{create\_deque}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{create\_deque()}{create\_deque()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structdeque}{deque}}$\ast$ create\+\_\+deque (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Deque \mbox{\Hypertarget{datastructs_8c_adfde97b701dfc4580163167d043b89fb}\label{datastructs_8c_adfde97b701dfc4580163167d043b89fb}} 
+\index{datastructs.c@{datastructs.c}!create\_dlnode@{create\_dlnode}}
+\index{create\_dlnode@{create\_dlnode}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{create\_dlnode()}{create\_dlnode()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structdl__node}{dl\+\_\+node}}$\ast$ create\+\_\+dlnode (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+Create a \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} instance. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data} & pointer to object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to newly created \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{datastructs_8c_ac876e12b1704071e274a5d22b8a53932}\label{datastructs_8c_ac876e12b1704071e274a5d22b8a53932}} 
+\index{datastructs.c@{datastructs.c}!create\_dlpnode@{create\_dlpnode}}
+\index{create\_dlpnode@{create\_dlpnode}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{create\_dlpnode()}{create\_dlpnode()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}}$\ast$ create\+\_\+dlpnode (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+Create a \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} instance. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data} & pointer to object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to newly created \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{datastructs_8c_a00029e335cda45ae903e2ced584e391a}\label{datastructs_8c_a00029e335cda45ae903e2ced584e391a}} 
+\index{datastructs.c@{datastructs.c}!create\_queue@{create\_queue}}
+\index{create\_queue@{create\_queue}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{create\_queue()}{create\_queue()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structqueue}{queue}}$\ast$ create\+\_\+queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Queue \mbox{\Hypertarget{datastructs_8c_a4c72ae35502a70c93313e7faabb75f70}\label{datastructs_8c_a4c72ae35502a70c93313e7faabb75f70}} 
+\index{datastructs.c@{datastructs.c}!create\_set@{create\_set}}
+\index{create\_set@{create\_set}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{create\_set()}{create\_set()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structset}{set}}$\ast$ create\+\_\+set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Set \mbox{\Hypertarget{datastructs_8c_a5c19fd5ac916ec112b34afdb945c1d1a}\label{datastructs_8c_a5c19fd5ac916ec112b34afdb945c1d1a}} 
+\index{datastructs.c@{datastructs.c}!create\_slnode@{create\_slnode}}
+\index{create\_slnode@{create\_slnode}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{create\_slnode()}{create\_slnode()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structsl__node}{sl\+\_\+node}}$\ast$ create\+\_\+slnode (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+Node types, create and free \mbox{\Hypertarget{datastructs_8c_af991b6afe6bd16f944388fc91269a5be}\label{datastructs_8c_af991b6afe6bd16f944388fc91269a5be}} 
+\index{datastructs.c@{datastructs.c}!create\_stack@{create\_stack}}
+\index{create\_stack@{create\_stack}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{create\_stack()}{create\_stack()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structstack}{stack}}$\ast$ create\+\_\+stack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Stack \mbox{\Hypertarget{datastructs_8c_a788995939407494569ed18b5d36a271b}\label{datastructs_8c_a788995939407494569ed18b5d36a271b}} 
+\index{datastructs.c@{datastructs.c}!del\_binarytree@{del\_binarytree}}
+\index{del\_binarytree@{del\_binarytree}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{del\_binarytree()}{del\_binarytree()}}
+{\footnotesize\ttfamily int8\+\_\+t del\+\_\+binarytree (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structbinarytree}{binarytree}} $\ast$}]{tree,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{datastructs_8c_aaa9a2215b54b78a15f197f3350f7fb36}\label{datastructs_8c_aaa9a2215b54b78a15f197f3350f7fb36}} 
+\index{datastructs.c@{datastructs.c}!del\_set@{del\_set}}
+\index{del\_set@{del\_set}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{del\_set()}{del\_set()}}
+{\footnotesize\ttfamily int8\+\_\+t del\+\_\+set (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structset}{set}} $\ast$}]{s,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{datastructs_8c_aff6a1b45819ebcebb6ff0d37c2591ff0}\label{datastructs_8c_aff6a1b45819ebcebb6ff0d37c2591ff0}} 
+\index{datastructs.c@{datastructs.c}!find\_binarytree@{find\_binarytree}}
+\index{find\_binarytree@{find\_binarytree}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{find\_binarytree()}{find\_binarytree()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}}$\ast$ find\+\_\+binarytree (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} $\ast$}]{n,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{datastructs_8c_a5cc384b4331ed649805222bb901dd0fc}\label{datastructs_8c_a5cc384b4331ed649805222bb901dd0fc}} 
+\index{datastructs.c@{datastructs.c}!free\_binarytree@{free\_binarytree}}
+\index{free\_binarytree@{free\_binarytree}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{free\_binarytree()}{free\_binarytree()}}
+{\footnotesize\ttfamily void free\+\_\+binarytree (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structbinarytree}{binarytree}} $\ast$}]{tree }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{datastructs_8c_ad4f581903db9b6380cec7e6f6a51e5e0}\label{datastructs_8c_ad4f581903db9b6380cec7e6f6a51e5e0}} 
+\index{datastructs.c@{datastructs.c}!free\_deque@{free\_deque}}
+\index{free\_deque@{free\_deque}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{free\_deque()}{free\_deque()}}
+{\footnotesize\ttfamily void free\+\_\+deque (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdeque}{deque}} $\ast$}]{dq }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{datastructs_8c_ad1756e5087dd535a5884717daca771bb}\label{datastructs_8c_ad1756e5087dd535a5884717daca771bb}} 
+\index{datastructs.c@{datastructs.c}!free\_dlnode@{free\_dlnode}}
+\index{free\_dlnode@{free\_dlnode}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{free\_dlnode()}{free\_dlnode()}}
+{\footnotesize\ttfamily void free\+\_\+dlnode (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} $\ast$}]{n }\end{DoxyParamCaption})}
+
+Helper to fully free \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} instance and its data pointer. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em n} & pointer to \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} instance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{datastructs_8c_a2143e7aab3338e9be572be010a2d0820}\label{datastructs_8c_a2143e7aab3338e9be572be010a2d0820}} 
+\index{datastructs.c@{datastructs.c}!free\_dlnode\_seq@{free\_dlnode\_seq}}
+\index{free\_dlnode\_seq@{free\_dlnode\_seq}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{free\_dlnode\_seq()}{free\_dlnode\_seq()}}
+{\footnotesize\ttfamily void free\+\_\+dlnode\+\_\+seq (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} $\ast$}]{n }\end{DoxyParamCaption})}
+
+Helper for clearing every sequentially linked \mbox{\hyperlink{structdl__node}{dl\+\_\+node}}. 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}n\mbox{]}} & n pointer to beginning of \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} sequence \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{datastructs_8c_a84c216cd565520135cd8f28b1661fcdc}\label{datastructs_8c_a84c216cd565520135cd8f28b1661fcdc}} 
+\index{datastructs.c@{datastructs.c}!free\_dlpnode@{free\_dlpnode}}
+\index{free\_dlpnode@{free\_dlpnode}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{free\_dlpnode()}{free\_dlpnode()}}
+{\footnotesize\ttfamily void free\+\_\+dlpnode (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} $\ast$}]{n }\end{DoxyParamCaption})}
+
+Helper to fully free \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} instance and its data pointer. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em n} & pointer to \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} instance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{datastructs_8c_a514a2174af34164aa2a7f021b41fc8d7}\label{datastructs_8c_a514a2174af34164aa2a7f021b41fc8d7}} 
+\index{datastructs.c@{datastructs.c}!free\_queue@{free\_queue}}
+\index{free\_queue@{free\_queue}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{free\_queue()}{free\_queue()}}
+{\footnotesize\ttfamily void free\+\_\+queue (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structqueue}{queue}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{datastructs_8c_a9379b253df297624bab5f1c0e177cea7}\label{datastructs_8c_a9379b253df297624bab5f1c0e177cea7}} 
+\index{datastructs.c@{datastructs.c}!free\_set@{free\_set}}
+\index{free\_set@{free\_set}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{free\_set()}{free\_set()}}
+{\footnotesize\ttfamily void free\+\_\+set (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structset}{set}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{datastructs_8c_a4477b26121b223516c77fae83bc8e9e6}\label{datastructs_8c_a4477b26121b223516c77fae83bc8e9e6}} 
+\index{datastructs.c@{datastructs.c}!free\_slnode@{free\_slnode}}
+\index{free\_slnode@{free\_slnode}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{free\_slnode()}{free\_slnode()}}
+{\footnotesize\ttfamily void free\+\_\+slnode (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsl__node}{sl\+\_\+node}} $\ast$}]{n }\end{DoxyParamCaption})}
+
+Helper to fully free \mbox{\hyperlink{structsl__node}{sl\+\_\+node}} instance and its data pointer. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em n} & pointer to \mbox{\hyperlink{structsl__node}{sl\+\_\+node}} instance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{datastructs_8c_a82e9b11c768db750c9235188b08eb5cb}\label{datastructs_8c_a82e9b11c768db750c9235188b08eb5cb}} 
+\index{datastructs.c@{datastructs.c}!free\_slnode\_seq@{free\_slnode\_seq}}
+\index{free\_slnode\_seq@{free\_slnode\_seq}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{free\_slnode\_seq()}{free\_slnode\_seq()}}
+{\footnotesize\ttfamily void free\+\_\+slnode\+\_\+seq (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsl__node}{sl\+\_\+node}} $\ast$}]{n }\end{DoxyParamCaption})}
+
+Helper for clearing every sequentially linked \mbox{\hyperlink{structsl__node}{sl\+\_\+node}}. 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}n\mbox{]}} & n pointer to beginning of \mbox{\hyperlink{structsl__node}{sl\+\_\+node}} sequence \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{datastructs_8c_ab5ead2093b4871d147ce22ede36de84f}\label{datastructs_8c_ab5ead2093b4871d147ce22ede36de84f}} 
+\index{datastructs.c@{datastructs.c}!free\_stack@{free\_stack}}
+\index{free\_stack@{free\_stack}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{free\_stack()}{free\_stack()}}
+{\footnotesize\ttfamily void free\+\_\+stack (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structstack}{stack}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{datastructs_8c_ae84a446090b35414fae9cb8ff7747560}\label{datastructs_8c_ae84a446090b35414fae9cb8ff7747560}} 
+\index{datastructs.c@{datastructs.c}!free\_sub\_binarytree@{free\_sub\_binarytree}}
+\index{free\_sub\_binarytree@{free\_sub\_binarytree}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{free\_sub\_binarytree()}{free\_sub\_binarytree()}}
+{\footnotesize\ttfamily void free\+\_\+sub\+\_\+binarytree (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} $\ast$}]{start }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{datastructs_8c_ae42228071a39fd844bf226f96583631d}\label{datastructs_8c_ae42228071a39fd844bf226f96583631d}} 
+\index{datastructs.c@{datastructs.c}!highest\_binarytree@{highest\_binarytree}}
+\index{highest\_binarytree@{highest\_binarytree}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{highest\_binarytree()}{highest\_binarytree()}}
+{\footnotesize\ttfamily void$\ast$ highest\+\_\+binarytree (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structbinarytree}{binarytree}} $\ast$}]{tree }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{datastructs_8c_aa5c75a53fcab126bf26ab4a7103d6ae9}\label{datastructs_8c_aa5c75a53fcab126bf26ab4a7103d6ae9}} 
+\index{datastructs.c@{datastructs.c}!lowest\_binarytree@{lowest\_binarytree}}
+\index{lowest\_binarytree@{lowest\_binarytree}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{lowest\_binarytree()}{lowest\_binarytree()}}
+{\footnotesize\ttfamily void$\ast$ lowest\+\_\+binarytree (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structbinarytree}{binarytree}} $\ast$}]{tree }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{datastructs_8c_a61d14832aad1bce9d36d76d418713442}\label{datastructs_8c_a61d14832aad1bce9d36d76d418713442}} 
+\index{datastructs.c@{datastructs.c}!pop\_first\_deque@{pop\_first\_deque}}
+\index{pop\_first\_deque@{pop\_first\_deque}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{pop\_first\_deque()}{pop\_first\_deque()}}
+{\footnotesize\ttfamily void$\ast$ pop\+\_\+first\+\_\+deque (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdeque}{deque}} $\ast$}]{dq }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{datastructs_8c_af301c9120ce55ae6b09486ed3707b315}\label{datastructs_8c_af301c9120ce55ae6b09486ed3707b315}} 
+\index{datastructs.c@{datastructs.c}!pop\_last\_deque@{pop\_last\_deque}}
+\index{pop\_last\_deque@{pop\_last\_deque}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{pop\_last\_deque()}{pop\_last\_deque()}}
+{\footnotesize\ttfamily void$\ast$ pop\+\_\+last\+\_\+deque (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdeque}{deque}} $\ast$}]{dq }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{datastructs_8c_a8810a26d9eb3b9ed40bd89ee7f8e3ef6}\label{datastructs_8c_a8810a26d9eb3b9ed40bd89ee7f8e3ef6}} 
+\index{datastructs.c@{datastructs.c}!pop\_queue@{pop\_queue}}
+\index{pop\_queue@{pop\_queue}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{pop\_queue()}{pop\_queue()}}
+{\footnotesize\ttfamily void$\ast$ pop\+\_\+queue (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structqueue}{queue}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{datastructs_8c_a5ed947d9781c236cb08d014c105f83ce}\label{datastructs_8c_a5ed947d9781c236cb08d014c105f83ce}} 
+\index{datastructs.c@{datastructs.c}!pop\_stack@{pop\_stack}}
+\index{pop\_stack@{pop\_stack}!datastructs.c@{datastructs.c}}
+\doxysubsubsection{\texorpdfstring{pop\_stack()}{pop\_stack()}}
+{\footnotesize\ttfamily void$\ast$ pop\+\_\+stack (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structstack}{stack}} $\ast$}]{s }\end{DoxyParamCaption})}
+

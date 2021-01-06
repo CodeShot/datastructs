@@ -1,0 +1,75 @@
+\hypertarget{group__Tree}{}\doxysection{Tree functions}
+\label{group__Tree}\index{Tree functions@{Tree functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtree}{tree}} $\ast$ \mbox{\hyperlink{group__Tree_gab04526e4a67ad90fb7716ae3de299215}{create\+\_\+tree}} ()
+\item 
+void \mbox{\hyperlink{group__Tree_ga15f828f30cd22a5143c332ce0d1c6355}{free\+\_\+tree}} (struct \mbox{\hyperlink{structtree}{tree}} $\ast$t)
+\item 
+int8\+\_\+t \mbox{\hyperlink{group__Tree_gad81d3252894b7d3305fc683a3783edef}{add\+\_\+child\+\_\+treenode}} (struct \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} $\ast$n, void $\ast$data)
+\item 
+\mbox{\Hypertarget{group__Tree_ga1f6a232f1e6bd06610b5204fcb751f05}\label{group__Tree_ga1f6a232f1e6bd06610b5204fcb751f05}} 
+int8\+\_\+t {\bfseries del\+\_\+child\+\_\+treenode} (struct \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} $\ast$n, void $\ast$data)
+\item 
+struct \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} $\ast$ \mbox{\hyperlink{group__Tree_ga8c7114ba0a1e3f6993af51d5374eb753}{find\+\_\+tree}} (struct \mbox{\hyperlink{structtree}{tree}} $\ast$t, void $\ast$data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__Tree_gad81d3252894b7d3305fc683a3783edef}\label{group__Tree_gad81d3252894b7d3305fc683a3783edef}} 
+\index{Tree functions@{Tree functions}!add\_child\_treenode@{add\_child\_treenode}}
+\index{add\_child\_treenode@{add\_child\_treenode}!Tree functions@{Tree functions}}
+\doxysubsubsection{\texorpdfstring{add\_child\_treenode()}{add\_child\_treenode()}}
+{\footnotesize\ttfamily int8\+\_\+t add\+\_\+child\+\_\+treenode (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} $\ast$}]{n,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+Add node to a set. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em n} & pointer to \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} instance ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & pointer to node data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result (0 if already in set, 1 if added successfully) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Tree_gab04526e4a67ad90fb7716ae3de299215}\label{group__Tree_gab04526e4a67ad90fb7716ae3de299215}} 
+\index{Tree functions@{Tree functions}!create\_tree@{create\_tree}}
+\index{create\_tree@{create\_tree}!Tree functions@{Tree functions}}
+\doxysubsubsection{\texorpdfstring{create\_tree()}{create\_tree()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structtree}{tree}}$\ast$ create\+\_\+tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Create a tree instance. \begin{DoxyReturn}{Returns}
+pointer to newly created tree 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Tree_ga8c7114ba0a1e3f6993af51d5374eb753}\label{group__Tree_ga8c7114ba0a1e3f6993af51d5374eb753}} 
+\index{Tree functions@{Tree functions}!find\_tree@{find\_tree}}
+\index{find\_tree@{find\_tree}!Tree functions@{Tree functions}}
+\doxysubsubsection{\texorpdfstring{find\_tree()}{find\_tree()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structtree__node}{tree\+\_\+node}}$\ast$ find\+\_\+tree (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structtree}{tree}} $\ast$}]{t,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+Find node in a tree. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em t} & pointer to tree \\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & pointer to node data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result (-\/1 if already in tree, 1 if added successfully) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Tree_ga15f828f30cd22a5143c332ce0d1c6355}\label{group__Tree_ga15f828f30cd22a5143c332ce0d1c6355}} 
+\index{Tree functions@{Tree functions}!free\_tree@{free\_tree}}
+\index{free\_tree@{free\_tree}!Tree functions@{Tree functions}}
+\doxysubsubsection{\texorpdfstring{free\_tree()}{free\_tree()}}
+{\footnotesize\ttfamily void free\+\_\+tree (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structtree}{tree}} $\ast$}]{t }\end{DoxyParamCaption})}
+
+Free tree instance and all its \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} references. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em t} & pointer to tree instance \\
+\hline
+\end{DoxyParams}

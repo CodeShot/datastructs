@@ -1,0 +1,44 @@
+\hypertarget{structtree__node}{}\doxysection{tree\+\_\+node Struct Reference}
+\label{structtree__node}\index{tree\_node@{tree\_node}}
+
+
+{\ttfamily \#include $<$datastructs.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{structtree__node_a48fb98a8a85ec0497df056f52700a87e}{data}}
+\item 
+struct \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} $\ast$ \mbox{\hyperlink{structtree__node_a23176b684464fd150c42bba84ac00818}{parent}}
+\item 
+struct \mbox{\hyperlink{structqueue}{queue}} $\ast$ \mbox{\hyperlink{structtree__node_aa630a2b2f431e194ee4fead983611a0f}{children}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Node with parent and a queue of children (todo\+: make hashmap ;S) 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structtree__node_aa630a2b2f431e194ee4fead983611a0f}\label{structtree__node_aa630a2b2f431e194ee4fead983611a0f}} 
+\index{tree\_node@{tree\_node}!children@{children}}
+\index{children@{children}!tree\_node@{tree\_node}}
+\doxysubsubsection{\texorpdfstring{children}{children}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structqueue}{queue}}$\ast$ tree\+\_\+node\+::children}
+
+pointer to queue of hierarchical children \mbox{\Hypertarget{structtree__node_a48fb98a8a85ec0497df056f52700a87e}\label{structtree__node_a48fb98a8a85ec0497df056f52700a87e}} 
+\index{tree\_node@{tree\_node}!data@{data}}
+\index{data@{data}!tree\_node@{tree\_node}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily void$\ast$ tree\+\_\+node\+::data}
+
+pointer to object stored by node \mbox{\Hypertarget{structtree__node_a23176b684464fd150c42bba84ac00818}\label{structtree__node_a23176b684464fd150c42bba84ac00818}} 
+\index{tree\_node@{tree\_node}!parent@{parent}}
+\index{parent@{parent}!tree\_node@{tree\_node}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structtree__node}{tree\+\_\+node}}$\ast$ tree\+\_\+node\+::parent}
+
+pointer to hierarchical parent 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{datastructs_8h}{datastructs.\+h}}\end{DoxyCompactItemize}
