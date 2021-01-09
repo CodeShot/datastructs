@@ -283,6 +283,7 @@ void add_queue(queue_t *const q, void *const data);
  */
 void *pop_queue(queue_t *const q);
 
+void map_queue(queue_t *const s, void (*func)(sl_node_t *, void *), void *func_data); 
 /**
  * @}
  */
@@ -367,6 +368,8 @@ void *pop_first_deque(deque_t *const dq);
  * @return data pointer stored by the node
  */
 void *pop_last_deque(deque_t *const dq);
+
+void map_deque(deque_t *const dq, void (*func)(dl_node_t *, void *), void *func_data, bool reverse);
 /**
  * @}
  */
