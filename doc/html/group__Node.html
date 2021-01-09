@@ -24,7 +24,7 @@
    <div id="projectname">datastructs
    &#160;<span id="projectnumber">1</span>
    </div>
-   <div id="projectbrief">Implementation of basic node based datatypes</div>
+   <div id="projectbrief">Implementation of basic node based datastructure</div>
   </td>
  </tr>
  </tbody>
@@ -72,39 +72,112 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga5c19fd5ac916ec112b34afdb945c1d1a"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsl__node.html">sl_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#ga5c19fd5ac916ec112b34afdb945c1d1a">create_slnode</a> (void *data)</td></tr>
-<tr class="separator:ga5c19fd5ac916ec112b34afdb945c1d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4477b26121b223516c77fae83bc8e9e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#ga4477b26121b223516c77fae83bc8e9e6">free_slnode</a> (struct <a class="el" href="structsl__node.html">sl_node</a> *n)</td></tr>
-<tr class="separator:ga4477b26121b223516c77fae83bc8e9e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadfde97b701dfc4580163167d043b89fb"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdl__node.html">dl_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#gadfde97b701dfc4580163167d043b89fb">create_dlnode</a> (void *data)</td></tr>
-<tr class="separator:gadfde97b701dfc4580163167d043b89fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad1756e5087dd535a5884717daca771bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#gad1756e5087dd535a5884717daca771bb">free_dlnode</a> (struct <a class="el" href="structdl__node.html">dl_node</a> *n)</td></tr>
-<tr class="separator:gad1756e5087dd535a5884717daca771bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac876e12b1704071e274a5d22b8a53932"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdlp__node.html">dlp_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#gac876e12b1704071e274a5d22b8a53932">create_dlpnode</a> (void *data)</td></tr>
-<tr class="separator:gac876e12b1704071e274a5d22b8a53932"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga84c216cd565520135cd8f28b1661fcdc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#ga84c216cd565520135cd8f28b1661fcdc">free_dlpnode</a> (struct <a class="el" href="structdlp__node.html">dlp_node</a> *n)</td></tr>
-<tr class="separator:ga84c216cd565520135cd8f28b1661fcdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0983e084126172e14bd5daf44d40e1dd"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structtree__node.html">tree_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#ga0983e084126172e14bd5daf44d40e1dd">create_treenode</a> (void *data)</td></tr>
-<tr class="separator:ga0983e084126172e14bd5daf44d40e1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga99ffc99102f732d742e997a52cd52a6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#ga99ffc99102f732d742e997a52cd52a6b">free_treenode</a> (struct <a class="el" href="structtree__node.html">tree_node</a> *n)</td></tr>
-<tr class="separator:ga99ffc99102f732d742e997a52cd52a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga82e9b11c768db750c9235188b08eb5cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#ga82e9b11c768db750c9235188b08eb5cb">free_slnode_seq</a> (struct <a class="el" href="structsl__node.html">sl_node</a> *n)</td></tr>
-<tr class="separator:ga82e9b11c768db750c9235188b08eb5cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2143e7aab3338e9be572be010a2d0820"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#ga2143e7aab3338e9be572be010a2d0820">free_dlnode_seq</a> (struct <a class="el" href="structdl__node.html">dl_node</a> *n)</td></tr>
-<tr class="separator:ga2143e7aab3338e9be572be010a2d0820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab282eeba8a93cbdbdbc2f4455984707a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsl__node.html">sl_node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#gab282eeba8a93cbdbdbc2f4455984707a">create_slnode</a> (void *const data)</td></tr>
+<tr class="separator:gab282eeba8a93cbdbdbc2f4455984707a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf9d96f91086dac62f8977675db8c3d68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#gaf9d96f91086dac62f8977675db8c3d68">free_slnode</a> (<a class="el" href="structsl__node.html">sl_node_t</a> *n)</td></tr>
+<tr class="separator:gaf9d96f91086dac62f8977675db8c3d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacbce7c2a4ab9b29c4d73d711b90fb969"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdl__node.html">dl_node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#gacbce7c2a4ab9b29c4d73d711b90fb969">create_dlnode</a> (void *const data)</td></tr>
+<tr class="separator:gacbce7c2a4ab9b29c4d73d711b90fb969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa7c361b8c1f6eeb795de2a118cb95983"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#gaa7c361b8c1f6eeb795de2a118cb95983">free_dlnode</a> (<a class="el" href="structdl__node.html">dl_node_t</a> *n)</td></tr>
+<tr class="separator:gaa7c361b8c1f6eeb795de2a118cb95983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9267310b85f6430b624de912b0b31c8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdlp__node.html">dlp_node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#ga9267310b85f6430b624de912b0b31c8c">create_dlpnode</a> (void *const data)</td></tr>
+<tr class="separator:ga9267310b85f6430b624de912b0b31c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad3b004d625153d11e2771915b17311de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#gad3b004d625153d11e2771915b17311de">free_dlpnode</a> (<a class="el" href="structdlp__node.html">dlp_node_t</a> *n)</td></tr>
+<tr class="separator:gad3b004d625153d11e2771915b17311de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga34170fe5863a0fe5d5c332cd0ef5f446"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtree__node.html">tree_node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#ga34170fe5863a0fe5d5c332cd0ef5f446">create_treenode</a> (void *const data)</td></tr>
+<tr class="separator:ga34170fe5863a0fe5d5c332cd0ef5f446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga65448534c4bd664b4ea0a94cd62f5ee4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#ga65448534c4bd664b4ea0a94cd62f5ee4">free_treenode</a> (<a class="el" href="structtree__node.html">tree_node_t</a> *n)</td></tr>
+<tr class="separator:ga65448534c4bd664b4ea0a94cd62f5ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf548ef71d8a7f73783ea04f0cc196d51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#gaf548ef71d8a7f73783ea04f0cc196d51">free_slnode_seq</a> (<a class="el" href="structsl__node.html">sl_node_t</a> *n)</td></tr>
+<tr class="separator:gaf548ef71d8a7f73783ea04f0cc196d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae6a3c4796d24c9afc1a316d545358823"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#gae6a3c4796d24c9afc1a316d545358823">free_dlnode_seq</a> (<a class="el" href="structdl__node.html">dl_node_t</a> *n)</td></tr>
+<tr class="separator:gae6a3c4796d24c9afc1a316d545358823"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gace141186efdb9a3ceaab6e5fbf95857e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#gace141186efdb9a3ceaab6e5fbf95857e">map_slnode_seq</a> (<a class="el" href="structsl__node.html">sl_node_t</a> *const node, void(*func)(<a class="el" href="structsl__node.html">sl_node_t</a> *, void *), void *func_data)</td></tr>
+<tr class="separator:gace141186efdb9a3ceaab6e5fbf95857e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5b32dabe4372cd69a50a075776b941d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#ga5b32dabe4372cd69a50a075776b941d1">map_dlnode_seq</a> (<a class="el" href="structdl__node.html">dl_node_t</a> *const node, void(*func)(<a class="el" href="structdl__node.html">dl_node_t</a> *, void *), void *func_data, bool reverse)</td></tr>
+<tr class="separator:ga5b32dabe4372cd69a50a075776b941d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa445a52ebb19bfd4adccd2bbe502d69c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#gaa445a52ebb19bfd4adccd2bbe502d69c">map_slnode_data_seq</a> (<a class="el" href="structsl__node.html">sl_node_t</a> *const node, void(*func)(void *, void *), void *func_data)</td></tr>
+<tr class="separator:gaa445a52ebb19bfd4adccd2bbe502d69c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga55d181ebd0cbdea88886a080a4aad10e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#ga55d181ebd0cbdea88886a080a4aad10e">map_dlnode_data_seq</a> (<a class="el" href="structdl__node.html">dl_node_t</a> *const node, void(*func)(void *, void *), void *func_data, bool reverse)</td></tr>
+<tr class="separator:ga55d181ebd0cbdea88886a080a4aad10e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga65bd26ba89de16607c773268432dd572"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#ga65bd26ba89de16607c773268432dd572">count_slnode_seq</a> (<a class="el" href="structsl__node.html">sl_node_t</a> *const node)</td></tr>
+<tr class="separator:ga65bd26ba89de16607c773268432dd572"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga650fbce606e7fa8c7c0d0fa5e8763d49"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Node.html#ga650fbce606e7fa8c7c0d0fa5e8763d49">count_dlnode_seq</a> (<a class="el" href="structdl__node.html">dl_node_t</a> *const node, bool reverse)</td></tr>
+<tr class="separator:ga650fbce606e7fa8c7c0d0fa5e8763d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gadfde97b701dfc4580163167d043b89fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadfde97b701dfc4580163167d043b89fb">&#9670;&nbsp;</a></span>create_dlnode()</h2>
+<a id="ga650fbce606e7fa8c7c0d0fa5e8763d49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga650fbce606e7fa8c7c0d0fa5e8763d49">&#9670;&nbsp;</a></span>count_dlnode_seq()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structdl__node.html">dl_node</a>* create_dlnode </td>
+          <td class="memname">uint32_t count_dlnode_seq </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
+          <td class="paramtype"><a class="el" href="structdl__node.html">dl_node_t</a> *const&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>reverse</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Count the number of nodes a dl_node_t sequence us from and inlcluding <em>node</em>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">node</td><td>pointer to start of count </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reverese</td><td>boolean value, if left true/1 it movement is reversed </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>nuber of nodes </dd></dl>
+
+</div>
+</div>
+<a id="ga65bd26ba89de16607c773268432dd572"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga65bd26ba89de16607c773268432dd572">&#9670;&nbsp;</a></span>count_slnode_seq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t count_slnode_seq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsl__node.html">sl_node_t</a> *const&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Count the number of nodes a sl_node_t sequence us from and inlcluding <em>node</em>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>pointer to start of count </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>number of nodes </dd></dl>
+
+</div>
+</div>
+<a id="gacbce7c2a4ab9b29c4d73d711b90fb969"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacbce7c2a4ab9b29c4d73d711b90fb969">&#9670;&nbsp;</a></span>create_dlnode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdl__node.html">dl_node_t</a>* create_dlnode </td>
+          <td>(</td>
+          <td class="paramtype">void *const&#160;</td>
           <td class="paramname"><em>data</em></td><td>)</td>
           <td></td>
         </tr>
@@ -120,16 +193,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gac876e12b1704071e274a5d22b8a53932"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac876e12b1704071e274a5d22b8a53932">&#9670;&nbsp;</a></span>create_dlpnode()</h2>
+<a id="ga9267310b85f6430b624de912b0b31c8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9267310b85f6430b624de912b0b31c8c">&#9670;&nbsp;</a></span>create_dlpnode()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structdlp__node.html">dlp_node</a>* create_dlpnode </td>
+          <td class="memname"><a class="el" href="structdlp__node.html">dlp_node_t</a>* create_dlpnode </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
+          <td class="paramtype">void *const&#160;</td>
           <td class="paramname"><em>data</em></td><td>)</td>
           <td></td>
         </tr>
@@ -145,16 +218,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga5c19fd5ac916ec112b34afdb945c1d1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5c19fd5ac916ec112b34afdb945c1d1a">&#9670;&nbsp;</a></span>create_slnode()</h2>
+<a id="gab282eeba8a93cbdbdbc2f4455984707a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab282eeba8a93cbdbdbc2f4455984707a">&#9670;&nbsp;</a></span>create_slnode()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structsl__node.html">sl_node</a>* create_slnode </td>
+          <td class="memname"><a class="el" href="structsl__node.html">sl_node_t</a>* create_slnode </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
+          <td class="paramtype">void *const&#160;</td>
           <td class="paramname"><em>data</em></td><td>)</td>
           <td></td>
         </tr>
@@ -167,20 +240,20 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>pointer to newly created <a class="el" href="structsl__node.html">sl_node</a></dd></dl>
-<p>Node types, create and free </p>
+<p>Node types, core </p>
 
 </div>
 </div>
-<a id="ga0983e084126172e14bd5daf44d40e1dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0983e084126172e14bd5daf44d40e1dd">&#9670;&nbsp;</a></span>create_treenode()</h2>
+<a id="ga34170fe5863a0fe5d5c332cd0ef5f446"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga34170fe5863a0fe5d5c332cd0ef5f446">&#9670;&nbsp;</a></span>create_treenode()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structtree__node.html">tree_node</a>* create_treenode </td>
+          <td class="memname"><a class="el" href="structtree__node.html">tree_node_t</a>* create_treenode </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
+          <td class="paramtype">void *const&#160;</td>
           <td class="paramname"><em>data</em></td><td>)</td>
           <td></td>
         </tr>
@@ -196,8 +269,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gad1756e5087dd535a5884717daca771bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad1756e5087dd535a5884717daca771bb">&#9670;&nbsp;</a></span>free_dlnode()</h2>
+<a id="gaa7c361b8c1f6eeb795de2a118cb95983"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa7c361b8c1f6eeb795de2a118cb95983">&#9670;&nbsp;</a></span>free_dlnode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -205,7 +278,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void free_dlnode </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structdl__node.html">dl_node</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structdl__node.html">dl_node_t</a> *&#160;</td>
           <td class="paramname"><em>n</em></td><td>)</td>
           <td></td>
         </tr>
@@ -220,8 +293,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga2143e7aab3338e9be572be010a2d0820"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2143e7aab3338e9be572be010a2d0820">&#9670;&nbsp;</a></span>free_dlnode_seq()</h2>
+<a id="gae6a3c4796d24c9afc1a316d545358823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae6a3c4796d24c9afc1a316d545358823">&#9670;&nbsp;</a></span>free_dlnode_seq()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -229,7 +302,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void free_dlnode_seq </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structdl__node.html">dl_node</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structdl__node.html">dl_node_t</a> *&#160;</td>
           <td class="paramname"><em>n</em></td><td>)</td>
           <td></td>
         </tr>
@@ -244,8 +317,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga84c216cd565520135cd8f28b1661fcdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga84c216cd565520135cd8f28b1661fcdc">&#9670;&nbsp;</a></span>free_dlpnode()</h2>
+<a id="gad3b004d625153d11e2771915b17311de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad3b004d625153d11e2771915b17311de">&#9670;&nbsp;</a></span>free_dlpnode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -253,7 +326,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void free_dlpnode </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structdlp__node.html">dlp_node</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structdlp__node.html">dlp_node_t</a> *&#160;</td>
           <td class="paramname"><em>n</em></td><td>)</td>
           <td></td>
         </tr>
@@ -268,8 +341,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga4477b26121b223516c77fae83bc8e9e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4477b26121b223516c77fae83bc8e9e6">&#9670;&nbsp;</a></span>free_slnode()</h2>
+<a id="gaf9d96f91086dac62f8977675db8c3d68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf9d96f91086dac62f8977675db8c3d68">&#9670;&nbsp;</a></span>free_slnode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -277,7 +350,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void free_slnode </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structsl__node.html">sl_node</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structsl__node.html">sl_node_t</a> *&#160;</td>
           <td class="paramname"><em>n</em></td><td>)</td>
           <td></td>
         </tr>
@@ -292,8 +365,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga82e9b11c768db750c9235188b08eb5cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga82e9b11c768db750c9235188b08eb5cb">&#9670;&nbsp;</a></span>free_slnode_seq()</h2>
+<a id="gaf548ef71d8a7f73783ea04f0cc196d51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf548ef71d8a7f73783ea04f0cc196d51">&#9670;&nbsp;</a></span>free_slnode_seq()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -301,7 +374,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void free_slnode_seq </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structsl__node.html">sl_node</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structsl__node.html">sl_node_t</a> *&#160;</td>
           <td class="paramname"><em>n</em></td><td>)</td>
           <td></td>
         </tr>
@@ -309,15 +382,16 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Helper for clearing every sequentially linked <a class="el" href="structsl__node.html">sl_node</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>pointer to beginning of <a class="el" href="structsl__node.html">sl_node</a> sequence </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>pointer to beginning of <a class="el" href="structsl__node.html">sl_node</a> sequence</td></tr>
   </table>
   </dd>
 </dl>
+<p>Node types, derived </p>
 
 </div>
 </div>
-<a id="ga99ffc99102f732d742e997a52cd52a6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga99ffc99102f732d742e997a52cd52a6b">&#9670;&nbsp;</a></span>free_treenode()</h2>
+<a id="ga65448534c4bd664b4ea0a94cd62f5ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga65448534c4bd664b4ea0a94cd62f5ee4">&#9670;&nbsp;</a></span>free_treenode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -325,7 +399,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void free_treenode </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structtree__node.html">tree_node</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structtree__node.html">tree_node_t</a> *&#160;</td>
           <td class="paramname"><em>n</em></td><td>)</td>
           <td></td>
         </tr>
@@ -334,6 +408,188 @@ Functions</h2></td></tr>
 <p>Helper to fully free <a class="el" href="structtree__node.html">tree_node</a> instance and its data pointer. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>pointer to <a class="el" href="structtree__node.html">tree_node</a> instance </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga55d181ebd0cbdea88886a080a4aad10e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga55d181ebd0cbdea88886a080a4aad10e">&#9670;&nbsp;</a></span>map_dlnode_data_seq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void map_dlnode_data_seq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdl__node.html">dl_node_t</a> *const&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(void *, void *)&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>func_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>reverse</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Map a function to interact with each data pointer in a sequence of nodes with <em>node</em> pointer passed being the first. The function interacting will get a data pointer as first parameter and func_data as second. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>pointer to starting node </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>function pointer to user defined function </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">func_data</td><td>pointer to data for user defined function, NULL allowed </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reverese</td><td>boolean value, if left true/1 it movement is reversed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga5b32dabe4372cd69a50a075776b941d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5b32dabe4372cd69a50a075776b941d1">&#9670;&nbsp;</a></span>map_dlnode_seq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void map_dlnode_seq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdl__node.html">dl_node_t</a> *const&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(<a class="el" href="structdl__node.html">dl_node_t</a> *, void *)&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>func_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>reverse</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Map a function to interact with each dl_node_t in a sequence of nodes with <em>node</em> pointer passed being the first. The function interacting will get a dl_node_t pointer as first parameter and func_data as second. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>pointer to starting node </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>function pointer to user defined function </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">func_data</td><td>pointer to data for user defined function, NULL allowed </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reverese</td><td>boolean value, if left true/1 it movement is reversed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaa445a52ebb19bfd4adccd2bbe502d69c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa445a52ebb19bfd4adccd2bbe502d69c">&#9670;&nbsp;</a></span>map_slnode_data_seq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void map_slnode_data_seq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsl__node.html">sl_node_t</a> *const&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(void *, void *)&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>func_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Map a function to interact with each data pointer in a sequence of nodes with <em>node</em> pointer passed being the first. The function interacting will get a data pointer as first parameter and func_data as second. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>pointer to starting node </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>function pointer to user defined function </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">func_data</td><td>pointer to data for user defined function, NULL allowed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gace141186efdb9a3ceaab6e5fbf95857e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gace141186efdb9a3ceaab6e5fbf95857e">&#9670;&nbsp;</a></span>map_slnode_seq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void map_slnode_seq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsl__node.html">sl_node_t</a> *const&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(<a class="el" href="structsl__node.html">sl_node_t</a> *, void *)&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>func_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Map a function to interact with each sl_node_t in a sequence of nodes with <em>node</em> pointer passed being the first. The function interacting will get a sl_node_t pointer as first parameter and func_data as second. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>pointer to starting node </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>function pointer to user defined function </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">func_data</td><td>pointer to data for user defined function, NULL allowed </td></tr>
   </table>
   </dd>
 </dl>

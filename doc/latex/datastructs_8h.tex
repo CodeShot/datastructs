@@ -1,6 +1,8 @@
 \hypertarget{datastructs_8h}{}\doxysection{datastructs.\+h File Reference}
 \label{datastructs_8h}\index{datastructs.h@{datastructs.h}}
 {\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
 \doxysubsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
@@ -26,90 +28,140 @@ struct \mbox{\hyperlink{structbag}{bag}}
 \item 
 struct \mbox{\hyperlink{structtree}{tree}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{datastructs_8h_aa5101e98074434bd3541c2ea4c1eca07}\label{datastructs_8h_aa5101e98074434bd3541c2ea4c1eca07}} 
+typedef struct \mbox{\hyperlink{structsl__node}{sl\+\_\+node}} {\bfseries sl\+\_\+node\+\_\+t}
+\item 
+\mbox{\Hypertarget{datastructs_8h_a05200acdfd9775895724910059dd3fe2}\label{datastructs_8h_a05200acdfd9775895724910059dd3fe2}} 
+typedef struct \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} {\bfseries dl\+\_\+node\+\_\+t}
+\item 
+\mbox{\Hypertarget{datastructs_8h_a0478d4e8ea0fddcd9d86ee56fb34d37c}\label{datastructs_8h_a0478d4e8ea0fddcd9d86ee56fb34d37c}} 
+typedef struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} {\bfseries dlp\+\_\+node\+\_\+t}
+\item 
+\mbox{\Hypertarget{datastructs_8h_a2408a83ad1c7155197f3ab27403ebd20}\label{datastructs_8h_a2408a83ad1c7155197f3ab27403ebd20}} 
+typedef struct \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} {\bfseries tree\+\_\+node\+\_\+t}
+\item 
+\mbox{\Hypertarget{datastructs_8h_a4626fc2f61bed7e5faec5b4f459a02f7}\label{datastructs_8h_a4626fc2f61bed7e5faec5b4f459a02f7}} 
+typedef struct \mbox{\hyperlink{structstack}{stack}} {\bfseries stack\+\_\+t}
+\item 
+\mbox{\Hypertarget{datastructs_8h_aa8acf648f3b0c69d7e132fcc61dc58c7}\label{datastructs_8h_aa8acf648f3b0c69d7e132fcc61dc58c7}} 
+typedef struct \mbox{\hyperlink{structqueue}{queue}} {\bfseries queue\+\_\+t}
+\item 
+\mbox{\Hypertarget{datastructs_8h_a097d1f3a3800d8d0f0a6f529a71c5439}\label{datastructs_8h_a097d1f3a3800d8d0f0a6f529a71c5439}} 
+typedef struct \mbox{\hyperlink{structdeque}{deque}} {\bfseries deque\+\_\+t}
+\item 
+\mbox{\Hypertarget{datastructs_8h_aabd08cfd7893b1b0d401ce689de8c1b7}\label{datastructs_8h_aabd08cfd7893b1b0d401ce689de8c1b7}} 
+typedef struct \mbox{\hyperlink{structtree}{tree}} {\bfseries tree\+\_\+t}
+\item 
+\mbox{\Hypertarget{datastructs_8h_a1c7131d14c316fcade11f05c411bce8b}\label{datastructs_8h_a1c7131d14c316fcade11f05c411bce8b}} 
+typedef struct \mbox{\hyperlink{structset}{set}} {\bfseries set\+\_\+t}
+\item 
+\mbox{\Hypertarget{datastructs_8h_ae77c8368d171b8d28b714f062ae9d76e}\label{datastructs_8h_ae77c8368d171b8d28b714f062ae9d76e}} 
+typedef struct \mbox{\hyperlink{structbag}{bag}} {\bfseries bag\+\_\+t}
+\item 
+\mbox{\Hypertarget{datastructs_8h_a89ddadbd95c055a2d2dcf210b07bb44f}\label{datastructs_8h_a89ddadbd95c055a2d2dcf210b07bb44f}} 
+typedef struct \mbox{\hyperlink{structbinarytree}{binarytree}} {\bfseries binarytree\+\_\+t}
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structsl__node}{sl\+\_\+node}} $\ast$ \mbox{\hyperlink{group__Node_ga5c19fd5ac916ec112b34afdb945c1d1a}{create\+\_\+slnode}} (void $\ast$data)
+\mbox{\hyperlink{structsl__node}{sl\+\_\+node\+\_\+t}} $\ast$ \mbox{\hyperlink{group__Node_gab282eeba8a93cbdbdbc2f4455984707a}{create\+\_\+slnode}} (void $\ast$const data)
 \item 
-void \mbox{\hyperlink{group__Node_ga4477b26121b223516c77fae83bc8e9e6}{free\+\_\+slnode}} (struct \mbox{\hyperlink{structsl__node}{sl\+\_\+node}} $\ast$n)
+void \mbox{\hyperlink{group__Node_gaf9d96f91086dac62f8977675db8c3d68}{free\+\_\+slnode}} (\mbox{\hyperlink{structsl__node}{sl\+\_\+node\+\_\+t}} $\ast$n)
 \item 
-struct \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} $\ast$ \mbox{\hyperlink{group__Node_gadfde97b701dfc4580163167d043b89fb}{create\+\_\+dlnode}} (void $\ast$data)
+\mbox{\hyperlink{structdl__node}{dl\+\_\+node\+\_\+t}} $\ast$ \mbox{\hyperlink{group__Node_gacbce7c2a4ab9b29c4d73d711b90fb969}{create\+\_\+dlnode}} (void $\ast$const data)
 \item 
-void \mbox{\hyperlink{group__Node_gad1756e5087dd535a5884717daca771bb}{free\+\_\+dlnode}} (struct \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} $\ast$n)
+void \mbox{\hyperlink{group__Node_gaa7c361b8c1f6eeb795de2a118cb95983}{free\+\_\+dlnode}} (\mbox{\hyperlink{structdl__node}{dl\+\_\+node\+\_\+t}} $\ast$n)
 \item 
-struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} $\ast$ \mbox{\hyperlink{group__Node_gac876e12b1704071e274a5d22b8a53932}{create\+\_\+dlpnode}} (void $\ast$data)
+\mbox{\hyperlink{structdlp__node}{dlp\+\_\+node\+\_\+t}} $\ast$ \mbox{\hyperlink{group__Node_ga9267310b85f6430b624de912b0b31c8c}{create\+\_\+dlpnode}} (void $\ast$const data)
 \item 
-void \mbox{\hyperlink{group__Node_ga84c216cd565520135cd8f28b1661fcdc}{free\+\_\+dlpnode}} (struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} $\ast$n)
+void \mbox{\hyperlink{group__Node_gad3b004d625153d11e2771915b17311de}{free\+\_\+dlpnode}} (\mbox{\hyperlink{structdlp__node}{dlp\+\_\+node\+\_\+t}} $\ast$n)
 \item 
-struct \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} $\ast$ \mbox{\hyperlink{group__Node_ga0983e084126172e14bd5daf44d40e1dd}{create\+\_\+treenode}} (void $\ast$data)
+\mbox{\hyperlink{structtree__node}{tree\+\_\+node\+\_\+t}} $\ast$ \mbox{\hyperlink{group__Node_ga34170fe5863a0fe5d5c332cd0ef5f446}{create\+\_\+treenode}} (void $\ast$const data)
 \item 
-void \mbox{\hyperlink{group__Node_ga99ffc99102f732d742e997a52cd52a6b}{free\+\_\+treenode}} (struct \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} $\ast$n)
+void \mbox{\hyperlink{group__Node_ga65448534c4bd664b4ea0a94cd62f5ee4}{free\+\_\+treenode}} (\mbox{\hyperlink{structtree__node}{tree\+\_\+node\+\_\+t}} $\ast$n)
 \item 
-void \mbox{\hyperlink{group__Node_ga82e9b11c768db750c9235188b08eb5cb}{free\+\_\+slnode\+\_\+seq}} (struct \mbox{\hyperlink{structsl__node}{sl\+\_\+node}} $\ast$n)
+void \mbox{\hyperlink{group__Node_gaf548ef71d8a7f73783ea04f0cc196d51}{free\+\_\+slnode\+\_\+seq}} (\mbox{\hyperlink{structsl__node}{sl\+\_\+node\+\_\+t}} $\ast$n)
 \item 
-void \mbox{\hyperlink{group__Node_ga2143e7aab3338e9be572be010a2d0820}{free\+\_\+dlnode\+\_\+seq}} (struct \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} $\ast$n)
+void \mbox{\hyperlink{group__Node_gae6a3c4796d24c9afc1a316d545358823}{free\+\_\+dlnode\+\_\+seq}} (\mbox{\hyperlink{structdl__node}{dl\+\_\+node\+\_\+t}} $\ast$n)
 \item 
-struct \mbox{\hyperlink{structqueue}{queue}} $\ast$ \mbox{\hyperlink{group__Queue_ga00029e335cda45ae903e2ced584e391a}{create\+\_\+queue}} ()
+void \mbox{\hyperlink{group__Node_gace141186efdb9a3ceaab6e5fbf95857e}{map\+\_\+slnode\+\_\+seq}} (\mbox{\hyperlink{structsl__node}{sl\+\_\+node\+\_\+t}} $\ast$const node, void($\ast$func)(\mbox{\hyperlink{structsl__node}{sl\+\_\+node\+\_\+t}} $\ast$, void $\ast$), void $\ast$func\+\_\+data)
 \item 
-void \mbox{\hyperlink{group__Queue_ga514a2174af34164aa2a7f021b41fc8d7}{free\+\_\+queue}} (struct \mbox{\hyperlink{structqueue}{queue}} $\ast$q)
+void \mbox{\hyperlink{group__Node_ga5b32dabe4372cd69a50a075776b941d1}{map\+\_\+dlnode\+\_\+seq}} (\mbox{\hyperlink{structdl__node}{dl\+\_\+node\+\_\+t}} $\ast$const node, void($\ast$func)(\mbox{\hyperlink{structdl__node}{dl\+\_\+node\+\_\+t}} $\ast$, void $\ast$), void $\ast$func\+\_\+data, bool reverse)
 \item 
-void \mbox{\hyperlink{group__Queue_gad1e7d02ccf93534bfc877371523c8426}{add\+\_\+queue}} (struct \mbox{\hyperlink{structqueue}{queue}} $\ast$q, void $\ast$data)
+void \mbox{\hyperlink{group__Node_gaa445a52ebb19bfd4adccd2bbe502d69c}{map\+\_\+slnode\+\_\+data\+\_\+seq}} (\mbox{\hyperlink{structsl__node}{sl\+\_\+node\+\_\+t}} $\ast$const node, void($\ast$func)(void $\ast$, void $\ast$), void $\ast$func\+\_\+data)
 \item 
-void $\ast$ \mbox{\hyperlink{group__Queue_ga8810a26d9eb3b9ed40bd89ee7f8e3ef6}{pop\+\_\+queue}} (struct \mbox{\hyperlink{structqueue}{queue}} $\ast$q)
+void \mbox{\hyperlink{group__Node_ga55d181ebd0cbdea88886a080a4aad10e}{map\+\_\+dlnode\+\_\+data\+\_\+seq}} (\mbox{\hyperlink{structdl__node}{dl\+\_\+node\+\_\+t}} $\ast$const node, void($\ast$func)(void $\ast$, void $\ast$), void $\ast$func\+\_\+data, bool reverse)
 \item 
-struct \mbox{\hyperlink{structstack}{stack}} $\ast$ \mbox{\hyperlink{group__Stack_gaf991b6afe6bd16f944388fc91269a5be}{create\+\_\+stack}} ()
+uint32\+\_\+t \mbox{\hyperlink{group__Node_ga65bd26ba89de16607c773268432dd572}{count\+\_\+slnode\+\_\+seq}} (\mbox{\hyperlink{structsl__node}{sl\+\_\+node\+\_\+t}} $\ast$const node)
 \item 
-void \mbox{\hyperlink{group__Stack_gab5ead2093b4871d147ce22ede36de84f}{free\+\_\+stack}} (struct \mbox{\hyperlink{structstack}{stack}} $\ast$s)
+uint32\+\_\+t \mbox{\hyperlink{group__Node_ga650fbce606e7fa8c7c0d0fa5e8763d49}{count\+\_\+dlnode\+\_\+seq}} (\mbox{\hyperlink{structdl__node}{dl\+\_\+node\+\_\+t}} $\ast$const node, bool reverse)
 \item 
-void \mbox{\hyperlink{group__Stack_ga9b1911ef2001424b0e5b909f96a1d97d}{add\+\_\+stack}} (struct \mbox{\hyperlink{structstack}{stack}} $\ast$s, void $\ast$data)
+\mbox{\hyperlink{structqueue}{queue\+\_\+t}} $\ast$ \mbox{\hyperlink{group__Queue_ga8cbb47f21eedee20759ca5bbccad8ddb}{create\+\_\+queue}} ()
 \item 
-void $\ast$ \mbox{\hyperlink{group__Stack_ga5ed947d9781c236cb08d014c105f83ce}{pop\+\_\+stack}} (struct \mbox{\hyperlink{structstack}{stack}} $\ast$s)
+void \mbox{\hyperlink{group__Queue_ga30f1f24bedea323e0c478e61c2928248}{free\+\_\+queue}} (\mbox{\hyperlink{structqueue}{queue\+\_\+t}} $\ast$q)
 \item 
-struct \mbox{\hyperlink{structdeque}{deque}} $\ast$ \mbox{\hyperlink{group__Deque_ga87b945cc56c7e45584a76966aaeb7a59}{create\+\_\+deque}} ()
+void \mbox{\hyperlink{group__Queue_ga610753377e924dc85cfb3b3e13f09346}{add\+\_\+queue}} (\mbox{\hyperlink{structqueue}{queue\+\_\+t}} $\ast$const q, void $\ast$const data)
 \item 
-void \mbox{\hyperlink{group__Deque_gad4f581903db9b6380cec7e6f6a51e5e0}{free\+\_\+deque}} (struct \mbox{\hyperlink{structdeque}{deque}} $\ast$dq)
+void \mbox{\hyperlink{group__Queue_gac302ddb129b22a71e03f563bc74c0888}{pop\+\_\+queue}} (\mbox{\hyperlink{structqueue}{queue\+\_\+t}} $\ast$const q, void $\ast$data)
 \item 
-void \mbox{\hyperlink{group__Deque_ga729a37122ee7f31753b5a8fbc070d9b4}{add\+\_\+first\+\_\+deque}} (struct \mbox{\hyperlink{structdeque}{deque}} $\ast$dq, void $\ast$data)
+\mbox{\hyperlink{structstack}{stack\+\_\+t}} $\ast$ \mbox{\hyperlink{group__Stack_gac9dc5aff94e1776a3c070eff468acb8d}{create\+\_\+stack}} ()
 \item 
-void \mbox{\hyperlink{group__Deque_ga3c2350a42c9863f7ab1c483c50ebca65}{add\+\_\+last\+\_\+deque}} (struct \mbox{\hyperlink{structdeque}{deque}} $\ast$dq, void $\ast$data)
+void \mbox{\hyperlink{group__Stack_gacd3bfc432eeb36cffabbfe64b0922b32}{free\+\_\+stack}} (\mbox{\hyperlink{structstack}{stack\+\_\+t}} $\ast$s)
 \item 
-void $\ast$ \mbox{\hyperlink{group__Deque_ga61d14832aad1bce9d36d76d418713442}{pop\+\_\+first\+\_\+deque}} (struct \mbox{\hyperlink{structdeque}{deque}} $\ast$dq)
+void \mbox{\hyperlink{group__Stack_ga31d664cd6490021972abe421bb469332}{add\+\_\+stack}} (\mbox{\hyperlink{structstack}{stack\+\_\+t}} $\ast$const s, void $\ast$const data)
 \item 
-void $\ast$ \mbox{\hyperlink{group__Deque_gaf301c9120ce55ae6b09486ed3707b315}{pop\+\_\+last\+\_\+deque}} (struct \mbox{\hyperlink{structdeque}{deque}} $\ast$dq)
+void \mbox{\hyperlink{group__Stack_gafeb84f37a5796dbf79e9c340891e038f}{pop\+\_\+stack}} (\mbox{\hyperlink{structstack}{stack\+\_\+t}} $\ast$const s, void $\ast$data)
 \item 
-struct \mbox{\hyperlink{structbinarytree}{binarytree}} $\ast$ \mbox{\hyperlink{group__Binarytree_gae2547288735bcd7c7314f046a5e02079}{create\+\_\+binarytree}} ()
+\mbox{\hyperlink{structdeque}{deque\+\_\+t}} $\ast$ \mbox{\hyperlink{group__Deque_ga33bd2298167861e6e89c5d3339633c8c}{create\+\_\+deque}} ()
 \item 
-void \mbox{\hyperlink{group__Binarytree_ga6b8d18d4efb2d2ad083b52a6dfbb097b}{free\+\_\+binarytree}} (struct \mbox{\hyperlink{structbinarytree}{binarytree}} $\ast$t)
+void \mbox{\hyperlink{group__Deque_ga0482f4230c522c72db19627213b8e12f}{free\+\_\+deque}} (\mbox{\hyperlink{structdeque}{deque\+\_\+t}} $\ast$dq)
 \item 
-void \mbox{\hyperlink{group__Binarytree_ga9d12de708150a205b3b5a60342439b2b}{free\+\_\+sub\+\_\+binarytree}} (struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} $\ast$n)
+void \mbox{\hyperlink{group__Deque_ga3ffc33a64c7b41244dd24a95330c0994}{add\+\_\+first\+\_\+deque}} (\mbox{\hyperlink{structdeque}{deque\+\_\+t}} $\ast$const dq, void $\ast$const data)
 \item 
-int8\+\_\+t \mbox{\hyperlink{group__Binarytree_gac90a7c5b92eee8e896597de6cf2f04fd}{add\+\_\+binarytree}} (struct \mbox{\hyperlink{structbinarytree}{binarytree}} $\ast$t, void $\ast$data)
+void \mbox{\hyperlink{group__Deque_gac5dec135ea08f0f01057eed75d05063c}{add\+\_\+last\+\_\+deque}} (\mbox{\hyperlink{structdeque}{deque\+\_\+t}} $\ast$const dq, void $\ast$const data)
 \item 
-struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} $\ast$ \mbox{\hyperlink{group__Binarytree_gaff6a1b45819ebcebb6ff0d37c2591ff0}{find\+\_\+binarytree}} (struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} $\ast$n, void $\ast$data)
+void \mbox{\hyperlink{group__Deque_ga21148694cbab87baea8954628c2da36a}{pop\+\_\+first\+\_\+deque}} (\mbox{\hyperlink{structdeque}{deque\+\_\+t}} $\ast$const dq, void $\ast$data)
 \item 
-void $\ast$ \mbox{\hyperlink{group__Binarytree_gad0ff9a528a83a946f0f4d0bc4ef18001}{lowest\+\_\+binarytree}} (struct \mbox{\hyperlink{structbinarytree}{binarytree}} $\ast$t)
+void \mbox{\hyperlink{group__Deque_ga47fb864e4f97fb83f4f7154154a7b064}{pop\+\_\+last\+\_\+deque}} (\mbox{\hyperlink{structdeque}{deque\+\_\+t}} $\ast$const dq, void $\ast$data)
 \item 
-void $\ast$ \mbox{\hyperlink{group__Binarytree_gaec6dd4ee113cf0b54f71a3dcc21e413e}{highest\+\_\+binarytree}} (struct \mbox{\hyperlink{structbinarytree}{binarytree}} $\ast$t)
+\mbox{\hyperlink{structbinarytree}{binarytree\+\_\+t}} $\ast$ \mbox{\hyperlink{group__Binarytree_ga5b4ebf2e65ea563dc0391c8ae0c357c3}{create\+\_\+binarytree}} ()
 \item 
-struct \mbox{\hyperlink{structset}{set}} $\ast$ \mbox{\hyperlink{group__Set_ga4c72ae35502a70c93313e7faabb75f70}{create\+\_\+set}} ()
+void \mbox{\hyperlink{group__Binarytree_gad6172f43c6b9298125afa2256a893424}{free\+\_\+binarytree}} (\mbox{\hyperlink{structbinarytree}{binarytree\+\_\+t}} $\ast$t)
 \item 
-void \mbox{\hyperlink{group__Set_ga9379b253df297624bab5f1c0e177cea7}{free\+\_\+set}} (struct \mbox{\hyperlink{structset}{set}} $\ast$s)
+void \mbox{\hyperlink{group__Binarytree_gaf3609e2a11b9ccdf49dbe813e127e1e3}{free\+\_\+sub\+\_\+binarytree}} (\mbox{\hyperlink{structdlp__node}{dlp\+\_\+node\+\_\+t}} $\ast$n)
 \item 
-int8\+\_\+t \mbox{\hyperlink{group__Set_ga41a96c2a17b3551d3234bd5f97e81a75}{add\+\_\+set}} (struct \mbox{\hyperlink{structset}{set}} $\ast$s, void $\ast$data)
+int8\+\_\+t \mbox{\hyperlink{group__Binarytree_ga6f26c024065667bb1f877769a8f2552d}{add\+\_\+binarytree}} (\mbox{\hyperlink{structbinarytree}{binarytree\+\_\+t}} $\ast$const t, void $\ast$const data)
 \item 
-int8\+\_\+t \mbox{\hyperlink{group__Set_ga6e3cc34e8ed113b4d2ad113c16311d64}{find\+\_\+set}} (struct \mbox{\hyperlink{structset}{set}} $\ast$s, void $\ast$data)
+int8\+\_\+t \mbox{\hyperlink{group__Binarytree_gaaa48b519885eb3694e53e708ef83eaea}{del\+\_\+binarytree}} (\mbox{\hyperlink{structbinarytree}{binarytree\+\_\+t}} $\ast$const t, void $\ast$const data)
 \item 
-int8\+\_\+t \mbox{\hyperlink{group__Set_gaaa9a2215b54b78a15f197f3350f7fb36}{del\+\_\+set}} (struct \mbox{\hyperlink{structset}{set}} $\ast$s, void $\ast$data)
+\mbox{\hyperlink{structdlp__node}{dlp\+\_\+node\+\_\+t}} $\ast$ \mbox{\hyperlink{group__Binarytree_ga96e880afa2bbeb969d8d47054d596fff}{find\+\_\+binarytree}} (\mbox{\hyperlink{structdlp__node}{dlp\+\_\+node\+\_\+t}} $\ast$const n, void $\ast$const data)
+\item 
+void $\ast$ \mbox{\hyperlink{group__Binarytree_gae2d513ca675ea2d9c723053b9b20af58}{lowest\+\_\+binarytree}} (\mbox{\hyperlink{structbinarytree}{binarytree\+\_\+t}} $\ast$const t)
+\item 
+void $\ast$ \mbox{\hyperlink{group__Binarytree_ga75088ca5976ceda64bdce06809c22107}{highest\+\_\+binarytree}} (\mbox{\hyperlink{structbinarytree}{binarytree\+\_\+t}} $\ast$const t)
+\item 
+\mbox{\hyperlink{structset}{set\+\_\+t}} $\ast$ \mbox{\hyperlink{group__Set_ga5f3373624b0946f5033fa8ab5fd01262}{create\+\_\+set}} ()
+\item 
+void \mbox{\hyperlink{group__Set_gacd314cf51203cfe815694cca30996c6f}{free\+\_\+set}} (\mbox{\hyperlink{structset}{set\+\_\+t}} $\ast$s)
+\item 
+int8\+\_\+t \mbox{\hyperlink{group__Set_ga8b6ee41820d2e662723bf6fbd1cbe814}{add\+\_\+set}} (\mbox{\hyperlink{structset}{set\+\_\+t}} $\ast$const s, void $\ast$const data)
+\item 
+int8\+\_\+t \mbox{\hyperlink{group__Set_gaa730eadf3f923c268f52c2f59dc881e0}{find\+\_\+set}} (\mbox{\hyperlink{structset}{set\+\_\+t}} $\ast$const s, void $\ast$const data)
+\item 
+int8\+\_\+t \mbox{\hyperlink{group__Set_ga6be314c7ee4d92ed808872ec5298d985}{del\+\_\+set}} (\mbox{\hyperlink{structset}{set\+\_\+t}} $\ast$const s, void $\ast$const data)
 \item 
 struct \mbox{\hyperlink{structtree}{tree}} $\ast$ \mbox{\hyperlink{group__Tree_gab04526e4a67ad90fb7716ae3de299215}{create\+\_\+tree}} ()
 \item 
-void \mbox{\hyperlink{group__Tree_ga15f828f30cd22a5143c332ce0d1c6355}{free\+\_\+tree}} (struct \mbox{\hyperlink{structtree}{tree}} $\ast$t)
+void \mbox{\hyperlink{group__Tree_ga66f1cc8b6427839973726e1efb03232e}{free\+\_\+tree}} (\mbox{\hyperlink{structtree}{tree\+\_\+t}} $\ast$t)
 \item 
-int8\+\_\+t \mbox{\hyperlink{group__Tree_gad81d3252894b7d3305fc683a3783edef}{add\+\_\+child\+\_\+treenode}} (struct \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} $\ast$n, void $\ast$data)
+int8\+\_\+t \mbox{\hyperlink{group__Tree_ga881ae86da1d88c6a975828fa95931654}{add\+\_\+child\+\_\+treenode}} (\mbox{\hyperlink{structtree__node}{tree\+\_\+node\+\_\+t}} $\ast$n, void $\ast$data)
 \item 
-int8\+\_\+t {\bfseries del\+\_\+child\+\_\+treenode} (struct \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} $\ast$n, void $\ast$data)
+int8\+\_\+t {\bfseries del\+\_\+child\+\_\+treenode} (\mbox{\hyperlink{structtree__node}{tree\+\_\+node\+\_\+t}} $\ast$n, void $\ast$data)
 \item 
-struct \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} $\ast$ \mbox{\hyperlink{group__Tree_ga8c7114ba0a1e3f6993af51d5374eb753}{find\+\_\+tree}} (struct \mbox{\hyperlink{structtree}{tree}} $\ast$t, void $\ast$data)
+\mbox{\hyperlink{structtree__node}{tree\+\_\+node\+\_\+t}} $\ast$ \mbox{\hyperlink{group__Tree_ga07512f4cc6993d254f49d220ce66b549}{find\+\_\+tree}} (\mbox{\hyperlink{structtree}{tree\+\_\+t}} $\ast$t, void $\ast$data)
 \end{DoxyCompactItemize}
 
 
@@ -118,10 +170,10 @@ Datastructs uses different nodetypes to implement datastructures.
 
 
 \begin{DoxyItemize}
-\item \mbox{\hyperlink{structsl__node}{sl\+\_\+node}} {\itshape for stack and queue}
-\item \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} {\itshape for deque}
-\item \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} {\itshape for binarytree}
-\item \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} {\itshape for tree}
+\item sl\+\_\+node\+\_\+t {\itshape for stack and queue}
+\item dl\+\_\+node\+\_\+t {\itshape for deque}
+\item dlp\+\_\+node\+\_\+t {\itshape for binarytree}
+\item tree\+\_\+node\+\_\+t {\itshape for tree}
 \end{DoxyItemize}
 
 The primary intentended use case of this library would be without interacting with node objects.
@@ -141,9 +193,9 @@ All datastructures have been implemented and tested with explicit pointer types 
 
 Roadmap\+:
 \begin{DoxyItemize}
-\item {\bfseries{general manner of determininglikeness of data based on pointer size}}
-\item {\bfseries{add overall support for variadic arguments}}
-\item {\bfseries{consider naming conventions early on}}
-\item {\bfseries{consider macros for setting overall behaviors, as choice of implementation}}
-\item {\bfseries{implement push\&pop-\/stack queue for to investigate macros to alternate implementations}} 
+\item {\bfseries{general manner of determining likeness of data based on pointer size}}
+\item {\bfseries{considering\+: add overall support for variadic arguments}}
+\item {\bfseries{naming conventions must be resolved}}
+\item {\bfseries{consider how to implement datastructure properties}}
+\item {\bfseries{implement push\&pop-\/stack queue}} 
 \end{DoxyItemize}

@@ -3,25 +3,37 @@
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structsl__node}{sl\+\_\+node}} $\ast$ \mbox{\hyperlink{group__Node_ga5c19fd5ac916ec112b34afdb945c1d1a}{create\+\_\+slnode}} (void $\ast$data)
+\mbox{\hyperlink{structsl__node}{sl\+\_\+node\+\_\+t}} $\ast$ \mbox{\hyperlink{group__Node_gab282eeba8a93cbdbdbc2f4455984707a}{create\+\_\+slnode}} (void $\ast$const data)
 \item 
-void \mbox{\hyperlink{group__Node_ga4477b26121b223516c77fae83bc8e9e6}{free\+\_\+slnode}} (struct \mbox{\hyperlink{structsl__node}{sl\+\_\+node}} $\ast$n)
+void \mbox{\hyperlink{group__Node_gaf9d96f91086dac62f8977675db8c3d68}{free\+\_\+slnode}} (\mbox{\hyperlink{structsl__node}{sl\+\_\+node\+\_\+t}} $\ast$n)
 \item 
-struct \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} $\ast$ \mbox{\hyperlink{group__Node_gadfde97b701dfc4580163167d043b89fb}{create\+\_\+dlnode}} (void $\ast$data)
+\mbox{\hyperlink{structdl__node}{dl\+\_\+node\+\_\+t}} $\ast$ \mbox{\hyperlink{group__Node_gacbce7c2a4ab9b29c4d73d711b90fb969}{create\+\_\+dlnode}} (void $\ast$const data)
 \item 
-void \mbox{\hyperlink{group__Node_gad1756e5087dd535a5884717daca771bb}{free\+\_\+dlnode}} (struct \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} $\ast$n)
+void \mbox{\hyperlink{group__Node_gaa7c361b8c1f6eeb795de2a118cb95983}{free\+\_\+dlnode}} (\mbox{\hyperlink{structdl__node}{dl\+\_\+node\+\_\+t}} $\ast$n)
 \item 
-struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} $\ast$ \mbox{\hyperlink{group__Node_gac876e12b1704071e274a5d22b8a53932}{create\+\_\+dlpnode}} (void $\ast$data)
+\mbox{\hyperlink{structdlp__node}{dlp\+\_\+node\+\_\+t}} $\ast$ \mbox{\hyperlink{group__Node_ga9267310b85f6430b624de912b0b31c8c}{create\+\_\+dlpnode}} (void $\ast$const data)
 \item 
-void \mbox{\hyperlink{group__Node_ga84c216cd565520135cd8f28b1661fcdc}{free\+\_\+dlpnode}} (struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} $\ast$n)
+void \mbox{\hyperlink{group__Node_gad3b004d625153d11e2771915b17311de}{free\+\_\+dlpnode}} (\mbox{\hyperlink{structdlp__node}{dlp\+\_\+node\+\_\+t}} $\ast$n)
 \item 
-struct \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} $\ast$ \mbox{\hyperlink{group__Node_ga0983e084126172e14bd5daf44d40e1dd}{create\+\_\+treenode}} (void $\ast$data)
+\mbox{\hyperlink{structtree__node}{tree\+\_\+node\+\_\+t}} $\ast$ \mbox{\hyperlink{group__Node_ga34170fe5863a0fe5d5c332cd0ef5f446}{create\+\_\+treenode}} (void $\ast$const data)
 \item 
-void \mbox{\hyperlink{group__Node_ga99ffc99102f732d742e997a52cd52a6b}{free\+\_\+treenode}} (struct \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} $\ast$n)
+void \mbox{\hyperlink{group__Node_ga65448534c4bd664b4ea0a94cd62f5ee4}{free\+\_\+treenode}} (\mbox{\hyperlink{structtree__node}{tree\+\_\+node\+\_\+t}} $\ast$n)
 \item 
-void \mbox{\hyperlink{group__Node_ga82e9b11c768db750c9235188b08eb5cb}{free\+\_\+slnode\+\_\+seq}} (struct \mbox{\hyperlink{structsl__node}{sl\+\_\+node}} $\ast$n)
+void \mbox{\hyperlink{group__Node_gaf548ef71d8a7f73783ea04f0cc196d51}{free\+\_\+slnode\+\_\+seq}} (\mbox{\hyperlink{structsl__node}{sl\+\_\+node\+\_\+t}} $\ast$n)
 \item 
-void \mbox{\hyperlink{group__Node_ga2143e7aab3338e9be572be010a2d0820}{free\+\_\+dlnode\+\_\+seq}} (struct \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} $\ast$n)
+void \mbox{\hyperlink{group__Node_gae6a3c4796d24c9afc1a316d545358823}{free\+\_\+dlnode\+\_\+seq}} (\mbox{\hyperlink{structdl__node}{dl\+\_\+node\+\_\+t}} $\ast$n)
+\item 
+void \mbox{\hyperlink{group__Node_gace141186efdb9a3ceaab6e5fbf95857e}{map\+\_\+slnode\+\_\+seq}} (\mbox{\hyperlink{structsl__node}{sl\+\_\+node\+\_\+t}} $\ast$const node, void($\ast$func)(\mbox{\hyperlink{structsl__node}{sl\+\_\+node\+\_\+t}} $\ast$, void $\ast$), void $\ast$func\+\_\+data)
+\item 
+void \mbox{\hyperlink{group__Node_ga5b32dabe4372cd69a50a075776b941d1}{map\+\_\+dlnode\+\_\+seq}} (\mbox{\hyperlink{structdl__node}{dl\+\_\+node\+\_\+t}} $\ast$const node, void($\ast$func)(\mbox{\hyperlink{structdl__node}{dl\+\_\+node\+\_\+t}} $\ast$, void $\ast$), void $\ast$func\+\_\+data, bool reverse)
+\item 
+void \mbox{\hyperlink{group__Node_gaa445a52ebb19bfd4adccd2bbe502d69c}{map\+\_\+slnode\+\_\+data\+\_\+seq}} (\mbox{\hyperlink{structsl__node}{sl\+\_\+node\+\_\+t}} $\ast$const node, void($\ast$func)(void $\ast$, void $\ast$), void $\ast$func\+\_\+data)
+\item 
+void \mbox{\hyperlink{group__Node_ga55d181ebd0cbdea88886a080a4aad10e}{map\+\_\+dlnode\+\_\+data\+\_\+seq}} (\mbox{\hyperlink{structdl__node}{dl\+\_\+node\+\_\+t}} $\ast$const node, void($\ast$func)(void $\ast$, void $\ast$), void $\ast$func\+\_\+data, bool reverse)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__Node_ga65bd26ba89de16607c773268432dd572}{count\+\_\+slnode\+\_\+seq}} (\mbox{\hyperlink{structsl__node}{sl\+\_\+node\+\_\+t}} $\ast$const node)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__Node_ga650fbce606e7fa8c7c0d0fa5e8763d49}{count\+\_\+dlnode\+\_\+seq}} (\mbox{\hyperlink{structdl__node}{dl\+\_\+node\+\_\+t}} $\ast$const node, bool reverse)
 \end{DoxyCompactItemize}
 
 
@@ -29,11 +41,41 @@ void \mbox{\hyperlink{group__Node_ga2143e7aab3338e9be572be010a2d0820}{free\+\_\+
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{group__Node_gadfde97b701dfc4580163167d043b89fb}\label{group__Node_gadfde97b701dfc4580163167d043b89fb}} 
+\mbox{\Hypertarget{group__Node_ga650fbce606e7fa8c7c0d0fa5e8763d49}\label{group__Node_ga650fbce606e7fa8c7c0d0fa5e8763d49}} 
+\index{Node functions@{Node functions}!count\_dlnode\_seq@{count\_dlnode\_seq}}
+\index{count\_dlnode\_seq@{count\_dlnode\_seq}!Node functions@{Node functions}}
+\doxysubsubsection{\texorpdfstring{count\_dlnode\_seq()}{count\_dlnode\_seq()}}
+{\footnotesize\ttfamily uint32\+\_\+t count\+\_\+dlnode\+\_\+seq (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdl__node}{dl\+\_\+node\+\_\+t}} $\ast$const}]{node,  }\item[{bool}]{reverse }\end{DoxyParamCaption})}
+
+Count the number of nodes a dl\+\_\+node\+\_\+t sequence us from and inlcluding {\itshape node}. 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em node} & pointer to start of count \\
+\hline
+\mbox{\texttt{ in}}  & {\em reverese} & boolean value, if left true/1 it movement is reversed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nuber of nodes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Node_ga65bd26ba89de16607c773268432dd572}\label{group__Node_ga65bd26ba89de16607c773268432dd572}} 
+\index{Node functions@{Node functions}!count\_slnode\_seq@{count\_slnode\_seq}}
+\index{count\_slnode\_seq@{count\_slnode\_seq}!Node functions@{Node functions}}
+\doxysubsubsection{\texorpdfstring{count\_slnode\_seq()}{count\_slnode\_seq()}}
+{\footnotesize\ttfamily uint32\+\_\+t count\+\_\+slnode\+\_\+seq (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsl__node}{sl\+\_\+node\+\_\+t}} $\ast$const}]{node }\end{DoxyParamCaption})}
+
+Count the number of nodes a sl\+\_\+node\+\_\+t sequence us from and inlcluding {\itshape node}. 
+\begin{DoxyParams}{Parameters}
+{\em node} & pointer to start of count \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of nodes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__Node_gacbce7c2a4ab9b29c4d73d711b90fb969}\label{group__Node_gacbce7c2a4ab9b29c4d73d711b90fb969}} 
 \index{Node functions@{Node functions}!create\_dlnode@{create\_dlnode}}
 \index{create\_dlnode@{create\_dlnode}!Node functions@{Node functions}}
 \doxysubsubsection{\texorpdfstring{create\_dlnode()}{create\_dlnode()}}
-{\footnotesize\ttfamily struct \mbox{\hyperlink{structdl__node}{dl\+\_\+node}}$\ast$ create\+\_\+dlnode (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdl__node}{dl\+\_\+node\+\_\+t}}$\ast$ create\+\_\+dlnode (\begin{DoxyParamCaption}\item[{void $\ast$const}]{data }\end{DoxyParamCaption})}
 
 Create a \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} instance. 
 \begin{DoxyParams}[1]{Parameters}
@@ -43,11 +85,11 @@ Create a \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} instance.
 \begin{DoxyReturn}{Returns}
 pointer to newly created \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} 
 \end{DoxyReturn}
-\mbox{\Hypertarget{group__Node_gac876e12b1704071e274a5d22b8a53932}\label{group__Node_gac876e12b1704071e274a5d22b8a53932}} 
+\mbox{\Hypertarget{group__Node_ga9267310b85f6430b624de912b0b31c8c}\label{group__Node_ga9267310b85f6430b624de912b0b31c8c}} 
 \index{Node functions@{Node functions}!create\_dlpnode@{create\_dlpnode}}
 \index{create\_dlpnode@{create\_dlpnode}!Node functions@{Node functions}}
 \doxysubsubsection{\texorpdfstring{create\_dlpnode()}{create\_dlpnode()}}
-{\footnotesize\ttfamily struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}}$\ast$ create\+\_\+dlpnode (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node\+\_\+t}}$\ast$ create\+\_\+dlpnode (\begin{DoxyParamCaption}\item[{void $\ast$const}]{data }\end{DoxyParamCaption})}
 
 Create a \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} instance. 
 \begin{DoxyParams}[1]{Parameters}
@@ -57,11 +99,11 @@ Create a \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} instance.
 \begin{DoxyReturn}{Returns}
 pointer to newly created \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} 
 \end{DoxyReturn}
-\mbox{\Hypertarget{group__Node_ga5c19fd5ac916ec112b34afdb945c1d1a}\label{group__Node_ga5c19fd5ac916ec112b34afdb945c1d1a}} 
+\mbox{\Hypertarget{group__Node_gab282eeba8a93cbdbdbc2f4455984707a}\label{group__Node_gab282eeba8a93cbdbdbc2f4455984707a}} 
 \index{Node functions@{Node functions}!create\_slnode@{create\_slnode}}
 \index{create\_slnode@{create\_slnode}!Node functions@{Node functions}}
 \doxysubsubsection{\texorpdfstring{create\_slnode()}{create\_slnode()}}
-{\footnotesize\ttfamily struct \mbox{\hyperlink{structsl__node}{sl\+\_\+node}}$\ast$ create\+\_\+slnode (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsl__node}{sl\+\_\+node\+\_\+t}}$\ast$ create\+\_\+slnode (\begin{DoxyParamCaption}\item[{void $\ast$const}]{data }\end{DoxyParamCaption})}
 
 Create a \mbox{\hyperlink{structsl__node}{sl\+\_\+node}} instance. 
 \begin{DoxyParams}[1]{Parameters}
@@ -71,11 +113,11 @@ Create a \mbox{\hyperlink{structsl__node}{sl\+\_\+node}} instance.
 \begin{DoxyReturn}{Returns}
 pointer to newly created \mbox{\hyperlink{structsl__node}{sl\+\_\+node}}
 \end{DoxyReturn}
-Node types, create and free \mbox{\Hypertarget{group__Node_ga0983e084126172e14bd5daf44d40e1dd}\label{group__Node_ga0983e084126172e14bd5daf44d40e1dd}} 
+Node types, core \mbox{\Hypertarget{group__Node_ga34170fe5863a0fe5d5c332cd0ef5f446}\label{group__Node_ga34170fe5863a0fe5d5c332cd0ef5f446}} 
 \index{Node functions@{Node functions}!create\_treenode@{create\_treenode}}
 \index{create\_treenode@{create\_treenode}!Node functions@{Node functions}}
 \doxysubsubsection{\texorpdfstring{create\_treenode()}{create\_treenode()}}
-{\footnotesize\ttfamily struct \mbox{\hyperlink{structtree__node}{tree\+\_\+node}}$\ast$ create\+\_\+treenode (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtree__node}{tree\+\_\+node\+\_\+t}}$\ast$ create\+\_\+treenode (\begin{DoxyParamCaption}\item[{void $\ast$const}]{data }\end{DoxyParamCaption})}
 
 Create a \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} instance. 
 \begin{DoxyParams}[1]{Parameters}
@@ -85,69 +127,133 @@ Create a \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} instance.
 \begin{DoxyReturn}{Returns}
 pointer to newly created \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} 
 \end{DoxyReturn}
-\mbox{\Hypertarget{group__Node_gad1756e5087dd535a5884717daca771bb}\label{group__Node_gad1756e5087dd535a5884717daca771bb}} 
+\mbox{\Hypertarget{group__Node_gaa7c361b8c1f6eeb795de2a118cb95983}\label{group__Node_gaa7c361b8c1f6eeb795de2a118cb95983}} 
 \index{Node functions@{Node functions}!free\_dlnode@{free\_dlnode}}
 \index{free\_dlnode@{free\_dlnode}!Node functions@{Node functions}}
 \doxysubsubsection{\texorpdfstring{free\_dlnode()}{free\_dlnode()}}
-{\footnotesize\ttfamily void free\+\_\+dlnode (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} $\ast$}]{n }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void free\+\_\+dlnode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdl__node}{dl\+\_\+node\+\_\+t}} $\ast$}]{n }\end{DoxyParamCaption})}
 
 Helper to fully free \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} instance and its data pointer. 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em n} & pointer to \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} instance \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{group__Node_ga2143e7aab3338e9be572be010a2d0820}\label{group__Node_ga2143e7aab3338e9be572be010a2d0820}} 
+\mbox{\Hypertarget{group__Node_gae6a3c4796d24c9afc1a316d545358823}\label{group__Node_gae6a3c4796d24c9afc1a316d545358823}} 
 \index{Node functions@{Node functions}!free\_dlnode\_seq@{free\_dlnode\_seq}}
 \index{free\_dlnode\_seq@{free\_dlnode\_seq}!Node functions@{Node functions}}
 \doxysubsubsection{\texorpdfstring{free\_dlnode\_seq()}{free\_dlnode\_seq()}}
-{\footnotesize\ttfamily void free\+\_\+dlnode\+\_\+seq (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} $\ast$}]{n }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void free\+\_\+dlnode\+\_\+seq (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdl__node}{dl\+\_\+node\+\_\+t}} $\ast$}]{n }\end{DoxyParamCaption})}
 
 Helper for clearing every sequentially linked \mbox{\hyperlink{structdl__node}{dl\+\_\+node}}. 
 \begin{DoxyParams}{Parameters}
 {\em \mbox{[}n\mbox{]}} & n pointer to beginning of \mbox{\hyperlink{structdl__node}{dl\+\_\+node}} sequence \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{group__Node_ga84c216cd565520135cd8f28b1661fcdc}\label{group__Node_ga84c216cd565520135cd8f28b1661fcdc}} 
+\mbox{\Hypertarget{group__Node_gad3b004d625153d11e2771915b17311de}\label{group__Node_gad3b004d625153d11e2771915b17311de}} 
 \index{Node functions@{Node functions}!free\_dlpnode@{free\_dlpnode}}
 \index{free\_dlpnode@{free\_dlpnode}!Node functions@{Node functions}}
 \doxysubsubsection{\texorpdfstring{free\_dlpnode()}{free\_dlpnode()}}
-{\footnotesize\ttfamily void free\+\_\+dlpnode (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} $\ast$}]{n }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void free\+\_\+dlpnode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdlp__node}{dlp\+\_\+node\+\_\+t}} $\ast$}]{n }\end{DoxyParamCaption})}
 
 Helper to fully free \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} instance and its data pointer. 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em n} & pointer to \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} instance \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{group__Node_ga4477b26121b223516c77fae83bc8e9e6}\label{group__Node_ga4477b26121b223516c77fae83bc8e9e6}} 
+\mbox{\Hypertarget{group__Node_gaf9d96f91086dac62f8977675db8c3d68}\label{group__Node_gaf9d96f91086dac62f8977675db8c3d68}} 
 \index{Node functions@{Node functions}!free\_slnode@{free\_slnode}}
 \index{free\_slnode@{free\_slnode}!Node functions@{Node functions}}
 \doxysubsubsection{\texorpdfstring{free\_slnode()}{free\_slnode()}}
-{\footnotesize\ttfamily void free\+\_\+slnode (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsl__node}{sl\+\_\+node}} $\ast$}]{n }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void free\+\_\+slnode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsl__node}{sl\+\_\+node\+\_\+t}} $\ast$}]{n }\end{DoxyParamCaption})}
 
 Helper to fully free \mbox{\hyperlink{structsl__node}{sl\+\_\+node}} instance and its data pointer. 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em n} & pointer to \mbox{\hyperlink{structsl__node}{sl\+\_\+node}} instance \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{group__Node_ga82e9b11c768db750c9235188b08eb5cb}\label{group__Node_ga82e9b11c768db750c9235188b08eb5cb}} 
+\mbox{\Hypertarget{group__Node_gaf548ef71d8a7f73783ea04f0cc196d51}\label{group__Node_gaf548ef71d8a7f73783ea04f0cc196d51}} 
 \index{Node functions@{Node functions}!free\_slnode\_seq@{free\_slnode\_seq}}
 \index{free\_slnode\_seq@{free\_slnode\_seq}!Node functions@{Node functions}}
 \doxysubsubsection{\texorpdfstring{free\_slnode\_seq()}{free\_slnode\_seq()}}
-{\footnotesize\ttfamily void free\+\_\+slnode\+\_\+seq (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsl__node}{sl\+\_\+node}} $\ast$}]{n }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void free\+\_\+slnode\+\_\+seq (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsl__node}{sl\+\_\+node\+\_\+t}} $\ast$}]{n }\end{DoxyParamCaption})}
 
 Helper for clearing every sequentially linked \mbox{\hyperlink{structsl__node}{sl\+\_\+node}}. 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em n} & pointer to beginning of \mbox{\hyperlink{structsl__node}{sl\+\_\+node}} sequence \\
+\mbox{\texttt{ in}}  & {\em n} & pointer to beginning of \mbox{\hyperlink{structsl__node}{sl\+\_\+node}} sequence\\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{group__Node_ga99ffc99102f732d742e997a52cd52a6b}\label{group__Node_ga99ffc99102f732d742e997a52cd52a6b}} 
+Node types, derived \mbox{\Hypertarget{group__Node_ga65448534c4bd664b4ea0a94cd62f5ee4}\label{group__Node_ga65448534c4bd664b4ea0a94cd62f5ee4}} 
 \index{Node functions@{Node functions}!free\_treenode@{free\_treenode}}
 \index{free\_treenode@{free\_treenode}!Node functions@{Node functions}}
 \doxysubsubsection{\texorpdfstring{free\_treenode()}{free\_treenode()}}
-{\footnotesize\ttfamily void free\+\_\+treenode (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} $\ast$}]{n }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void free\+\_\+treenode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtree__node}{tree\+\_\+node\+\_\+t}} $\ast$}]{n }\end{DoxyParamCaption})}
 
 Helper to fully free \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} instance and its data pointer. 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em n} & pointer to \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} instance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Node_ga55d181ebd0cbdea88886a080a4aad10e}\label{group__Node_ga55d181ebd0cbdea88886a080a4aad10e}} 
+\index{Node functions@{Node functions}!map\_dlnode\_data\_seq@{map\_dlnode\_data\_seq}}
+\index{map\_dlnode\_data\_seq@{map\_dlnode\_data\_seq}!Node functions@{Node functions}}
+\doxysubsubsection{\texorpdfstring{map\_dlnode\_data\_seq()}{map\_dlnode\_data\_seq()}}
+{\footnotesize\ttfamily void map\+\_\+dlnode\+\_\+data\+\_\+seq (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdl__node}{dl\+\_\+node\+\_\+t}} $\ast$const}]{node,  }\item[{void($\ast$)(void $\ast$, void $\ast$)}]{func,  }\item[{void $\ast$}]{func\+\_\+data,  }\item[{bool}]{reverse }\end{DoxyParamCaption})}
+
+Map a function to interact with each data pointer in a sequence of nodes with {\itshape node} pointer passed being the first. The function interacting will get a data pointer as first parameter and func\+\_\+data as second. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node} & pointer to starting node \\
+\hline
+\mbox{\texttt{ in}}  & {\em func} & function pointer to user defined function \\
+\hline
+\mbox{\texttt{ out}}  & {\em func\+\_\+data} & pointer to data for user defined function, N\+U\+LL allowed \\
+\hline
+\mbox{\texttt{ in}}  & {\em reverese} & boolean value, if left true/1 it movement is reversed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Node_ga5b32dabe4372cd69a50a075776b941d1}\label{group__Node_ga5b32dabe4372cd69a50a075776b941d1}} 
+\index{Node functions@{Node functions}!map\_dlnode\_seq@{map\_dlnode\_seq}}
+\index{map\_dlnode\_seq@{map\_dlnode\_seq}!Node functions@{Node functions}}
+\doxysubsubsection{\texorpdfstring{map\_dlnode\_seq()}{map\_dlnode\_seq()}}
+{\footnotesize\ttfamily void map\+\_\+dlnode\+\_\+seq (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdl__node}{dl\+\_\+node\+\_\+t}} $\ast$const}]{node,  }\item[{void($\ast$)(\mbox{\hyperlink{structdl__node}{dl\+\_\+node\+\_\+t}} $\ast$, void $\ast$)}]{func,  }\item[{void $\ast$}]{func\+\_\+data,  }\item[{bool}]{reverse }\end{DoxyParamCaption})}
+
+Map a function to interact with each dl\+\_\+node\+\_\+t in a sequence of nodes with {\itshape node} pointer passed being the first. The function interacting will get a dl\+\_\+node\+\_\+t pointer as first parameter and func\+\_\+data as second. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node} & pointer to starting node \\
+\hline
+\mbox{\texttt{ in}}  & {\em func} & function pointer to user defined function \\
+\hline
+\mbox{\texttt{ out}}  & {\em func\+\_\+data} & pointer to data for user defined function, N\+U\+LL allowed \\
+\hline
+\mbox{\texttt{ in}}  & {\em reverese} & boolean value, if left true/1 it movement is reversed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Node_gaa445a52ebb19bfd4adccd2bbe502d69c}\label{group__Node_gaa445a52ebb19bfd4adccd2bbe502d69c}} 
+\index{Node functions@{Node functions}!map\_slnode\_data\_seq@{map\_slnode\_data\_seq}}
+\index{map\_slnode\_data\_seq@{map\_slnode\_data\_seq}!Node functions@{Node functions}}
+\doxysubsubsection{\texorpdfstring{map\_slnode\_data\_seq()}{map\_slnode\_data\_seq()}}
+{\footnotesize\ttfamily void map\+\_\+slnode\+\_\+data\+\_\+seq (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsl__node}{sl\+\_\+node\+\_\+t}} $\ast$const}]{node,  }\item[{void($\ast$)(void $\ast$, void $\ast$)}]{func,  }\item[{void $\ast$}]{func\+\_\+data }\end{DoxyParamCaption})}
+
+Map a function to interact with each data pointer in a sequence of nodes with {\itshape node} pointer passed being the first. The function interacting will get a data pointer as first parameter and func\+\_\+data as second. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node} & pointer to starting node \\
+\hline
+\mbox{\texttt{ in}}  & {\em func} & function pointer to user defined function \\
+\hline
+\mbox{\texttt{ out}}  & {\em func\+\_\+data} & pointer to data for user defined function, N\+U\+LL allowed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Node_gace141186efdb9a3ceaab6e5fbf95857e}\label{group__Node_gace141186efdb9a3ceaab6e5fbf95857e}} 
+\index{Node functions@{Node functions}!map\_slnode\_seq@{map\_slnode\_seq}}
+\index{map\_slnode\_seq@{map\_slnode\_seq}!Node functions@{Node functions}}
+\doxysubsubsection{\texorpdfstring{map\_slnode\_seq()}{map\_slnode\_seq()}}
+{\footnotesize\ttfamily void map\+\_\+slnode\+\_\+seq (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsl__node}{sl\+\_\+node\+\_\+t}} $\ast$const}]{node,  }\item[{void($\ast$)(\mbox{\hyperlink{structsl__node}{sl\+\_\+node\+\_\+t}} $\ast$, void $\ast$)}]{func,  }\item[{void $\ast$}]{func\+\_\+data }\end{DoxyParamCaption})}
+
+Map a function to interact with each sl\+\_\+node\+\_\+t in a sequence of nodes with {\itshape node} pointer passed being the first. The function interacting will get a sl\+\_\+node\+\_\+t pointer as first parameter and func\+\_\+data as second. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node} & pointer to starting node \\
+\hline
+\mbox{\texttt{ in}}  & {\em func} & function pointer to user defined function \\
+\hline
+\mbox{\texttt{ out}}  & {\em func\+\_\+data} & pointer to data for user defined function, N\+U\+LL allowed \\
 \hline
 \end{DoxyParams}

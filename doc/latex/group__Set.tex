@@ -3,15 +3,15 @@
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structset}{set}} $\ast$ \mbox{\hyperlink{group__Set_ga4c72ae35502a70c93313e7faabb75f70}{create\+\_\+set}} ()
+\mbox{\hyperlink{structset}{set\+\_\+t}} $\ast$ \mbox{\hyperlink{group__Set_ga5f3373624b0946f5033fa8ab5fd01262}{create\+\_\+set}} ()
 \item 
-void \mbox{\hyperlink{group__Set_ga9379b253df297624bab5f1c0e177cea7}{free\+\_\+set}} (struct \mbox{\hyperlink{structset}{set}} $\ast$s)
+void \mbox{\hyperlink{group__Set_gacd314cf51203cfe815694cca30996c6f}{free\+\_\+set}} (\mbox{\hyperlink{structset}{set\+\_\+t}} $\ast$s)
 \item 
-int8\+\_\+t \mbox{\hyperlink{group__Set_ga41a96c2a17b3551d3234bd5f97e81a75}{add\+\_\+set}} (struct \mbox{\hyperlink{structset}{set}} $\ast$s, void $\ast$data)
+int8\+\_\+t \mbox{\hyperlink{group__Set_ga8b6ee41820d2e662723bf6fbd1cbe814}{add\+\_\+set}} (\mbox{\hyperlink{structset}{set\+\_\+t}} $\ast$const s, void $\ast$const data)
 \item 
-int8\+\_\+t \mbox{\hyperlink{group__Set_ga6e3cc34e8ed113b4d2ad113c16311d64}{find\+\_\+set}} (struct \mbox{\hyperlink{structset}{set}} $\ast$s, void $\ast$data)
+int8\+\_\+t \mbox{\hyperlink{group__Set_gaa730eadf3f923c268f52c2f59dc881e0}{find\+\_\+set}} (\mbox{\hyperlink{structset}{set\+\_\+t}} $\ast$const s, void $\ast$const data)
 \item 
-int8\+\_\+t \mbox{\hyperlink{group__Set_gaaa9a2215b54b78a15f197f3350f7fb36}{del\+\_\+set}} (struct \mbox{\hyperlink{structset}{set}} $\ast$s, void $\ast$data)
+int8\+\_\+t \mbox{\hyperlink{group__Set_ga6be314c7ee4d92ed808872ec5298d985}{del\+\_\+set}} (\mbox{\hyperlink{structset}{set\+\_\+t}} $\ast$const s, void $\ast$const data)
 \end{DoxyCompactItemize}
 
 
@@ -19,11 +19,11 @@ int8\+\_\+t \mbox{\hyperlink{group__Set_gaaa9a2215b54b78a15f197f3350f7fb36}{del\
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{group__Set_ga41a96c2a17b3551d3234bd5f97e81a75}\label{group__Set_ga41a96c2a17b3551d3234bd5f97e81a75}} 
+\mbox{\Hypertarget{group__Set_ga8b6ee41820d2e662723bf6fbd1cbe814}\label{group__Set_ga8b6ee41820d2e662723bf6fbd1cbe814}} 
 \index{Set functions@{Set functions}!add\_set@{add\_set}}
 \index{add\_set@{add\_set}!Set functions@{Set functions}}
 \doxysubsubsection{\texorpdfstring{add\_set()}{add\_set()}}
-{\footnotesize\ttfamily int8\+\_\+t add\+\_\+set (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structset}{set}} $\ast$}]{s,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int8\+\_\+t add\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structset}{set\+\_\+t}} $\ast$const}]{s,  }\item[{void $\ast$const}]{data }\end{DoxyParamCaption})}
 
 Add node to a set. 
 \begin{DoxyParams}[1]{Parameters}
@@ -35,20 +35,20 @@ Add node to a set.
 \begin{DoxyReturn}{Returns}
 result (0 if already in set, 1 if added successfully) 
 \end{DoxyReturn}
-\mbox{\Hypertarget{group__Set_ga4c72ae35502a70c93313e7faabb75f70}\label{group__Set_ga4c72ae35502a70c93313e7faabb75f70}} 
+\mbox{\Hypertarget{group__Set_ga5f3373624b0946f5033fa8ab5fd01262}\label{group__Set_ga5f3373624b0946f5033fa8ab5fd01262}} 
 \index{Set functions@{Set functions}!create\_set@{create\_set}}
 \index{create\_set@{create\_set}!Set functions@{Set functions}}
 \doxysubsubsection{\texorpdfstring{create\_set()}{create\_set()}}
-{\footnotesize\ttfamily struct \mbox{\hyperlink{structset}{set}}$\ast$ create\+\_\+set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{structset}{set\+\_\+t}}$\ast$ create\+\_\+set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Create a set instance. \begin{DoxyReturn}{Returns}
 pointer to newly created set
 \end{DoxyReturn}
-Set \mbox{\Hypertarget{group__Set_gaaa9a2215b54b78a15f197f3350f7fb36}\label{group__Set_gaaa9a2215b54b78a15f197f3350f7fb36}} 
+Set \mbox{\Hypertarget{group__Set_ga6be314c7ee4d92ed808872ec5298d985}\label{group__Set_ga6be314c7ee4d92ed808872ec5298d985}} 
 \index{Set functions@{Set functions}!del\_set@{del\_set}}
 \index{del\_set@{del\_set}!Set functions@{Set functions}}
 \doxysubsubsection{\texorpdfstring{del\_set()}{del\_set()}}
-{\footnotesize\ttfamily int8\+\_\+t del\+\_\+set (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structset}{set}} $\ast$}]{s,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int8\+\_\+t del\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structset}{set\+\_\+t}} $\ast$const}]{s,  }\item[{void $\ast$const}]{data }\end{DoxyParamCaption})}
 
 Delete node in a set. 
 \begin{DoxyParams}[1]{Parameters}
@@ -60,11 +60,11 @@ Delete node in a set.
 \begin{DoxyReturn}{Returns}
 result (-\/1 if not found, 1 if deleted successfully) 
 \end{DoxyReturn}
-\mbox{\Hypertarget{group__Set_ga6e3cc34e8ed113b4d2ad113c16311d64}\label{group__Set_ga6e3cc34e8ed113b4d2ad113c16311d64}} 
+\mbox{\Hypertarget{group__Set_gaa730eadf3f923c268f52c2f59dc881e0}\label{group__Set_gaa730eadf3f923c268f52c2f59dc881e0}} 
 \index{Set functions@{Set functions}!find\_set@{find\_set}}
 \index{find\_set@{find\_set}!Set functions@{Set functions}}
 \doxysubsubsection{\texorpdfstring{find\_set()}{find\_set()}}
-{\footnotesize\ttfamily int8\+\_\+t find\+\_\+set (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structset}{set}} $\ast$}]{s,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int8\+\_\+t find\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structset}{set\+\_\+t}} $\ast$const}]{s,  }\item[{void $\ast$const}]{data }\end{DoxyParamCaption})}
 
 Find node in a set. 
 \begin{DoxyParams}[1]{Parameters}
@@ -76,11 +76,11 @@ Find node in a set.
 \begin{DoxyReturn}{Returns}
 result (-\/1 if already in set, 1 if added successfully) 
 \end{DoxyReturn}
-\mbox{\Hypertarget{group__Set_ga9379b253df297624bab5f1c0e177cea7}\label{group__Set_ga9379b253df297624bab5f1c0e177cea7}} 
+\mbox{\Hypertarget{group__Set_gacd314cf51203cfe815694cca30996c6f}\label{group__Set_gacd314cf51203cfe815694cca30996c6f}} 
 \index{Set functions@{Set functions}!free\_set@{free\_set}}
 \index{free\_set@{free\_set}!Set functions@{Set functions}}
 \doxysubsubsection{\texorpdfstring{free\_set()}{free\_set()}}
-{\footnotesize\ttfamily void free\+\_\+set (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structset}{set}} $\ast$}]{s }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void free\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structset}{set\+\_\+t}} $\ast$}]{s }\end{DoxyParamCaption})}
 
 Free set instance and all its associated node references. 
 \begin{DoxyParams}[1]{Parameters}

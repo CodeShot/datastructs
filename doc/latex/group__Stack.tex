@@ -3,13 +3,13 @@
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structstack}{stack}} $\ast$ \mbox{\hyperlink{group__Stack_gaf991b6afe6bd16f944388fc91269a5be}{create\+\_\+stack}} ()
+\mbox{\hyperlink{structstack}{stack\+\_\+t}} $\ast$ \mbox{\hyperlink{group__Stack_gac9dc5aff94e1776a3c070eff468acb8d}{create\+\_\+stack}} ()
 \item 
-void \mbox{\hyperlink{group__Stack_gab5ead2093b4871d147ce22ede36de84f}{free\+\_\+stack}} (struct \mbox{\hyperlink{structstack}{stack}} $\ast$s)
+void \mbox{\hyperlink{group__Stack_gacd3bfc432eeb36cffabbfe64b0922b32}{free\+\_\+stack}} (\mbox{\hyperlink{structstack}{stack\+\_\+t}} $\ast$s)
 \item 
-void \mbox{\hyperlink{group__Stack_ga9b1911ef2001424b0e5b909f96a1d97d}{add\+\_\+stack}} (struct \mbox{\hyperlink{structstack}{stack}} $\ast$s, void $\ast$data)
+void \mbox{\hyperlink{group__Stack_ga31d664cd6490021972abe421bb469332}{add\+\_\+stack}} (\mbox{\hyperlink{structstack}{stack\+\_\+t}} $\ast$const s, void $\ast$const data)
 \item 
-void $\ast$ \mbox{\hyperlink{group__Stack_ga5ed947d9781c236cb08d014c105f83ce}{pop\+\_\+stack}} (struct \mbox{\hyperlink{structstack}{stack}} $\ast$s)
+void \mbox{\hyperlink{group__Stack_gafeb84f37a5796dbf79e9c340891e038f}{pop\+\_\+stack}} (\mbox{\hyperlink{structstack}{stack\+\_\+t}} $\ast$const s, void $\ast$data)
 \end{DoxyCompactItemize}
 
 
@@ -17,11 +17,11 @@ void $\ast$ \mbox{\hyperlink{group__Stack_ga5ed947d9781c236cb08d014c105f83ce}{po
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{group__Stack_ga9b1911ef2001424b0e5b909f96a1d97d}\label{group__Stack_ga9b1911ef2001424b0e5b909f96a1d97d}} 
+\mbox{\Hypertarget{group__Stack_ga31d664cd6490021972abe421bb469332}\label{group__Stack_ga31d664cd6490021972abe421bb469332}} 
 \index{Stack functions@{Stack functions}!add\_stack@{add\_stack}}
 \index{add\_stack@{add\_stack}!Stack functions@{Stack functions}}
 \doxysubsubsection{\texorpdfstring{add\_stack()}{add\_stack()}}
-{\footnotesize\ttfamily void add\+\_\+stack (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structstack}{stack}} $\ast$}]{s,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void add\+\_\+stack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstack}{stack\+\_\+t}} $\ast$const}]{s,  }\item[{void $\ast$const}]{data }\end{DoxyParamCaption})}
 
 Add (push) a node to the stack. 
 \begin{DoxyParams}[1]{Parameters}
@@ -30,31 +30,31 @@ Add (push) a node to the stack.
 \mbox{\texttt{ in}}  & {\em data} & pointer to node data \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{group__Stack_gaf991b6afe6bd16f944388fc91269a5be}\label{group__Stack_gaf991b6afe6bd16f944388fc91269a5be}} 
+\mbox{\Hypertarget{group__Stack_gac9dc5aff94e1776a3c070eff468acb8d}\label{group__Stack_gac9dc5aff94e1776a3c070eff468acb8d}} 
 \index{Stack functions@{Stack functions}!create\_stack@{create\_stack}}
 \index{create\_stack@{create\_stack}!Stack functions@{Stack functions}}
 \doxysubsubsection{\texorpdfstring{create\_stack()}{create\_stack()}}
-{\footnotesize\ttfamily struct \mbox{\hyperlink{structstack}{stack}}$\ast$ create\+\_\+stack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{structstack}{stack\+\_\+t}}$\ast$ create\+\_\+stack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Create a stack instance. \begin{DoxyReturn}{Returns}
 pointer to newly created stack
 \end{DoxyReturn}
-Stack \mbox{\Hypertarget{group__Stack_gab5ead2093b4871d147ce22ede36de84f}\label{group__Stack_gab5ead2093b4871d147ce22ede36de84f}} 
+Stack -\/ core \mbox{\Hypertarget{group__Stack_gacd3bfc432eeb36cffabbfe64b0922b32}\label{group__Stack_gacd3bfc432eeb36cffabbfe64b0922b32}} 
 \index{Stack functions@{Stack functions}!free\_stack@{free\_stack}}
 \index{free\_stack@{free\_stack}!Stack functions@{Stack functions}}
 \doxysubsubsection{\texorpdfstring{free\_stack()}{free\_stack()}}
-{\footnotesize\ttfamily void free\+\_\+stack (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structstack}{stack}} $\ast$}]{s }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void free\+\_\+stack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstack}{stack\+\_\+t}} $\ast$}]{s }\end{DoxyParamCaption})}
 
 Free queue instance and all its nodes 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em q} & pointer to queue instance \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{group__Stack_ga5ed947d9781c236cb08d014c105f83ce}\label{group__Stack_ga5ed947d9781c236cb08d014c105f83ce}} 
+\mbox{\Hypertarget{group__Stack_gafeb84f37a5796dbf79e9c340891e038f}\label{group__Stack_gafeb84f37a5796dbf79e9c340891e038f}} 
 \index{Stack functions@{Stack functions}!pop\_stack@{pop\_stack}}
 \index{pop\_stack@{pop\_stack}!Stack functions@{Stack functions}}
 \doxysubsubsection{\texorpdfstring{pop\_stack()}{pop\_stack()}}
-{\footnotesize\ttfamily void$\ast$ pop\+\_\+stack (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structstack}{stack}} $\ast$}]{s }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void pop\+\_\+stack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstack}{stack\+\_\+t}} $\ast$const}]{s,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
 
 Pop a node from the stack (L\+I\+FO). 
 \begin{DoxyParams}[1]{Parameters}

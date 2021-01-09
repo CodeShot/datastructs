@@ -5,14 +5,14 @@
 \item 
 struct \mbox{\hyperlink{structtree}{tree}} $\ast$ \mbox{\hyperlink{group__Tree_gab04526e4a67ad90fb7716ae3de299215}{create\+\_\+tree}} ()
 \item 
-void \mbox{\hyperlink{group__Tree_ga15f828f30cd22a5143c332ce0d1c6355}{free\+\_\+tree}} (struct \mbox{\hyperlink{structtree}{tree}} $\ast$t)
+void \mbox{\hyperlink{group__Tree_ga66f1cc8b6427839973726e1efb03232e}{free\+\_\+tree}} (\mbox{\hyperlink{structtree}{tree\+\_\+t}} $\ast$t)
 \item 
-int8\+\_\+t \mbox{\hyperlink{group__Tree_gad81d3252894b7d3305fc683a3783edef}{add\+\_\+child\+\_\+treenode}} (struct \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} $\ast$n, void $\ast$data)
+int8\+\_\+t \mbox{\hyperlink{group__Tree_ga881ae86da1d88c6a975828fa95931654}{add\+\_\+child\+\_\+treenode}} (\mbox{\hyperlink{structtree__node}{tree\+\_\+node\+\_\+t}} $\ast$n, void $\ast$data)
 \item 
-\mbox{\Hypertarget{group__Tree_ga1f6a232f1e6bd06610b5204fcb751f05}\label{group__Tree_ga1f6a232f1e6bd06610b5204fcb751f05}} 
-int8\+\_\+t {\bfseries del\+\_\+child\+\_\+treenode} (struct \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} $\ast$n, void $\ast$data)
+\mbox{\Hypertarget{group__Tree_gafa5e4e9d339e9e00371db1801a3b3bfb}\label{group__Tree_gafa5e4e9d339e9e00371db1801a3b3bfb}} 
+int8\+\_\+t {\bfseries del\+\_\+child\+\_\+treenode} (\mbox{\hyperlink{structtree__node}{tree\+\_\+node\+\_\+t}} $\ast$n, void $\ast$data)
 \item 
-struct \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} $\ast$ \mbox{\hyperlink{group__Tree_ga8c7114ba0a1e3f6993af51d5374eb753}{find\+\_\+tree}} (struct \mbox{\hyperlink{structtree}{tree}} $\ast$t, void $\ast$data)
+\mbox{\hyperlink{structtree__node}{tree\+\_\+node\+\_\+t}} $\ast$ \mbox{\hyperlink{group__Tree_ga07512f4cc6993d254f49d220ce66b549}{find\+\_\+tree}} (\mbox{\hyperlink{structtree}{tree\+\_\+t}} $\ast$t, void $\ast$data)
 \end{DoxyCompactItemize}
 
 
@@ -20,11 +20,11 @@ struct \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} $\ast$ \mbox{\hyperli
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{group__Tree_gad81d3252894b7d3305fc683a3783edef}\label{group__Tree_gad81d3252894b7d3305fc683a3783edef}} 
+\mbox{\Hypertarget{group__Tree_ga881ae86da1d88c6a975828fa95931654}\label{group__Tree_ga881ae86da1d88c6a975828fa95931654}} 
 \index{Tree functions@{Tree functions}!add\_child\_treenode@{add\_child\_treenode}}
 \index{add\_child\_treenode@{add\_child\_treenode}!Tree functions@{Tree functions}}
 \doxysubsubsection{\texorpdfstring{add\_child\_treenode()}{add\_child\_treenode()}}
-{\footnotesize\ttfamily int8\+\_\+t add\+\_\+child\+\_\+treenode (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} $\ast$}]{n,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int8\+\_\+t add\+\_\+child\+\_\+treenode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtree__node}{tree\+\_\+node\+\_\+t}} $\ast$}]{n,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
 
 Add node to a set. 
 \begin{DoxyParams}[1]{Parameters}
@@ -46,11 +46,11 @@ result (0 if already in set, 1 if added successfully)
 Create a tree instance. \begin{DoxyReturn}{Returns}
 pointer to newly created tree 
 \end{DoxyReturn}
-\mbox{\Hypertarget{group__Tree_ga8c7114ba0a1e3f6993af51d5374eb753}\label{group__Tree_ga8c7114ba0a1e3f6993af51d5374eb753}} 
+\mbox{\Hypertarget{group__Tree_ga07512f4cc6993d254f49d220ce66b549}\label{group__Tree_ga07512f4cc6993d254f49d220ce66b549}} 
 \index{Tree functions@{Tree functions}!find\_tree@{find\_tree}}
 \index{find\_tree@{find\_tree}!Tree functions@{Tree functions}}
 \doxysubsubsection{\texorpdfstring{find\_tree()}{find\_tree()}}
-{\footnotesize\ttfamily struct \mbox{\hyperlink{structtree__node}{tree\+\_\+node}}$\ast$ find\+\_\+tree (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structtree}{tree}} $\ast$}]{t,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtree__node}{tree\+\_\+node\+\_\+t}}$\ast$ find\+\_\+tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtree}{tree\+\_\+t}} $\ast$}]{t,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
 
 Find node in a tree. 
 \begin{DoxyParams}[1]{Parameters}
@@ -62,11 +62,11 @@ Find node in a tree.
 \begin{DoxyReturn}{Returns}
 result (-\/1 if already in tree, 1 if added successfully) 
 \end{DoxyReturn}
-\mbox{\Hypertarget{group__Tree_ga15f828f30cd22a5143c332ce0d1c6355}\label{group__Tree_ga15f828f30cd22a5143c332ce0d1c6355}} 
+\mbox{\Hypertarget{group__Tree_ga66f1cc8b6427839973726e1efb03232e}\label{group__Tree_ga66f1cc8b6427839973726e1efb03232e}} 
 \index{Tree functions@{Tree functions}!free\_tree@{free\_tree}}
 \index{free\_tree@{free\_tree}!Tree functions@{Tree functions}}
 \doxysubsubsection{\texorpdfstring{free\_tree()}{free\_tree()}}
-{\footnotesize\ttfamily void free\+\_\+tree (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structtree}{tree}} $\ast$}]{t }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void free\+\_\+tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtree}{tree\+\_\+t}} $\ast$}]{t }\end{DoxyParamCaption})}
 
 Free tree instance and all its \mbox{\hyperlink{structtree__node}{tree\+\_\+node}} references. 
 \begin{DoxyParams}[1]{Parameters}

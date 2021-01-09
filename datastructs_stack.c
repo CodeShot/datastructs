@@ -9,14 +9,14 @@ stack_t *create_stack()
     return malloc(sizeof(stack_t));
 }
 
-void push_stack(stack_t *s, void *data)
+void push_stack(stack_t *const s, void *const data)
 {
     sl_node_t *n = create_slnode(data);
     n->next = s->first;
     s->first = n;
 }
 
-void pop_stack(stack_t *s, void *data)
+void pop_stack(stack_t *const s, void * data)
 {
     if (s->first == NULL) {
         data = NULL;
@@ -38,15 +38,15 @@ void free_stack(stack_t *s)
  * Stack - derived
  */
 
-uint32_t count_stack(stack_t *s) 
+uint32_t count_stack(stack_t *const s) 
 {
     if (s->first == NULL)
         return 0;
 
-    return 1; //count_slnode_seq(s->first);
+    return count_slnode_seq(s->first);
 }
 
-void map_stack(stack_t *s, void (*func)(sl_node_t *, void *), void *func_data)
+void map_stack(stack_t *const s, void (*func)(sl_node_t *, void *), void *func_data)
 {
     
 }

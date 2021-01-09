@@ -69,7 +69,7 @@ void free_dlnode_seq(dl_node_t *n)
     }
 }
 
-void map_slnode_seq(sl_node_t *node, void (*func)(sl_node_t *, void *), void *func_data)
+void map_slnode_seq(sl_node_t *const node, void (*func)(sl_node_t *, void *), void *func_data)
 {
     sl_node_t *n = node;
     while (n != NULL) {
@@ -78,7 +78,7 @@ void map_slnode_seq(sl_node_t *node, void (*func)(sl_node_t *, void *), void *fu
     }
 }
 
-void map_dlnode_seq(dl_node_t *node, void (*func)(dl_node_t *, void *), void *func_data, bool reverse)
+void map_dlnode_seq(dl_node_t *const node, void (*func)(dl_node_t *, void *), void *func_data, bool reverse)
 {
     dl_node_t *n = node;
     if (reverse) 
@@ -94,7 +94,7 @@ void map_dlnode_seq(dl_node_t *node, void (*func)(dl_node_t *, void *), void *fu
         }
 }
 
-void map_slnode_data_seq(sl_node_t *node, void (*func)(void *, void *), void *func_data)
+void map_slnode_data_seq(sl_node_t *const node, void (*func)(void *, void *), void *func_data)
 {    
     sl_node_t *n = node;
     while (n != NULL) {
@@ -103,7 +103,7 @@ void map_slnode_data_seq(sl_node_t *node, void (*func)(void *, void *), void *fu
     }
 }
 
-void map_dlnode_data_seq(dl_node_t *node, void (*func)(void *, void *), void *func_data, bool reverse)
+void map_dlnode_data_seq(dl_node_t *const node, void (*func)(void *, void *), void *func_data, bool reverse)
 {
     dl_node_t *n = node;
     if (reverse) 
@@ -119,7 +119,7 @@ void map_dlnode_data_seq(dl_node_t *node, void (*func)(void *, void *), void *fu
         }
 }
 
-uint32_t count_slnode_seq(sl_node_t *node)
+uint32_t count_slnode_seq(sl_node_t *const node)
 {
     uint32_t counter = 0;
     sl_node_t *n = node;
@@ -132,7 +132,7 @@ uint32_t count_slnode_seq(sl_node_t *node)
     return counter;    
 }
 
-uint32_t count_dlnode_seq(dl_node_t *node, bool reverse)
+uint32_t count_dlnode_seq(dl_node_t *const node, bool reverse)
 {
     uint32_t counter = 0;
     dl_node_t *n = node;

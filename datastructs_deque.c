@@ -13,7 +13,7 @@ deque_t *create_deque()
     return dq;
 }
 
-void add_first_deque(deque_t *dq, void *data)
+void add_first_deque(deque_t *const dq, void *const data)
 {
     dl_node_t *n = create_dlnode(data);
     
@@ -31,7 +31,7 @@ void add_first_deque(deque_t *dq, void *data)
     dq->count++;
 }
 
-void add_last_deque(deque_t *dq, void *data)
+void add_last_deque(deque_t *const dq, void *const data)
 {
     dl_node_t *n = create_dlnode(data);
 
@@ -51,7 +51,7 @@ void add_last_deque(deque_t *dq, void *data)
     dq->count++;
 }
 
-void pop_first_deque(deque_t *dq, void *data)
+void pop_first_deque(deque_t *const dq, void *data)
 {
     if (dq->first == NULL) {
         data = NULL;
@@ -67,7 +67,7 @@ void pop_first_deque(deque_t *dq, void *data)
     free(n);
 }
 
-void pop_last_deque(deque_t *dq, void *data)
+void pop_last_deque(deque_t *const dq, void *data)
 {
     if (dq->last == NULL) {
         data = NULL;
@@ -83,7 +83,7 @@ void pop_last_deque(deque_t *dq, void *data)
     free(n);
 }
 
-void *contains_deque(deque_t *dq)
+void *contains_deque(deque_t *const dq)
 {
     dl_node_t *n = dq->last;
     dq->last = dq->last->prev;
@@ -101,7 +101,7 @@ void free_deque(deque_t *dq)
  * Queue - derived
  */
 
-uint32_t count_deque(deque_t *dq) 
+uint32_t count_deque(deque_t *const dq) 
 {
     if (dq->first == NULL)
         return 0;
@@ -109,7 +109,7 @@ uint32_t count_deque(deque_t *dq)
     count_dlnode_seq(dq->first, 0);
 }
 
-void map_deque(deque_t *dq, void (*func)(dl_node_t *, void *), void *func_data, bool reverse)
+void map_deque(deque_t *const dq, void (*func)(dl_node_t *, void *), void *func_data, bool reverse)
 {
     dl_node_t *start;
 

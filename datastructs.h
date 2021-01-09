@@ -199,7 +199,7 @@ void free_dlnode_seq(dl_node_t *n); // sequence of nodes
  * @param[in] func function pointer to user defined function
  * @param[out] func_data pointer to data for user defined function, NULL allowed
  */
-void map_slnode_seq(sl_node_t *node, void (*func)(sl_node_t *, void *), void *func_data);
+void map_slnode_seq(sl_node_t *const node, void (*func)(sl_node_t *, void *), void *func_data);
 
 /**
  * Map a function to interact with each dl_node_t in a sequence of nodes with 
@@ -210,7 +210,7 @@ void map_slnode_seq(sl_node_t *node, void (*func)(sl_node_t *, void *), void *fu
  * @param[out] func_data pointer to data for user defined function, NULL allowed
  * @param[in] reverese boolean value, if left true/1 it movement is reversed
  */
-void map_dlnode_seq(dl_node_t *node, void (*func)(dl_node_t *, void *), void *func_data, bool reverse);
+void map_dlnode_seq(dl_node_t *const node, void (*func)(dl_node_t *, void *), void *func_data, bool reverse);
 
 /**
  * Map a function to interact with each data pointer in a sequence of nodes with 
@@ -220,7 +220,7 @@ void map_dlnode_seq(dl_node_t *node, void (*func)(dl_node_t *, void *), void *fu
  * @param[in] func function pointer to user defined function
  * @param[out] func_data pointer to data for user defined function, NULL allowed
  */
-void map_slnode_data_seq(sl_node_t *node, void (*func)(void *, void *), void *func_data);
+void map_slnode_data_seq(sl_node_t *const node, void (*func)(void *, void *), void *func_data);
 
 /**
  * Map a function to interact with each data pointer in a sequence of nodes with 
@@ -231,14 +231,14 @@ void map_slnode_data_seq(sl_node_t *node, void (*func)(void *, void *), void *fu
  * @param[out] func_data pointer to data for user defined function, NULL allowed
  * @param[in] reverese boolean value, if left true/1 it movement is reversed
  */
-void map_dlnode_data_seq(dl_node_t *node, void (*func)(void *, void *), void *func_data, bool reverse);
+void map_dlnode_data_seq(dl_node_t *const node, void (*func)(void *, void *), void *func_data, bool reverse);
 
 /**
  * Count the number of nodes a sl_node_t sequence us from and inlcluding *node*.
  * @param node pointer to start of count
  * @return number of nodes
  */
-uint32_t count_slnode_seq(sl_node_t *node);
+uint32_t count_slnode_seq(sl_node_t *const node);
 
 /**
  * Count the number of nodes a dl_node_t sequence us from and inlcluding *node*.
@@ -246,7 +246,7 @@ uint32_t count_slnode_seq(sl_node_t *node);
  * @param[in] reverese boolean value, if left true/1 it movement is reversed
  * @return nuber of nodes
  */
-uint32_t count_dlnode_seq(dl_node_t *node, bool reverse);
+uint32_t count_dlnode_seq(dl_node_t *const node, bool reverse);
 
 /**
  * @}
@@ -274,14 +274,14 @@ void free_queue(queue_t *q);
  * @param[out] q pointer to queue
  * @param{in] data pointer to node data
  */
-void add_queue(queue_t *q, void *data);
+void add_queue(queue_t *const q, void *const data);
 
 /**
  * Pop a node from the queue (FIFO).
  * @param[out] q pointer to queue
  * @return data pointer stored by the node
  */
-void pop_queue(queue_t *q, void *data);
+void pop_queue(queue_t *const q, void *data);
 
 /**
  * @}
@@ -309,14 +309,14 @@ void free_stack(stack_t *s);
  * @param[out] s pointer to stack instance
  * @param[in] data pointer to node data
  */
-void add_stack(stack_t *s, void *data);
+void add_stack(stack_t *const s, void *const data);
 
 /**
  * Pop a node from the stack (LIFO).
  * @param[out] s pointer to stack instance
  * @return data pointer stored by the node
  */
-void pop_stack(stack_t *s, void *data);
+void pop_stack(stack_t *const s, void *data);
 /**
  * @}
  */
@@ -343,28 +343,28 @@ void free_deque(deque_t *dq);
  * @param[out] dq pointer to deque instance
  * @param[in] data pointer to node data
  */
-void add_first_deque(deque_t *dq, void *data);
+void add_first_deque(deque_t *const dq, void *const data);
 
 /**
  * Add a node to end of deque.
  * @param[out] dq pointer to deque instance
  * @param[in] data pointer to node data
  */
-void add_last_deque(deque_t *dq, void *data);
+void add_last_deque(deque_t *const dq, void *const data);
 
 /**
  * Pop a node from the beginning of the deque.
  * @param[out] s pointer to deque instance
  * @return data pointer stored by the node
  */
-void pop_first_deque(deque_t *dq, void *data);
+void pop_first_deque(deque_t *const dq, void *data);
 
 /**
  * Pop a node from the end of the deque.
  * @param[out] s pointer to deque instance
  * @return data pointer stored by the node
  */
-void pop_last_deque(deque_t *dq, void *data);
+void pop_last_deque(deque_t *const dq, void *data);
 /**
  * @}
  */
@@ -398,14 +398,14 @@ void free_sub_binarytree(dlp_node_t *n);
  * @param[in] data pointer to node data
  * @return result (0 if already in binarytree, 1 if added successfully)
  */
-int8_t add_binarytree(binarytree_t *t, void *data);
+int8_t add_binarytree(binarytree_t *const t, void *const data);
 
 /**
  * Delete only node specified by data and reconstruct binarytree accordingly.
  * @param[in] t pointer to binarytree instance
  * @param[in] data pointer to data that will qualify deletion 
  */
-int8_t del_binarytree(binarytree_t *t, void *data);
+int8_t del_binarytree(binarytree_t *const t, void *const data);
 
 /**
  * Find node in a binarytree.
@@ -413,21 +413,21 @@ int8_t del_binarytree(binarytree_t *t, void *data);
  * @param[in] data pointer to node data
  * @return result (-1 if already in binarytree, 1 if added successfully)
  */
-dlp_node_t *find_binarytree(dlp_node_t *n, void *data);
+dlp_node_t *find_binarytree(dlp_node_t *const n, void *const data);
 
 /**
  * Get node with lowest value on evaluation (WARN: bugged).
  * @param[in] t pointer to binarytree instance
  * @return pointer to node data or NULL if binarytree is empty
  */
-void *lowest_binarytree(binarytree_t *t);
+void *lowest_binarytree(binarytree_t *const t);
 
 /**
  * Get node with highest value on evaluation (WARN: bugged).
  * @param[in] t pointer to binarytree instance
  * @return pointer to node data or NULL if binarytree is empty
  */
-void *highest_binarytree(binarytree_t *t);
+void *highest_binarytree(binarytree_t *const t);
 /**
  * @}
  */
@@ -455,7 +455,7 @@ void free_set(set_t *s);
  * @param[in] data pointer to node data
  * @return result (0 if already in set, 1 if added successfully)
  */
-int8_t add_set(set_t *s, void *data);
+int8_t add_set(set_t *const s, void *const data);
 
 /**
  * Find node in a set.
@@ -463,7 +463,7 @@ int8_t add_set(set_t *s, void *data);
  * @param[in] data pointer to node data
  * @return result (-1 if already in set, 1 if added successfully)
  */
-int8_t find_set(set_t *s, void *data);
+int8_t find_set(set_t *const s, void *const data);
 
 /**
  * Delete node in a set.
@@ -471,7 +471,7 @@ int8_t find_set(set_t *s, void *data);
  * @param[in] data pointer to data to search for
  * @return result (-1 if not found, 1 if deleted successfully) 
  */
-int8_t del_set(set_t *s, void *data);
+int8_t del_set(set_t *const s, void *const data);
 /**
  * @}
  */

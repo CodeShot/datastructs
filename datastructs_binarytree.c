@@ -10,7 +10,7 @@ binarytree_t *create_binarytree()
     return t;
 }
 
-void *lowest_binarytree(binarytree_t *t)
+void *lowest_binarytree(binarytree_t *const t)
 {
     if (t->root == NULL)
         return NULL;
@@ -26,7 +26,7 @@ void *lowest_binarytree(binarytree_t *t)
     return previous->data;
 }
 
-void *highest_binarytree(binarytree_t *t)
+void *highest_binarytree(binarytree_t *const t)
 {
     if (t->root == NULL)
         return NULL;
@@ -42,7 +42,7 @@ void *highest_binarytree(binarytree_t *t)
     return previous->data;
 }
 
-int8_t add_binarytree(binarytree_t *t, void *data)
+int8_t add_binarytree(binarytree_t *const t, void *const data)
 {
     if (t->root == NULL) {
         t->root = create_dlpnode(data);
@@ -73,7 +73,7 @@ int8_t add_binarytree(binarytree_t *t, void *data)
     }
 }
 
-dlp_node_t *find_binarytree(dlp_node_t *n, void *data)
+dlp_node_t *find_binarytree(dlp_node_t *const n, void *const data)
 {
     if (n == NULL) return NULL;
     if (n->data == data) return n;
@@ -85,7 +85,7 @@ dlp_node_t *find_binarytree(dlp_node_t *n, void *data)
     return find_binarytree(n->next, data);
 }
 
-int8_t del_binarytree(binarytree_t *t, void *data)
+int8_t del_binarytree(binarytree_t *const t, void *const data)
 {
     dlp_node_t *found = find_binarytree(t->root, data);
 

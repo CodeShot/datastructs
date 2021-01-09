@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['set_58',['set',['../structset.html',1,'set'],['../group__Set.html',1,'(Global Namespace)']]],
-  ['sl_5fnode_59',['sl_node',['../structsl__node.html',1,'']]],
-  ['stack_60',['stack',['../structstack.html',1,'stack'],['../group__Stack.html',1,'(Global Namespace)']]]
+  ['root_64',['root',['../structbinarytree.html#ae14b923dbe6464ececd35889f51c1196',1,'binarytree::root()'],['../structtree.html#a2cbb54a78866923f52ac2ec30e4cba38',1,'tree::root()']]]
 ];

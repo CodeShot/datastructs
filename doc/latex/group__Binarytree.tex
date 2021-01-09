@@ -3,19 +3,21 @@
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structbinarytree}{binarytree}} $\ast$ \mbox{\hyperlink{group__Binarytree_gae2547288735bcd7c7314f046a5e02079}{create\+\_\+binarytree}} ()
+\mbox{\hyperlink{structbinarytree}{binarytree\+\_\+t}} $\ast$ \mbox{\hyperlink{group__Binarytree_ga5b4ebf2e65ea563dc0391c8ae0c357c3}{create\+\_\+binarytree}} ()
 \item 
-void \mbox{\hyperlink{group__Binarytree_ga6b8d18d4efb2d2ad083b52a6dfbb097b}{free\+\_\+binarytree}} (struct \mbox{\hyperlink{structbinarytree}{binarytree}} $\ast$t)
+void \mbox{\hyperlink{group__Binarytree_gad6172f43c6b9298125afa2256a893424}{free\+\_\+binarytree}} (\mbox{\hyperlink{structbinarytree}{binarytree\+\_\+t}} $\ast$t)
 \item 
-void \mbox{\hyperlink{group__Binarytree_ga9d12de708150a205b3b5a60342439b2b}{free\+\_\+sub\+\_\+binarytree}} (struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} $\ast$n)
+void \mbox{\hyperlink{group__Binarytree_gaf3609e2a11b9ccdf49dbe813e127e1e3}{free\+\_\+sub\+\_\+binarytree}} (\mbox{\hyperlink{structdlp__node}{dlp\+\_\+node\+\_\+t}} $\ast$n)
 \item 
-int8\+\_\+t \mbox{\hyperlink{group__Binarytree_gac90a7c5b92eee8e896597de6cf2f04fd}{add\+\_\+binarytree}} (struct \mbox{\hyperlink{structbinarytree}{binarytree}} $\ast$t, void $\ast$data)
+int8\+\_\+t \mbox{\hyperlink{group__Binarytree_ga6f26c024065667bb1f877769a8f2552d}{add\+\_\+binarytree}} (\mbox{\hyperlink{structbinarytree}{binarytree\+\_\+t}} $\ast$const t, void $\ast$const data)
 \item 
-struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} $\ast$ \mbox{\hyperlink{group__Binarytree_gaff6a1b45819ebcebb6ff0d37c2591ff0}{find\+\_\+binarytree}} (struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} $\ast$n, void $\ast$data)
+int8\+\_\+t \mbox{\hyperlink{group__Binarytree_gaaa48b519885eb3694e53e708ef83eaea}{del\+\_\+binarytree}} (\mbox{\hyperlink{structbinarytree}{binarytree\+\_\+t}} $\ast$const t, void $\ast$const data)
 \item 
-void $\ast$ \mbox{\hyperlink{group__Binarytree_gad0ff9a528a83a946f0f4d0bc4ef18001}{lowest\+\_\+binarytree}} (struct \mbox{\hyperlink{structbinarytree}{binarytree}} $\ast$t)
+\mbox{\hyperlink{structdlp__node}{dlp\+\_\+node\+\_\+t}} $\ast$ \mbox{\hyperlink{group__Binarytree_ga96e880afa2bbeb969d8d47054d596fff}{find\+\_\+binarytree}} (\mbox{\hyperlink{structdlp__node}{dlp\+\_\+node\+\_\+t}} $\ast$const n, void $\ast$const data)
 \item 
-void $\ast$ \mbox{\hyperlink{group__Binarytree_gaec6dd4ee113cf0b54f71a3dcc21e413e}{highest\+\_\+binarytree}} (struct \mbox{\hyperlink{structbinarytree}{binarytree}} $\ast$t)
+void $\ast$ \mbox{\hyperlink{group__Binarytree_gae2d513ca675ea2d9c723053b9b20af58}{lowest\+\_\+binarytree}} (\mbox{\hyperlink{structbinarytree}{binarytree\+\_\+t}} $\ast$const t)
+\item 
+void $\ast$ \mbox{\hyperlink{group__Binarytree_ga75088ca5976ceda64bdce06809c22107}{highest\+\_\+binarytree}} (\mbox{\hyperlink{structbinarytree}{binarytree\+\_\+t}} $\ast$const t)
 \end{DoxyCompactItemize}
 
 
@@ -23,11 +25,11 @@ void $\ast$ \mbox{\hyperlink{group__Binarytree_gaec6dd4ee113cf0b54f71a3dcc21e413
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{group__Binarytree_gac90a7c5b92eee8e896597de6cf2f04fd}\label{group__Binarytree_gac90a7c5b92eee8e896597de6cf2f04fd}} 
+\mbox{\Hypertarget{group__Binarytree_ga6f26c024065667bb1f877769a8f2552d}\label{group__Binarytree_ga6f26c024065667bb1f877769a8f2552d}} 
 \index{Binarytree functions@{Binarytree functions}!add\_binarytree@{add\_binarytree}}
 \index{add\_binarytree@{add\_binarytree}!Binarytree functions@{Binarytree functions}}
 \doxysubsubsection{\texorpdfstring{add\_binarytree()}{add\_binarytree()}}
-{\footnotesize\ttfamily int8\+\_\+t add\+\_\+binarytree (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structbinarytree}{binarytree}} $\ast$}]{t,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int8\+\_\+t add\+\_\+binarytree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbinarytree}{binarytree\+\_\+t}} $\ast$const}]{t,  }\item[{void $\ast$const}]{data }\end{DoxyParamCaption})}
 
 Add node to a binarytree. 
 \begin{DoxyParams}[1]{Parameters}
@@ -39,20 +41,33 @@ Add node to a binarytree.
 \begin{DoxyReturn}{Returns}
 result (0 if already in binarytree, 1 if added successfully) 
 \end{DoxyReturn}
-\mbox{\Hypertarget{group__Binarytree_gae2547288735bcd7c7314f046a5e02079}\label{group__Binarytree_gae2547288735bcd7c7314f046a5e02079}} 
+\mbox{\Hypertarget{group__Binarytree_ga5b4ebf2e65ea563dc0391c8ae0c357c3}\label{group__Binarytree_ga5b4ebf2e65ea563dc0391c8ae0c357c3}} 
 \index{Binarytree functions@{Binarytree functions}!create\_binarytree@{create\_binarytree}}
 \index{create\_binarytree@{create\_binarytree}!Binarytree functions@{Binarytree functions}}
 \doxysubsubsection{\texorpdfstring{create\_binarytree()}{create\_binarytree()}}
-{\footnotesize\ttfamily struct \mbox{\hyperlink{structbinarytree}{binarytree}}$\ast$ create\+\_\+binarytree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{structbinarytree}{binarytree\+\_\+t}}$\ast$ create\+\_\+binarytree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Create a binarytree instance. \begin{DoxyReturn}{Returns}
 pointer to newly created binarytree
 \end{DoxyReturn}
-Binary tree \mbox{\Hypertarget{group__Binarytree_gaff6a1b45819ebcebb6ff0d37c2591ff0}\label{group__Binarytree_gaff6a1b45819ebcebb6ff0d37c2591ff0}} 
+Binary tree \mbox{\Hypertarget{group__Binarytree_gaaa48b519885eb3694e53e708ef83eaea}\label{group__Binarytree_gaaa48b519885eb3694e53e708ef83eaea}} 
+\index{Binarytree functions@{Binarytree functions}!del\_binarytree@{del\_binarytree}}
+\index{del\_binarytree@{del\_binarytree}!Binarytree functions@{Binarytree functions}}
+\doxysubsubsection{\texorpdfstring{del\_binarytree()}{del\_binarytree()}}
+{\footnotesize\ttfamily int8\+\_\+t del\+\_\+binarytree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbinarytree}{binarytree\+\_\+t}} $\ast$const}]{t,  }\item[{void $\ast$const}]{data }\end{DoxyParamCaption})}
+
+Delete only node specified by data and reconstruct binarytree accordingly. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em t} & pointer to binarytree instance \\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & pointer to data that will qualify deletion \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Binarytree_ga96e880afa2bbeb969d8d47054d596fff}\label{group__Binarytree_ga96e880afa2bbeb969d8d47054d596fff}} 
 \index{Binarytree functions@{Binarytree functions}!find\_binarytree@{find\_binarytree}}
 \index{find\_binarytree@{find\_binarytree}!Binarytree functions@{Binarytree functions}}
 \doxysubsubsection{\texorpdfstring{find\_binarytree()}{find\_binarytree()}}
-{\footnotesize\ttfamily struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}}$\ast$ find\+\_\+binarytree (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} $\ast$}]{n,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node\+\_\+t}}$\ast$ find\+\_\+binarytree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdlp__node}{dlp\+\_\+node\+\_\+t}} $\ast$const}]{n,  }\item[{void $\ast$const}]{data }\end{DoxyParamCaption})}
 
 Find node in a binarytree. 
 \begin{DoxyParams}[1]{Parameters}
@@ -64,33 +79,33 @@ Find node in a binarytree.
 \begin{DoxyReturn}{Returns}
 result (-\/1 if already in binarytree, 1 if added successfully) 
 \end{DoxyReturn}
-\mbox{\Hypertarget{group__Binarytree_ga6b8d18d4efb2d2ad083b52a6dfbb097b}\label{group__Binarytree_ga6b8d18d4efb2d2ad083b52a6dfbb097b}} 
+\mbox{\Hypertarget{group__Binarytree_gad6172f43c6b9298125afa2256a893424}\label{group__Binarytree_gad6172f43c6b9298125afa2256a893424}} 
 \index{Binarytree functions@{Binarytree functions}!free\_binarytree@{free\_binarytree}}
 \index{free\_binarytree@{free\_binarytree}!Binarytree functions@{Binarytree functions}}
 \doxysubsubsection{\texorpdfstring{free\_binarytree()}{free\_binarytree()}}
-{\footnotesize\ttfamily void free\+\_\+binarytree (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structbinarytree}{binarytree}} $\ast$}]{t }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void free\+\_\+binarytree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbinarytree}{binarytree\+\_\+t}} $\ast$}]{t }\end{DoxyParamCaption})}
 
 Free binarytree instance and all its \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} references. 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em t} & pointer to queue instance \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{group__Binarytree_ga9d12de708150a205b3b5a60342439b2b}\label{group__Binarytree_ga9d12de708150a205b3b5a60342439b2b}} 
+\mbox{\Hypertarget{group__Binarytree_gaf3609e2a11b9ccdf49dbe813e127e1e3}\label{group__Binarytree_gaf3609e2a11b9ccdf49dbe813e127e1e3}} 
 \index{Binarytree functions@{Binarytree functions}!free\_sub\_binarytree@{free\_sub\_binarytree}}
 \index{free\_sub\_binarytree@{free\_sub\_binarytree}!Binarytree functions@{Binarytree functions}}
 \doxysubsubsection{\texorpdfstring{free\_sub\_binarytree()}{free\_sub\_binarytree()}}
-{\footnotesize\ttfamily void free\+\_\+sub\+\_\+binarytree (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structdlp__node}{dlp\+\_\+node}} $\ast$}]{n }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void free\+\_\+sub\+\_\+binarytree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdlp__node}{dlp\+\_\+node\+\_\+t}} $\ast$}]{n }\end{DoxyParamCaption})}
 
 Helper to free nodes of a binarytree recursively below a certain node. 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em n} & pointer to node to free recursively \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{group__Binarytree_gaec6dd4ee113cf0b54f71a3dcc21e413e}\label{group__Binarytree_gaec6dd4ee113cf0b54f71a3dcc21e413e}} 
+\mbox{\Hypertarget{group__Binarytree_ga75088ca5976ceda64bdce06809c22107}\label{group__Binarytree_ga75088ca5976ceda64bdce06809c22107}} 
 \index{Binarytree functions@{Binarytree functions}!highest\_binarytree@{highest\_binarytree}}
 \index{highest\_binarytree@{highest\_binarytree}!Binarytree functions@{Binarytree functions}}
 \doxysubsubsection{\texorpdfstring{highest\_binarytree()}{highest\_binarytree()}}
-{\footnotesize\ttfamily void$\ast$ highest\+\_\+binarytree (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structbinarytree}{binarytree}} $\ast$}]{t }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void$\ast$ highest\+\_\+binarytree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbinarytree}{binarytree\+\_\+t}} $\ast$const}]{t }\end{DoxyParamCaption})}
 
 Get node with highest value on evaluation (W\+A\+RN\+: bugged). 
 \begin{DoxyParams}[1]{Parameters}
@@ -100,11 +115,11 @@ Get node with highest value on evaluation (W\+A\+RN\+: bugged).
 \begin{DoxyReturn}{Returns}
 pointer to node data or N\+U\+LL if binarytree is empty 
 \end{DoxyReturn}
-\mbox{\Hypertarget{group__Binarytree_gad0ff9a528a83a946f0f4d0bc4ef18001}\label{group__Binarytree_gad0ff9a528a83a946f0f4d0bc4ef18001}} 
+\mbox{\Hypertarget{group__Binarytree_gae2d513ca675ea2d9c723053b9b20af58}\label{group__Binarytree_gae2d513ca675ea2d9c723053b9b20af58}} 
 \index{Binarytree functions@{Binarytree functions}!lowest\_binarytree@{lowest\_binarytree}}
 \index{lowest\_binarytree@{lowest\_binarytree}!Binarytree functions@{Binarytree functions}}
 \doxysubsubsection{\texorpdfstring{lowest\_binarytree()}{lowest\_binarytree()}}
-{\footnotesize\ttfamily void$\ast$ lowest\+\_\+binarytree (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structbinarytree}{binarytree}} $\ast$}]{t }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void$\ast$ lowest\+\_\+binarytree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbinarytree}{binarytree\+\_\+t}} $\ast$const}]{t }\end{DoxyParamCaption})}
 
 Get node with lowest value on evaluation (W\+A\+RN\+: bugged). 
 \begin{DoxyParams}[1]{Parameters}

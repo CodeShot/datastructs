@@ -5,7 +5,7 @@ tree_t *create_tree()
     return malloc(sizeof(tree_t));
 }
 
-void add_tree(tree_node_t *n, void *data)
+void add_tree(tree_node_t *const n, void *data)
 {
     if (n->children == NULL)
         n->children = create_queue();
