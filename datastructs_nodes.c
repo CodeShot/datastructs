@@ -132,7 +132,7 @@ uint32_t count_slnode_seq(sl_node_t *const node)
     return counter;    
 }
 
-uint32_t count_dlnode_seq(dl_node_t *node, bool reverse)
+uint32_t count_dlnode_seq(dl_node_t *const node, bool reverse)
 {
     uint32_t counter = 0;
     dl_node_t *n = node;
@@ -150,3 +150,64 @@ uint32_t count_dlnode_seq(dl_node_t *node, bool reverse)
 
     return counter;
 }
+
+sl_node_t *get_index_slnode_seq(sl_node_t *const node, uint32_t index)
+{
+    sl_node_t *n = node;
+    uint32_t counter = 0;
+    
+    while (n != NULL && counter <= index) {
+        if (index == counter)
+            return n->data;
+        n = n->next;
+        counter++;
+    }
+    
+    return NULL;
+}
+
+dl_node_t *get_index_dlnode_seq(dl_node_t *const node, uint32_t index)
+{
+    dl_node_t *n = node;
+    uint32_t counter = 0;
+
+    while(n != NULL && counter <= index) {
+        if (counter == index)
+            return n->data;
+        n = n->next;
+        counter++;
+    }
+
+    return NULL;
+}
+
+sl_node_t *cut_slnode_range(sl_node_t *const node, uint32_t start, uint32_t end) 
+{
+    if (start > 0) start--;
+
+    sl_node_t *first = get_index_slnode_seq(node, start);
+    sl_node_t *last = get_index_slnode_seq(node, end);
+
+    if (first == NULL || last == NULL) return NULL;
+
+    sl_node_t *tmp = first->next;
+    first->next = last->next;
+    last->next = NULL;
+
+    return first; 
+}
+
+dl_node_t *cut_dlnode_range(dl_node_t *const node, uint32_t start, uint32_t end)
+{
+    dl_node_t *first = get_index_dlnode_seq(node, start);
+    dl_node_t *last = get_index_dlnode_seq(node, end);
+
+    if (first == NULL || last == NULL) return NULL;
+
+    first->prev->next = last->next;
+    last->next->prev = first->prev;
+
+    return first;
+}
+
+

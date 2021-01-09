@@ -134,7 +134,7 @@ libdatastructs_la_LIBADD =
 am_libdatastructs_la_OBJECTS = datastructs_nodes.lo \
 	datastructs_stack.lo datastructs_queue.lo datastructs_deque.lo \
 	datastructs_binarytree.lo datastructs_set.lo \
-	datastructs_tree.lo
+	datastructs_tree.lo datastructs_util.lo
 libdatastructs_la_OBJECTS = $(am_libdatastructs_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
@@ -165,7 +165,8 @@ am__depfiles_remade = ./$(DEPDIR)/datastructs_binarytree.Plo \
 	./$(DEPDIR)/datastructs_queue.Plo \
 	./$(DEPDIR)/datastructs_set.Plo \
 	./$(DEPDIR)/datastructs_stack.Plo \
-	./$(DEPDIR)/datastructs_tree.Plo
+	./$(DEPDIR)/datastructs_tree.Plo \
+	./$(DEPDIR)/datastructs_util.Plo
 am__mv = mv -f
 COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
@@ -355,7 +356,7 @@ lib_LTLIBRARIES = libdatastructs.la
 libdatastructs_la_SOURCES = datastructs_nodes.c datastructs_stack.c\
 							datastructs_queue.c datastructs_deque.c\
 							datastructs_binarytree.c datastructs_set.c\
-							datastructs_tree.c
+							datastructs_tree.c datastructs_util.c
 
 libdatastructs_la_LDFLAGS = -version-info 0:0:0
 pkginclude_HEADERS = datastructs.h
@@ -448,6 +449,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/datastructs_set.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/datastructs_stack.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/datastructs_tree.Plo@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/datastructs_util.Plo@am__quote@ # am--include-marker
 
 $(am__depfiles_remade):
 	@$(MKDIR_P) $(@D)
@@ -788,6 +790,7 @@ distclean: distclean-am
 	-rm -f ./$(DEPDIR)/datastructs_set.Plo
 	-rm -f ./$(DEPDIR)/datastructs_stack.Plo
 	-rm -f ./$(DEPDIR)/datastructs_tree.Plo
+	-rm -f ./$(DEPDIR)/datastructs_util.Plo
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-libtool distclean-tags
@@ -842,6 +845,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f ./$(DEPDIR)/datastructs_set.Plo
 	-rm -f ./$(DEPDIR)/datastructs_stack.Plo
 	-rm -f ./$(DEPDIR)/datastructs_tree.Plo
+	-rm -f ./$(DEPDIR)/datastructs_util.Plo
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 
