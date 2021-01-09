@@ -6,5 +6,5 @@ var searchData=
   ['add_5flast_5fdeque_3',['add_last_deque',['../group__Deque.html#gac5dec135ea08f0f01057eed75d05063c',1,'add_last_deque(deque_t *const dq, void *const data):&#160;datastructs_deque.c'],['../group__Deque.html#gac5dec135ea08f0f01057eed75d05063c',1,'add_last_deque(deque_t *const dq, void *const data):&#160;datastructs_deque.c']]],
   ['add_5fqueue_4',['add_queue',['../group__Queue.html#ga610753377e924dc85cfb3b3e13f09346',1,'add_queue(queue_t *const q, void *const data):&#160;datastructs_queue.c'],['../group__Queue.html#ga610753377e924dc85cfb3b3e13f09346',1,'add_queue(queue_t *const q, void *const data):&#160;datastructs_queue.c']]],
   ['add_5fset_5',['add_set',['../group__Set.html#ga8b6ee41820d2e662723bf6fbd1cbe814',1,'add_set(set_t *const s, void *const data):&#160;datastructs_set.c'],['../group__Set.html#ga8b6ee41820d2e662723bf6fbd1cbe814',1,'add_set(set_t *const s, void *const data):&#160;datastructs_set.c']]],
-  ['add_5fstack_6',['add_stack',['../group__Stack.html#ga31d664cd6490021972abe421bb469332',1,'datastructs.h']]]
+  ['add_5fstack_6',['add_stack',['../group__Stack.html#ga31d664cd6490021972abe421bb469332',1,'add_stack(stack_t *const s, void *const data):&#160;datastructs_stack.c'],['../group__Stack.html#ga31d664cd6490021972abe421bb469332',1,'add_stack(stack_t *const s, void *const data):&#160;datastructs_stack.c']]]
 ];

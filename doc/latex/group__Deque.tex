@@ -11,9 +11,9 @@ void \mbox{\hyperlink{group__Deque_ga3ffc33a64c7b41244dd24a95330c0994}{add\+\_\+
 \item 
 void \mbox{\hyperlink{group__Deque_gac5dec135ea08f0f01057eed75d05063c}{add\+\_\+last\+\_\+deque}} (\mbox{\hyperlink{structdeque}{deque\+\_\+t}} $\ast$const dq, void $\ast$const data)
 \item 
-void \mbox{\hyperlink{group__Deque_ga21148694cbab87baea8954628c2da36a}{pop\+\_\+first\+\_\+deque}} (\mbox{\hyperlink{structdeque}{deque\+\_\+t}} $\ast$const dq, void $\ast$data)
+void $\ast$ \mbox{\hyperlink{group__Deque_ga29d2df259c766d9f488f9deb9dd63cf3}{pop\+\_\+first\+\_\+deque}} (\mbox{\hyperlink{structdeque}{deque\+\_\+t}} $\ast$const dq)
 \item 
-void \mbox{\hyperlink{group__Deque_ga47fb864e4f97fb83f4f7154154a7b064}{pop\+\_\+last\+\_\+deque}} (\mbox{\hyperlink{structdeque}{deque\+\_\+t}} $\ast$const dq, void $\ast$data)
+void $\ast$ \mbox{\hyperlink{group__Deque_ga9de7b178dfaf35cd3e2ad8c96f20f1e7}{pop\+\_\+last\+\_\+deque}} (\mbox{\hyperlink{structdeque}{deque\+\_\+t}} $\ast$const dq)
 \end{DoxyCompactItemize}
 
 
@@ -67,11 +67,11 @@ Free queue instance and all its nodes
 \mbox{\texttt{ in}}  & {\em q} & pointer to queue instance \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{group__Deque_ga21148694cbab87baea8954628c2da36a}\label{group__Deque_ga21148694cbab87baea8954628c2da36a}} 
+\mbox{\Hypertarget{group__Deque_ga29d2df259c766d9f488f9deb9dd63cf3}\label{group__Deque_ga29d2df259c766d9f488f9deb9dd63cf3}} 
 \index{Deque functions@{Deque functions}!pop\_first\_deque@{pop\_first\_deque}}
 \index{pop\_first\_deque@{pop\_first\_deque}!Deque functions@{Deque functions}}
 \doxysubsubsection{\texorpdfstring{pop\_first\_deque()}{pop\_first\_deque()}}
-{\footnotesize\ttfamily void pop\+\_\+first\+\_\+deque (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdeque}{deque\+\_\+t}} $\ast$const}]{dq,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void$\ast$ pop\+\_\+first\+\_\+deque (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdeque}{deque\+\_\+t}} $\ast$const}]{dq }\end{DoxyParamCaption})}
 
 Pop a node from the beginning of the deque. 
 \begin{DoxyParams}[1]{Parameters}
@@ -81,11 +81,11 @@ Pop a node from the beginning of the deque.
 \begin{DoxyReturn}{Returns}
 data pointer stored by the node 
 \end{DoxyReturn}
-\mbox{\Hypertarget{group__Deque_ga47fb864e4f97fb83f4f7154154a7b064}\label{group__Deque_ga47fb864e4f97fb83f4f7154154a7b064}} 
+\mbox{\Hypertarget{group__Deque_ga9de7b178dfaf35cd3e2ad8c96f20f1e7}\label{group__Deque_ga9de7b178dfaf35cd3e2ad8c96f20f1e7}} 
 \index{Deque functions@{Deque functions}!pop\_last\_deque@{pop\_last\_deque}}
 \index{pop\_last\_deque@{pop\_last\_deque}!Deque functions@{Deque functions}}
 \doxysubsubsection{\texorpdfstring{pop\_last\_deque()}{pop\_last\_deque()}}
-{\footnotesize\ttfamily void pop\+\_\+last\+\_\+deque (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdeque}{deque\+\_\+t}} $\ast$const}]{dq,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void$\ast$ pop\+\_\+last\+\_\+deque (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdeque}{deque\+\_\+t}} $\ast$const}]{dq }\end{DoxyParamCaption})}
 
 Pop a node from the end of the deque. 
 \begin{DoxyParams}[1]{Parameters}

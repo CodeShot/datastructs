@@ -80,10 +80,10 @@ Functions</h2></td></tr>
 <tr class="separator:ga3ffc33a64c7b41244dd24a95330c0994"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac5dec135ea08f0f01057eed75d05063c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Deque.html#gac5dec135ea08f0f01057eed75d05063c">add_last_deque</a> (<a class="el" href="structdeque.html">deque_t</a> *const dq, void *const data)</td></tr>
 <tr class="separator:gac5dec135ea08f0f01057eed75d05063c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga21148694cbab87baea8954628c2da36a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Deque.html#ga21148694cbab87baea8954628c2da36a">pop_first_deque</a> (<a class="el" href="structdeque.html">deque_t</a> *const dq, void *data)</td></tr>
-<tr class="separator:ga21148694cbab87baea8954628c2da36a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga47fb864e4f97fb83f4f7154154a7b064"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Deque.html#ga47fb864e4f97fb83f4f7154154a7b064">pop_last_deque</a> (<a class="el" href="structdeque.html">deque_t</a> *const dq, void *data)</td></tr>
-<tr class="separator:ga47fb864e4f97fb83f4f7154154a7b064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga29d2df259c766d9f488f9deb9dd63cf3"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Deque.html#ga29d2df259c766d9f488f9deb9dd63cf3">pop_first_deque</a> (<a class="el" href="structdeque.html">deque_t</a> *const dq)</td></tr>
+<tr class="separator:ga29d2df259c766d9f488f9deb9dd63cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9de7b178dfaf35cd3e2ad8c96f20f1e7"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Deque.html#ga9de7b178dfaf35cd3e2ad8c96f20f1e7">pop_last_deque</a> (<a class="el" href="structdeque.html">deque_t</a> *const dq)</td></tr>
+<tr class="separator:ga9de7b178dfaf35cd3e2ad8c96f20f1e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
@@ -200,28 +200,18 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga21148694cbab87baea8954628c2da36a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga21148694cbab87baea8954628c2da36a">&#9670;&nbsp;</a></span>pop_first_deque()</h2>
+<a id="ga29d2df259c766d9f488f9deb9dd63cf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga29d2df259c766d9f488f9deb9dd63cf3">&#9670;&nbsp;</a></span>pop_first_deque()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void pop_first_deque </td>
+          <td class="memname">void* pop_first_deque </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structdeque.html">deque_t</a> *const&#160;</td>
-          <td class="paramname"><em>dq</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>dq</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -235,28 +225,18 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga47fb864e4f97fb83f4f7154154a7b064"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga47fb864e4f97fb83f4f7154154a7b064">&#9670;&nbsp;</a></span>pop_last_deque()</h2>
+<a id="ga9de7b178dfaf35cd3e2ad8c96f20f1e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9de7b178dfaf35cd3e2ad8c96f20f1e7">&#9670;&nbsp;</a></span>pop_last_deque()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void pop_last_deque </td>
+          <td class="memname">void* pop_last_deque </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structdeque.html">deque_t</a> *const&#160;</td>
-          <td class="paramname"><em>dq</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>dq</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
