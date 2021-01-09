@@ -9,23 +9,24 @@ stack_t *create_stack()
     return malloc(sizeof(stack_t));
 }
 
-void push_stack(stack_t *const s, void *const data)
+void add_stack(stack_t *const s, void *const data)
 {
     sl_node_t *n = create_slnode(data);
     n->next = s->first;
     s->first = n;
 }
 
-void pop_stack(stack_t *const s, void * data)
+void *pop_stack(stack_t *const s)
 {
-    if (s->first == NULL) {
-        data = NULL;
-        return;
-    }    
-    data = s->first->data;
+    if (s->first == NULL) return NULL;
+    
+    void *data = s->first->data;
     sl_node_t *n = s->first;
     s->first = s->first->next;
+
     free(n); // Regular free() intended
+
+    return data;
 }
 
 void free_stack(stack_t *s)

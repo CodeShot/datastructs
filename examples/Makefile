@@ -2,7 +2,7 @@ CC=gcc
 INCPATH=../
 CFLAGS=-c -Wall -I$(INCPATH)
 LDFLAGS=-ldatastructs
-LIBPATH=.
+LIBPATH=../.libs/
 CSOURCES=$(wildcard example_*.c)
 COBJECTS=$(CSOURCES:.c=.o)
 EXAMPLEAPPS=example_queue example_stack example_sequential example_binarytree example_binarytree2
@@ -14,7 +14,6 @@ $(COBJECTS): %.o: %.c
 	$(CC) -L$(LIBPATH) $(LDFLAGS) -o $* $<
 
 prepare:
-	cp ../.libs/libdatastructs.so .
 	cp ../datastructs.h .
 
 clean:

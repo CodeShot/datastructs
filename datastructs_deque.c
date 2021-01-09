@@ -51,36 +51,32 @@ void add_last_deque(deque_t *const dq, void *const data)
     dq->count++;
 }
 
-void pop_first_deque(deque_t *const dq, void *data)
+void *pop_first_deque(deque_t *const dq)
 {
-    if (dq->first == NULL) {
-        data = NULL;
-        return;
-    }
+    if (dq->first == NULL) return NULL;
 
     dl_node_t *n = dq->first;
     dq->first = dq->first->next;
     
     dq->count--;
-    data = n->data;
+    void *data = n->data;
     
     free(n);
+    return data;
 }
 
-void pop_last_deque(deque_t *const dq, void *data)
+void *pop_last_deque(deque_t *const dq)
 {
-    if (dq->last == NULL) {
-        data = NULL;
-        return;
-    }
+    if (dq->last == NULL) return NULL;
 
     dl_node_t *n = dq->last;
     dq->last = dq->last->prev;
 
     dq->count--;
-    data = n->data;
+    void *data = n->data;
     
     free(n);
+    return data;
 }
 
 void *contains_deque(deque_t *const dq)

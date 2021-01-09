@@ -15,7 +15,8 @@ int main()
     }
 
     for (int i = 0; i < 5; i++) {
-        int *a = (int *)pop_stack(s);
+        int *a = pop_stack(s);
+
         printf("%d, ", *a);
     }
     

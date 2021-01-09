@@ -19,12 +19,12 @@ int main()
     }
 
     printf("Queue\tStack\tDeque (last)\n");
-
+    
     for (int i = 0; i < 5; i++) {
-        int *qv = (int *)pop_queue(q);
-        int *sv = (int *)pop_stack(s);
-        int *dv = (int *)pop_last_deque(dq);
-
+        int *qv = pop_queue(q);
+        int *sv = pop_stack(s);
+        int *dv = pop_last_deque(dq);
+        
         printf("%d\t%d\t%d\n", *qv, *sv, *dv);
     } 
     printf("\n");

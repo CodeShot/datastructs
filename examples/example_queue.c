@@ -15,10 +15,11 @@ int main()
     }
 
     for (int i = 0; i < 5; i++) {
-        int *a = (int *)pop_queue(q);
+        int *a = pop_queue(q);
+        
         printf("%d, ", *a);
     }
-    
+   
     printf("\n");
 
     free_queue(q);

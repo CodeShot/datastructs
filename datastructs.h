@@ -281,7 +281,7 @@ void add_queue(queue_t *const q, void *const data);
  * @param[out] q pointer to queue
  * @return data pointer stored by the node
  */
-void pop_queue(queue_t *const q, void *data);
+void *pop_queue(queue_t *const q);
 
 /**
  * @}
@@ -316,7 +316,7 @@ void add_stack(stack_t *const s, void *const data);
  * @param[out] s pointer to stack instance
  * @return data pointer stored by the node
  */
-void pop_stack(stack_t *const s, void *data);
+void *pop_stack(stack_t *const s);
 /**
  * @}
  */
@@ -357,14 +357,14 @@ void add_last_deque(deque_t *const dq, void *const data);
  * @param[out] s pointer to deque instance
  * @return data pointer stored by the node
  */
-void pop_first_deque(deque_t *const dq, void *data);
+void *pop_first_deque(deque_t *const dq);
 
 /**
  * Pop a node from the end of the deque.
  * @param[out] s pointer to deque instance
  * @return data pointer stored by the node
  */
-void pop_last_deque(deque_t *const dq, void *data);
+void *pop_last_deque(deque_t *const dq);
 /**
  * @}
  */

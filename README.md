@@ -14,6 +14,6 @@ To regenerate documentation run (in basadir):
 
 To run examples (as shared library is not installed yet) LD_LIBRARY_PATH needs
 to be set:
-`LD_LIBRARY_PATH=. ./example_stack'
+`LD_LIBRARY_PATH=../.libs/ ./example_stack'
 
 Have fun!

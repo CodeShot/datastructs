@@ -20,18 +20,16 @@ void add_queue(queue_t *const q, void *const data)
     }
 }
 
-void pop_queue(queue_t *const q, void *data)
+void *pop_queue(queue_t *const q)
 {
-    if (q->first == NULL) {
-        data = NULL;
-        return;
-    }
+    if (q->first == NULL) return NULL;
 
     sl_node_t *tmp = q->first;
     q->first = q->first->next;
 
-    data = tmp->data;
+    void *data = tmp->data;
     free(tmp); // Regular free() as we return the data pointer
+    return data;
 }
 
 void free_queue(queue_t *q)
