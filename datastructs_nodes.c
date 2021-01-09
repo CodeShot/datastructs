@@ -53,7 +53,7 @@ void free_slnode_seq(sl_node_t *n)
 
     while (n != NULL) {
         tmp = n->next;
-        free_slnode(n);
+        free(n);
         n = tmp;
     }
 }
@@ -64,7 +64,7 @@ void free_dlnode_seq(dl_node_t *n)
 
     while (n != NULL) {
         tmp = n->next;
-        free_dlnode(n);
+        free(n);
         n = tmp;
     }
 }
@@ -132,7 +132,7 @@ uint32_t count_slnode_seq(sl_node_t *const node)
     return counter;    
 }
 
-uint32_t count_dlnode_seq(dl_node_t *const node, bool reverse)
+uint32_t count_dlnode_seq(dl_node_t *node, bool reverse)
 {
     uint32_t counter = 0;
     dl_node_t *n = node;

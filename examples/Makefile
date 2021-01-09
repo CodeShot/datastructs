@@ -5,7 +5,8 @@ LDFLAGS=-ldatastructs
 LIBPATH=../.libs/
 CSOURCES=$(wildcard example_*.c)
 COBJECTS=$(CSOURCES:.c=.o)
-EXAMPLEAPPS=example_queue example_stack example_sequential example_binarytree example_binarytree2
+EXAMPLEAPPS=example_queue example_stack example_sequential example_binarytree\
+			example_string example_binarytree2
 
 all: prepare $(COBJECTS) clean
 
