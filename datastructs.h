@@ -3,10 +3,10 @@
  *
  * Datastructs uses different nodetypes to implement datastructures.
  *
- * - sl_node *for stack and queue*
- * - dl_node *for deque*
- * - dlp_node *for binarytree*
- * - tree_node *for tree*
+ * - sl_node_t *for stack and queue*
+ * - dl_node_t *for deque*
+ * - dlp_node_t *for binarytree*
+ * - tree_node_t *for tree*
  * 
  * The primary intentended use case of this library would be without 
  * interacting with node objects.
@@ -26,17 +26,19 @@
  *  - tree (NOT IMPLEMENTED YET)
  *
  *  Roadmap:
- *  - **general manner of determininglikeness of data based on pointer size**
- *  - **add overall support for variadic arguments**
- *  - **consider naming conventions early on**
- *  - **consider macros for setting overall behaviors, as choice of implementation**
- *  - **implement push&pop-stack queue for to investigate macros to alternate implementations**
+ *  - **general manner of determining likeness of data based on pointer size**
+ *  - **considering: add overall support for variadic arguments**
+ *  - **naming conventions must be resolved**
+ *  - **consider how to implement datastructure properties**
+ *  - **implement push&pop-stack queue**
  */
 
 #ifndef _DATASTRUCTS_H
 #define _DATASTRUCTS_H
 
 #include <stdint.h>
+#include <stdbool.h>
+#include <stdlib.h>
 
 /** Single linked node */
 struct sl_node {
@@ -105,6 +107,21 @@ struct tree {
     struct tree_node *root;     /**< pointer to root node of binarytree */
 };
 
+/* Nodetypes */
+typedef struct sl_node  sl_node_t;
+typedef struct dl_node  dl_node_t;
+typedef struct dlp_node dlp_node_t;
+typedef struct tree_node tree_node_t;
+
+/* Datastructures */
+typedef struct stack    stack_t;
+typedef struct queue    queue_t;
+typedef struct deque    deque_t;
+typedef struct tree     tree_t;
+typedef struct set      set_t;
+typedef struct bag      bag_t;
+typedef struct binarytree binarytree_t;
+
 /**
  * @defgroup Node Node functions
  * @{
@@ -115,64 +132,122 @@ struct tree {
  * @param[in] data pointer to object
  * @return pointer to newly created sl_node
  */
-struct sl_node *create_slnode(void *data);
+sl_node_t *create_slnode(void *const data);
 
 /**
  * Helper to fully free sl_node instance and its data pointer.
  * @param[in] n pointer to sl_node instance
  */
-void free_slnode(struct sl_node *n);
+void free_slnode(sl_node_t *n);
 
 /**  
  * Create a dl_node instance.
  * @param[in] data pointer to object
  * @return pointer to newly created dl_node
  */
-struct dl_node *create_dlnode(void *data);
+dl_node_t *create_dlnode(void *const data);
 
 /**
  * Helper to fully free dl_node instance and its data pointer.
  * @param[in] n pointer to dl_node instance
  */
-void free_dlnode(struct dl_node *n);
+void free_dlnode(dl_node_t *n);
 
 /**  
  * Create a dlp_node instance.
  * @param[in] data pointer to object
  * @return pointer to newly created dlp_node
  */
-struct dlp_node *create_dlpnode(void *data);
+dlp_node_t *create_dlpnode(void *const data);
 
 /**
  * Helper to fully free dlp_node instance and its data pointer.
  * @param[in] n pointer to dlp_node instance
  */
-void free_dlpnode(struct dlp_node *n);
+void free_dlpnode(dlp_node_t *n);
 
 /**  
  * Create a tree_node instance.
  * @param[in] data pointer to object
  * @return pointer to newly created tree_node
  */
-struct tree_node *create_treenode(void *data);
+tree_node_t *create_treenode(void *const data);
 
 /**
  * Helper to fully free tree_node instance and its data pointer.
  * @param[in] n pointer to tree_node instance
  */
-void free_treenode(struct tree_node *n);
+void free_treenode(tree_node_t *n);
 
 /**
  * Helper for clearing every sequentially linked sl_node.
  * @param[in] n pointer to beginning of sl_node sequence
  */
-void free_slnode_seq(struct sl_node *n); // Helper for clearing
+void free_slnode_seq(sl_node_t *n); // Helper for clearing
 
 /**
  * Helper for clearing every sequentially linked dl_node.
  * @param[n] n pointer to beginning of dl_node sequence
  */
-void free_dlnode_seq(struct dl_node *n); // sequence of nodes
+void free_dlnode_seq(dl_node_t *n); // sequence of nodes
+
+/**
+ * Map a function to interact with each sl_node_t in a sequence of nodes with 
+ * *node* pointer passed being the first. The function interacting will get a 
+ * sl_node_t pointer as first parameter and func_data as second.
+ * @param[in] node pointer to starting node
+ * @param[in] func function pointer to user defined function
+ * @param[out] func_data pointer to data for user defined function, NULL allowed
+ */
+void map_slnode_seq(sl_node_t *node, void (*func)(sl_node_t *, void *), void *func_data);
+
+/**
+ * Map a function to interact with each dl_node_t in a sequence of nodes with 
+ * *node* pointer passed being the first. The function interacting will get a 
+ * dl_node_t pointer as first parameter and func_data as second.
+ * @param[in] node pointer to starting node
+ * @param[in] func function pointer to user defined function
+ * @param[out] func_data pointer to data for user defined function, NULL allowed
+ * @param[in] reverese boolean value, if left true/1 it movement is reversed
+ */
+void map_dlnode_seq(dl_node_t *node, void (*func)(dl_node_t *, void *), void *func_data, bool reverse);
+
+/**
+ * Map a function to interact with each data pointer in a sequence of nodes with 
+ * *node* pointer passed being the first. The function interacting will get a 
+ * data pointer as first parameter and func_data as second.
+ * @param[in] node pointer to starting node
+ * @param[in] func function pointer to user defined function
+ * @param[out] func_data pointer to data for user defined function, NULL allowed
+ */
+void map_slnode_data_seq(sl_node_t *node, void (*func)(void *, void *), void *func_data);
+
+/**
+ * Map a function to interact with each data pointer in a sequence of nodes with 
+ * *node* pointer passed being the first. The function interacting will get a 
+ * data pointer as first parameter and func_data as second.
+ * @param[in] node pointer to starting node
+ * @param[in] func function pointer to user defined function
+ * @param[out] func_data pointer to data for user defined function, NULL allowed
+ * @param[in] reverese boolean value, if left true/1 it movement is reversed
+ */
+void map_dlnode_data_seq(dl_node_t *node, void (*func)(void *, void *), void *func_data, bool reverse);
+
+/**
+ * Count the number of nodes a sl_node_t sequence us from and inlcluding *node*.
+ * @param node pointer to start of count
+ * @return number of nodes
+ */
+uint32_t count_slnode_seq(sl_node_t *node);
+
+/**
+ * Count the number of nodes a dl_node_t sequence us from and inlcluding *node*.
+ * @param node pointer to start of count
+ * @param[in] reverese boolean value, if left true/1 it movement is reversed
+ * @return nuber of nodes
+ */
+uint32_t count_dlnode_seq(dl_node_t *node, bool reverse);
+
 /**
  * @}
  */
@@ -186,27 +261,27 @@ void free_dlnode_seq(struct dl_node *n); // sequence of nodes
  * Create a queue instance.
  * @return pointer to newly created queue 
  */
-struct queue *create_queue();
+queue_t *create_queue();
 
 /**
  * Free queue instance and all its nodes
  * @param[in] q pointer to queue instance
  */
-void free_queue(struct queue *q);
+void free_queue(queue_t *q);
 
 /**
  * Add a node to queue.
  * @param[out] q pointer to queue
  * @param{in] data pointer to node data
  */
-void add_queue(struct queue *q, void *data);
+void add_queue(queue_t *q, void *data);
 
 /**
  * Pop a node from the queue (FIFO).
  * @param[out] q pointer to queue
  * @return data pointer stored by the node
  */
-void *pop_queue(struct queue *q);
+void pop_queue(queue_t *q, void *data);
 
 /**
  * @}
@@ -221,27 +296,27 @@ void *pop_queue(struct queue *q);
  * Create a stack instance.
  * @return pointer to newly created stack 
  */
+stack_t *create_stack();
 
-struct stack *create_stack();
 /**
  * Free queue instance and all its nodes
  * @param[in] q pointer to queue instance
  */
-void free_stack(struct stack *s);
+void free_stack(stack_t *s);
 
 /**
  * Add (push) a node to the stack.
  * @param[out] s pointer to stack instance
  * @param[in] data pointer to node data
  */
-void add_stack(struct stack *s, void *data);
+void add_stack(stack_t *s, void *data);
 
 /**
  * Pop a node from the stack (LIFO).
  * @param[out] s pointer to stack instance
  * @return data pointer stored by the node
  */
-void *pop_stack(struct stack *s);
+void pop_stack(stack_t *s, void *data);
 /**
  * @}
  */
@@ -255,41 +330,41 @@ void *pop_stack(struct stack *s);
  * Create a deque instance.
  * @return pointer to newly created deque 
  */
-struct deque *create_deque();
+deque_t *create_deque();
 
 /**
  * Free queue instance and all its nodes
  * @param[in] q pointer to queue instance
  */
-void free_deque(struct deque *dq);
+void free_deque(deque_t *dq);
 
 /**
  * Add a node to beginning of deque.
  * @param[out] dq pointer to deque instance
  * @param[in] data pointer to node data
  */
-void add_first_deque(struct deque *dq, void *data);
+void add_first_deque(deque_t *dq, void *data);
 
 /**
  * Add a node to end of deque.
  * @param[out] dq pointer to deque instance
  * @param[in] data pointer to node data
  */
-void add_last_deque(struct deque *dq, void *data);
+void add_last_deque(deque_t *dq, void *data);
 
 /**
  * Pop a node from the beginning of the deque.
  * @param[out] s pointer to deque instance
  * @return data pointer stored by the node
  */
-void *pop_first_deque(struct deque *dq);
+void pop_first_deque(deque_t *dq, void *data);
 
 /**
  * Pop a node from the end of the deque.
  * @param[out] s pointer to deque instance
  * @return data pointer stored by the node
  */
-void *pop_last_deque(struct deque *dq);
+void pop_last_deque(deque_t *dq, void *data);
 /**
  * @}
  */
@@ -303,19 +378,19 @@ void *pop_last_deque(struct deque *dq);
  * Create a binarytree instance.
  * @return pointer to newly created binarytree
  */
-struct binarytree *create_binarytree();
+binarytree_t *create_binarytree();
 
 /**
  * Free binarytree instance and all its dlp_node references.
  * @param[in] t pointer to queue instance
  */
-void free_binarytree(struct binarytree *t);
+void free_binarytree(binarytree_t *t);
 
 /**
  * Helper to free nodes of a binarytree recursively below a certain node.
  * @param[in] n pointer to node to free recursively
  */
-void free_sub_binarytree(struct dlp_node *n);
+void free_sub_binarytree(dlp_node_t *n);
 
 /**
  * Add node to a binarytree.
@@ -323,7 +398,14 @@ void free_sub_binarytree(struct dlp_node *n);
  * @param[in] data pointer to node data
  * @return result (0 if already in binarytree, 1 if added successfully)
  */
-int8_t add_binarytree(struct binarytree *t, void *data);
+int8_t add_binarytree(binarytree_t *t, void *data);
+
+/**
+ * Delete only node specified by data and reconstruct binarytree accordingly.
+ * @param[in] t pointer to binarytree instance
+ * @param[in] data pointer to data that will qualify deletion 
+ */
+int8_t del_binarytree(binarytree_t *t, void *data);
 
 /**
  * Find node in a binarytree.
@@ -331,21 +413,21 @@ int8_t add_binarytree(struct binarytree *t, void *data);
  * @param[in] data pointer to node data
  * @return result (-1 if already in binarytree, 1 if added successfully)
  */
-struct dlp_node *find_binarytree(struct dlp_node *n, void *data);
+dlp_node_t *find_binarytree(dlp_node_t *n, void *data);
 
 /**
  * Get node with lowest value on evaluation (WARN: bugged).
  * @param[in] t pointer to binarytree instance
  * @return pointer to node data or NULL if binarytree is empty
  */
-void *lowest_binarytree(struct binarytree *t);
+void *lowest_binarytree(binarytree_t *t);
 
 /**
  * Get node with highest value on evaluation (WARN: bugged).
  * @param[in] t pointer to binarytree instance
  * @return pointer to node data or NULL if binarytree is empty
  */
-void *highest_binarytree(struct binarytree *t);
+void *highest_binarytree(binarytree_t *t);
 /**
  * @}
  */
@@ -359,13 +441,13 @@ void *highest_binarytree(struct binarytree *t);
  * Create a set instance.
  * @return pointer to newly created set 
  */
-struct set *create_set();
+set_t *create_set();
 
 /**
  * Free set instance and all its associated node references.
  * @param[in] s pointer to set instance
  */
-void free_set(struct set *s);
+void free_set(set_t *s);
 
 /**
  * Add node to a set.
@@ -373,7 +455,7 @@ void free_set(struct set *s);
  * @param[in] data pointer to node data
  * @return result (0 if already in set, 1 if added successfully)
  */
-int8_t add_set(struct set *s, void *data);
+int8_t add_set(set_t *s, void *data);
 
 /**
  * Find node in a set.
@@ -381,7 +463,7 @@ int8_t add_set(struct set *s, void *data);
  * @param[in] data pointer to node data
  * @return result (-1 if already in set, 1 if added successfully)
  */
-int8_t find_set(struct set *s, void *data);
+int8_t find_set(set_t *s, void *data);
 
 /**
  * Delete node in a set.
@@ -389,7 +471,7 @@ int8_t find_set(struct set *s, void *data);
  * @param[in] data pointer to data to search for
  * @return result (-1 if not found, 1 if deleted successfully) 
  */
-int8_t del_set(struct set *s, void *data);
+int8_t del_set(set_t *s, void *data);
 /**
  * @}
  */
@@ -409,7 +491,7 @@ struct tree *create_tree();
  * Free tree instance and all its tree_node references.
  * @param[in] t pointer to tree instance
  */
-void free_tree(struct tree *t);
+void free_tree(tree_t *t);
 
 /**
  * Add node to a set.
@@ -417,8 +499,8 @@ void free_tree(struct tree *t);
  * @param[in] data pointer to node data
  * @return result (0 if already in set, 1 if added successfully)
  */
-int8_t add_child_treenode(struct tree_node *n, void *data);
-int8_t del_child_treenode(struct tree_node *n, void *data);
+int8_t add_child_treenode(tree_node_t *n, void *data);
+int8_t del_child_treenode(tree_node_t *n, void *data);
 
 /**
  * Find node in a tree.
@@ -426,8 +508,9 @@ int8_t del_child_treenode(struct tree_node *n, void *data);
  * @param[in] data pointer to node data
  * @return result (-1 if already in tree, 1 if added successfully)
  */
-struct tree_node *find_tree(struct tree *t, void *data);
+tree_node_t *find_tree(tree_t *t, void *data);
 /**
  * @}
  */
+
 #endif
