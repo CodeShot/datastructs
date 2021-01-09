@@ -49,7 +49,7 @@ uint32_t count_stack(stack_t *const s)
 
 void map_stack(stack_t *const s, void (*func)(sl_node_t *, void *), void *func_data)
 {
-    
+    map_slnode_seq(s->first, func, func_data);    
 }
 
 /**

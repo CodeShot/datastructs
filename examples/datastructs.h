@@ -317,6 +317,8 @@ void add_stack(stack_t *const s, void *const data);
  * @return data pointer stored by the node
  */
 void *pop_stack(stack_t *const s);
+
+void map_stack(stack_t *const s, void (*func)(sl_node_t *, void *), void *func_data); 
 /**
  * @}
  */
