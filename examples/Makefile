@@ -8,14 +8,11 @@ COBJECTS=$(CSOURCES:.c=.o)
 EXAMPLEAPPS=example_queue example_stack example_sequential example_binarytree\
 			example_string example_binarytree2
 
-all: prepare $(COBJECTS) clean
+all: $(COBJECTS) clean
 
 $(COBJECTS): %.o: %.c
 	$(CC) $(CFLAGS) $<
 	$(CC) -L$(LIBPATH) $(LDFLAGS) -o $* $<
-
-prepare:
-	cp ../datastructs.h .
 
 clean:
 	rm -f $(COBJECTS)

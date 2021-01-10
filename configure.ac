@@ -1,4 +1,4 @@
-AC_INIT([datastructs],[1],[CodeShot@github],[https://github.com/CodeShot])
+AC_INIT([datastructs],[1],[CodeShot@github],[],[https://github.com/CodeShot])
 AM_INIT_AUTOMAKE([])
 LT_INIT
 

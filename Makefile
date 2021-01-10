@@ -71,10 +71,10 @@ am__make_running_with_option = \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
-pkgdatadir = $(datadir)/https://github.com/CodeShot
-pkgincludedir = $(includedir)/https://github.com/CodeShot
-pkglibdir = $(libdir)/https://github.com/CodeShot
-pkglibexecdir = $(libexecdir)/https://github.com/CodeShot
+pkgdatadir = $(datadir)/datastructs
+pkgincludedir = $(includedir)/datastructs
+pkglibdir = $(libdir)/datastructs
+pkglibexecdir = $(libexecdir)/datastructs
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -248,7 +248,7 @@ CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
 CPPFLAGS = 
 CYGPATH_W = echo
-DEFS = -DPACKAGE_NAME=\"datastructs\" -DPACKAGE_TARNAME=\"https://github.com/CodeShot\" -DPACKAGE_VERSION=\"1\" -DPACKAGE_STRING=\"datastructs\ 1\" -DPACKAGE_BUGREPORT=\"CodeShot@github\" -DPACKAGE_URL=\"\" -DPACKAGE=\"https://github.com/CodeShot\" -DVERSION=\"1\" -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\"
+DEFS = -DPACKAGE_NAME=\"datastructs\" -DPACKAGE_TARNAME=\"datastructs\" -DPACKAGE_VERSION=\"1\" -DPACKAGE_STRING=\"datastructs\ 1\" -DPACKAGE_BUGREPORT=\"CodeShot@github\" -DPACKAGE_URL=\"https://github.com/CodeShot\" -DPACKAGE=\"datastructs\" -DVERSION=\"1\" -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\"
 DEPDIR = .deps
 DLLTOOL = false
 DSYMUTIL = 
@@ -283,12 +283,12 @@ OBJDUMP = objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
-PACKAGE = https://github.com/CodeShot
+PACKAGE = datastructs
 PACKAGE_BUGREPORT = CodeShot@github
 PACKAGE_NAME = datastructs
 PACKAGE_STRING = datastructs 1
-PACKAGE_TARNAME = https://github.com/CodeShot
-PACKAGE_URL = 
+PACKAGE_TARNAME = datastructs
+PACKAGE_URL = https://github.com/CodeShot
 PACKAGE_VERSION = 1
 PATH_SEPARATOR = :
 RANLIB = ranlib
@@ -338,7 +338,7 @@ mandir = ${datarootdir}/man
 mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-prefix = /usr/local
+prefix = /home/tl/code/mylibs
 program_transform_name = s,x,x,
 psdir = ${docdir}
 runstatedir = ${localstatedir}/run
